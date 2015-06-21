@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issued at:</strong>
+  <%= @expense.issued_at %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expense.description %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%= @expense.total_price %>
+</p>
+
+<p>
+  <strong>Tax price:</strong>
+  <%= @expense.tax_price %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>
