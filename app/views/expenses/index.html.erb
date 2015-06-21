@@ -8,6 +8,12 @@
   <li>Total net expenses: <%= @expenses.sum(:total_price) - @expenses.sum(:tax_price) %> </li>
 </ul>
 
+<ul>
+  <li><%= link_to 'previous Q', expenses_path(date: @filter_date.prev_quarter) %></li>
+  <li><%= link_to 'current Q', expenses_path(date: Date.today) %></li>
+  <li><%= link_to 'next Q', expenses_path(date: @filter_date.next_quarter) %></li>
+</ul>
+
 <table>
   <thead>
     <tr>
