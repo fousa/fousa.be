@@ -17,3 +17,5 @@
 /tmp
 .powder
 *.swp
+.env
+.env.development
