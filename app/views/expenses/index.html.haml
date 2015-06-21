@@ -1,0 +1,35 @@
+%h1= "Listing Expenses for #{format_quarter_date @filter_date}"
+
+%ul
+  %li= "Total expenses: #{@expenses.sum(:total_price)}"
+  %li= "Total tax: #{@expenses.sum(:tax_price)}"
+  %li= "Total net expenses: #{@expenses.sum(:total_price) - @expenses.sum(:tax_price)}"
+
+%ul
+  %li= link_to 'previous Q', expenses_path(date: @filter_date.prev_quarter)
+  %li= link_to 'current Q', expenses_path(date: Date.today)
+  %li= link_to 'next Q', expenses_path(date: @filter_date.next_quarter)
+
+%table
+  %thead
+    %tr
+      %th Issued at
+      %th Description
+      %th Total price
+      %th Tax price
+      %th{ colspan: "3" }
+
+  %tbody
+    - @expenses.each do |expense|
+      %tr{ class: expense.complete? ? '' : 'incomplete' }
+        %td= expense.issued_at
+        %td= expense.description
+        %td= expense.total_price
+        %td= expense.tax_price
+        %td= link_to 'Show', expense
+        %td= link_to 'Edit', edit_expense_path(expense)
+        %td= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Expense', new_expense_path
