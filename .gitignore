@@ -19,3 +19,4 @@
 *.swp
 .env
 .env.development
+.DS_Store
