@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Expenses</h1>
+<h1>Listing Expenses for <%= format_quarter_date @filter_date %></h1>
+
+<ul>
+  <li>Total expenses: <%= @expenses.sum(:total_price) %> </li>
+  <li>Total tax: <%= @expenses.sum(:tax_price) %> </li>
+  <li>Total net expenses: <%= @expenses.sum(:total_price) - @expenses.sum(:tax_price) %> </li>
+</ul>
 
 <table>
   <thead>

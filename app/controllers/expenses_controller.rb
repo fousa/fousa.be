@@ -4,7 +4,8 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.json
   def index
-    @expenses = Expense.all
+    @filter_date = Date.today
+    @expenses = Expense.by_quarter @filter_date
   end
 
   # GET /expenses/1
