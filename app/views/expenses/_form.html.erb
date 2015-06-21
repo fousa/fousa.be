@@ -1,33 +1,7 @@
-<%= form_for(@expense) do |f| %>
-  <% if @expense.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
-
-      <ul>
-      <% @expense.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :issued_at %><br>
-    <%= f.date_select :issued_at %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :total_price %><br>
-    <%= f.text_field :total_price %>
-  </div>
-  <div class="field">
-    <%= f.label :tax_price %><br>
-    <%= f.text_field :tax_price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@expense) do |f| %>
+  <%= f.input :issued_at %>
+  <%= f.input :description %>
+  <%= f.input :total_price %>
+  <%= f.input :tax_price %>
+  <%= f.submit %>
 <% end %>
