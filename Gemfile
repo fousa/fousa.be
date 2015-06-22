@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
 # Loads environment variables from `.env`.
 # [dotenv](https://github.com/bkeepers/dotenv)
 gem "dotenv", "~> 2.0.2"
@@ -32,6 +34,10 @@ gem "simple_form", "~> 3.1.0"
 # Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML tha
 # [haml](http://haml.info/)
 gem "haml", "~> 4.0.6"
+
+# Run Rails the 12factor way
+# [rails_12factor](https://github.com/heroku/rails_12factor)
+gem "rails_12factor", "~> 0.0.3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
