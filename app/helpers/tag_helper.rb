@@ -7,7 +7,7 @@ module TagHelper
   end
 
   def next_paginator_tag date
-    link_to expenses_path(date: date.next_quarter) do
+    link_to home_path(date: date.next_quarter) do
       content = 'Next '
       content += content_tag(:span, '&rarr;'.html_safe)
       content.html_safe
@@ -15,7 +15,7 @@ module TagHelper
   end
 
   def previous_paginator_tag date
-    link_to expenses_path(date: date.prev_quarter) do
+    link_to home_path(date: date.prev_quarter) do
       content = content_tag(:span, '&larr;'.html_safe)
       content += ' Previous'
       content
@@ -23,13 +23,21 @@ module TagHelper
   end
 
   def current_paginator_tag date
-    link_to 'Current Quarter', expenses_path(date: date)
+    link_to 'Current Quarter', home_path(date: date)
   end
 
   def back_tag
-    link_to expenses_path do
+    link_to home_path do
       content = content_tag(:span, '&larr;'.html_safe)
       content += ' Back'
+      content
+    end
+  end
+
+  def add_invoice_tag
+    link_to new_invoice_path do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-plus-sign'
+      content << " Add invoice"
       content
     end
   end

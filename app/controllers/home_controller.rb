@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 
   def show
     @expenses = Expense.by_quarter @filter_date
+    @invoices = Invoice.by_quarter @filter_date
   end
 
   private
