@@ -1,12 +1,9 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: [:show, :edit, :update, :destroy]
+  before_action :set_expense, only: [:edit, :update, :destroy]
   before_action :set_date, only: :index
 
   def index
     @expenses = Expense.by_quarter @filter_date
-  end
-
-  def show
   end
 
   def new
@@ -21,7 +18,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to @expense, notice: 'Expense was successfully created.' }
+        format.html { redirect_to expenses_path(date: @expense.issued_at), notice: 'Expense was successfully created.' }
       else
         format.html { render :new }
       end
@@ -31,7 +28,7 @@ class ExpensesController < ApplicationController
   def update
     respond_to do |format|
       if @expense.update(expense_params)
-        format.html { redirect_to @expense, notice: 'Expense was successfully updated.' }
+        format.html { redirect_to expenses_path(date: @expense.issued_at), notice: 'Expense was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -41,7 +38,7 @@ class ExpensesController < ApplicationController
   def destroy
     @expense.destroy
     respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+      format.html { redirect_to expenses_path(date: @expense.issued_at), notice: 'Expense was successfully destroyed.' }
     end
   end
 
