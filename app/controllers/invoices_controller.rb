@@ -32,6 +32,7 @@ class InvoicesController < ApplicationController
 
   def destroy
     @invoice.destroy
+    @invoices = Invoice.by_quarter old_date
     render_no_layout
   end
 

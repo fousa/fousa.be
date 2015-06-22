@@ -32,6 +32,7 @@ class ExpensesController < ApplicationController
 
   def destroy
     @expense.destroy
+    @expenses = Expense.by_quarter old_date
     render_no_layout
   end
 

@@ -1,4 +1,5 @@
 <% if @invoice.valid? %>
+  $('#invoices-totals').html("<%= escape_javascript(render(partial: 'invoices/totals', locals: { invoices: @invoices })) %>");
   $('#invoices').html("<%= escape_javascript(render(partial: 'invoices/invoices', locals: { invoices: @invoices })) %>");
   $('#form_modal').modal('hide')
 <% else %>

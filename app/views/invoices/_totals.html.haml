@@ -1,0 +1,9 @@
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title Invoiced
+  .panel-body
+    %ul
+      %li= "Total invoices: #{number_to_currency invoices.sum(:total_price)}"
+      %li= "Total tax: #{number_to_currency invoices.sum(:tax_price)}"
+      %li= "Total net income: #{number_to_currency invoices.sum(:total_price) - invoices.sum(:tax_price)}"
+

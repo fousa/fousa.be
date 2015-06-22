@@ -1,4 +1,5 @@
 <% if @expense.valid? %>
+  $('#expenses-totals').html("<%= escape_javascript(render(partial: 'expenses/totals', locals: { expenses: @expenses })) %>");
   $('#expenses').html("<%= escape_javascript(render(partial: 'expenses/expenses', locals: { expenses: @expenses })) %>");
   $('#form_modal').modal('hide')
 <% else %>

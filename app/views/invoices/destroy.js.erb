@@ -1,3 +1,4 @@
+$('#invoices-totals').html("<%= escape_javascript(render(partial: 'invoices/totals', locals: { invoices: @invoices })) %>");
 $("#invoice-<%= @invoice.id %>").fadeOut(1000,function() {
     $("#invoice-<%= @invoice.id %>").remove();
 });
