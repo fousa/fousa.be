@@ -11,4 +11,8 @@ class Invoice < ActiveRecord::Base
   def complete?
     total_price.present? && tax_price.present?
   end
+
+  def filename
+    "#{I18n.l(invoiced_at, format: :filename)} - #{name}"
+  end
 end

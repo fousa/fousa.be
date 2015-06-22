@@ -11,4 +11,8 @@ class Expense < ActiveRecord::Base
   def complete?
     total_price.present? && tax_price.present?
   end
+
+  def filename
+    "#{I18n.l(issued_at, format: :filename)} - #{description}"
+  end
 end
