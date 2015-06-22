@@ -33,7 +33,7 @@ class ExpensesController < ApplicationController
   def destroy
     @expense.destroy
     respond_to do |format|
-      format.html { redirect_to home_path(date: @expense.issued_at), notice: 'Expense was successfully destroyed.' }
+      format.js { render layout: false }
     end
   end
 

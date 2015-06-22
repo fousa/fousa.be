@@ -41,7 +41,7 @@
 
       %tbody
         - @invoices.each do |invoice|
-          %tr
+          %tr{ id: "invoice-#{invoice.id}" }
             %td= l invoice.invoiced_at, format: :long
             %td
               - if invoice.complete?
@@ -53,7 +53,7 @@
             %td.hidden-xs
               = link_to 'edit', edit_invoice_path(invoice)
               = '-'
-              = link_to 'destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'destroy', invoice, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
   .row
     %h3 Expenses
 
@@ -68,7 +68,7 @@
 
       %tbody
         - @expenses.each do |expense|
-          %tr
+          %tr{ id: "expense-#{expense.id}" }
             %td= l expense.issued_at, format: :long
             %td
               - if expense.complete?
@@ -80,4 +80,4 @@
             %td.hidden-xs
               = link_to 'edit', edit_expense_path(expense)
               = '-'
-              = link_to 'destroy', expense, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'destroy', expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
