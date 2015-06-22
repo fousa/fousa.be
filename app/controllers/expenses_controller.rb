@@ -3,15 +3,11 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   def edit
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   def create
@@ -36,9 +32,7 @@ class ExpensesController < ApplicationController
 
   def destroy
     @expense.destroy
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   private

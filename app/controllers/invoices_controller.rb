@@ -3,15 +3,11 @@ class InvoicesController < ApplicationController
 
   def new
     @invoice = Invoice.new
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   def edit
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   def create
@@ -36,9 +32,7 @@ class InvoicesController < ApplicationController
 
   def destroy
     @invoice.destroy
-    respond_to do |format|
-      format.js { render layout: false }
-    end
+    render_no_layout
   end
 
   private
