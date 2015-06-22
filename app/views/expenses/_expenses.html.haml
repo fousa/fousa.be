@@ -1,0 +1,25 @@
+%table.table.table-hover.table-bordered
+  %thead
+    %tr
+      %th Issued at
+      %th Description
+      %th Total price
+      %th.hidden-xs Tax price
+      %th.hidden-xs{ colspan: '1' }
+
+  %tbody
+    - expenses.each do |expense|
+      %tr{ id: "expense-#{expense.id}" }
+        %td= l expense.issued_at, format: :long
+        %td
+          - if expense.complete?
+            = expense.description
+          - else
+            %span.label.label-danger= expense.description
+        %td= number_to_currency expense.total_price
+        %td.hidden-xs= number_to_currency expense.tax_price
+        %td.hidden-xs
+          = link_to 'edit', edit_expense_path(expense), remote: true
+          = '-'
+          = link_to 'destroy', expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+

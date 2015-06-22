@@ -57,27 +57,14 @@
   .row
     %h3 Expenses
 
-    %table.table.table-hover.table-bordered
-      %thead
-        %tr
-          %th Issued at
-          %th Description
-          %th Total price
-          %th.hidden-xs Tax price
-          %th.hidden-xs{ colspan: '1' }
+    #expenses
+      = render partial: 'expenses/expenses', locals: { expenses: @expenses }
 
-      %tbody
-        - @expenses.each do |expense|
-          %tr{ id: "expense-#{expense.id}" }
-            %td= l expense.issued_at, format: :long
-            %td
-              - if expense.complete?
-                = expense.description
-              - else
-                %span.label.label-danger= expense.description
-            %td= number_to_currency expense.total_price
-            %td.hidden-xs= number_to_currency expense.tax_price
-            %td.hidden-xs
-              = link_to 'edit', edit_expense_path(expense)
-              = '-'
-              = link_to 'destroy', expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+.modal.fade#form_modal
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        %button.close{ type: "button", data: { dismiss: "modal" } }
+          %span &times;
+        %h4.modal-title
+      .modal-body
