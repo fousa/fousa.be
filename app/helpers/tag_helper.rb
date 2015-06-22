@@ -26,6 +26,14 @@ module TagHelper
     link_to 'Current Quarter', expenses_path(date: date)
   end
 
+  def back_tag
+    link_to expenses_path do
+      content = content_tag(:span, '&larr;'.html_safe)
+      content += ' Back'
+      content
+    end
+  end
+
   def add_expense_tag
     link_to new_expense_path do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-minus-sign'
