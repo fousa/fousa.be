@@ -1,5 +1,7 @@
 .content
+  %h4.pull-right= export_tag home_path(date: @filter_date, format: :pdf)
   %h1= format_quarter_date @filter_date
+
   .row
     .col-sm-6#expenses-totals
       = render partial: 'expenses/totals', locals: { expenses: @expenses }

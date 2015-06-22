@@ -77,7 +77,16 @@ GEM
     multi_json (1.11.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    pdf-core (0.5.1)
     pg (0.18.2)
+    prawn (2.0.1)
+      pdf-core (~> 0.5.1)
+      ttfunk (~> 1.4.0)
+    prawn-rails (0.1.1)
+      prawn
+      prawn-table
+      rails (>= 3.1.0)
+    prawn-table (0.2.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -132,6 +141,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    ttfunk (1.4.0)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -156,6 +166,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.18.2)
+  prawn (~> 2.0.1)
+  prawn-rails (~> 0.1.1)
   rails (= 4.2.1)
   rails_12factor (~> 0.0.3)
   sass-rails (~> 5.0)

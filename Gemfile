@@ -39,6 +39,14 @@ gem "haml", "~> 4.0.6"
 # [rails_12factor](https://github.com/heroku/rails_12factor)
 gem "rails_12factor", "~> 0.0.3"
 
+# Prawn is a fast, tiny, and nimble PDF generator for Ruby
+# [prawn](http://prawn.majesticseacreature.com)
+gem "prawn", "~> 2.0.1"
+
+# Prawn Handler for RoR 3.x/4.x projects handles and registers pdf formats
+# [prawn-rails](https://github.com/cortiz/prawn-rails)
+gem "prawn-rails", "~> 0.1.1"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

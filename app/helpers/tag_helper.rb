@@ -49,4 +49,12 @@ module TagHelper
       content
     end
   end
+
+  def export_tag path
+    link_to path, target: '_BLANK' do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-new-window'
+      content << " Open document"
+      content
+    end
+  end
 end
