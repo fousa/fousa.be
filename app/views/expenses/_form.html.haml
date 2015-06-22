@@ -1,5 +1,6 @@
 = simple_form_for(@expense) do |f|
-  = f.input :issued_at
+  - date = @expense.issued_at ? l(@expense.issued_at, format: :default) : ''
+  = f.input :issued_at, as: :string, input_html: { class: 'datepicker', value: date }
   = f.input :description
   = f.input :total_price
   = f.input :tax_price

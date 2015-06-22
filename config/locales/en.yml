@@ -30,3 +30,9 @@ en:
         significant: false
         strip_insignificant_zeros: false
         unit: "€"
+
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
