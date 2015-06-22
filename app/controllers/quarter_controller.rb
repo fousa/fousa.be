@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class QuarterController < ApplicationController
   before_action :set_date, only: :show
 
   def show

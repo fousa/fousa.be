@@ -1,5 +1,5 @@
 .content
-  %h4.pull-right= export_tag home_path(date: @filter_date, format: :pdf)
+  %h4.pull-right= export_tag quarter_path(date: @filter_date, format: :pdf)
   %h1= format_quarter_date @filter_date
 
   .row
