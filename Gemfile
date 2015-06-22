@@ -48,3 +48,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
+  # [pg](https://bitbucket.org/ged/ruby-pg)
+  gem "pg", "~> 0.18.2"
+end
