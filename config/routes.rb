@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :expenses, except: :show
+  resources :home, controller: :home, only: :show
 
-  root 'expenses#index'
+  resources :expenses, except: [:show, :index]
+
+  root 'home#show'
 end
