@@ -1,0 +1,36 @@
+module TagHelper
+  def logo_tag
+    link_to root_path do
+      url = 'http://www.fousa.be/assets/fousa-f8325619bc3079782d60103040fa3bdc.svg'
+      image_tag url, class: 'logo', alt: 'Fousa'
+    end
+  end
+
+  def next_paginator_tag date
+    link_to expenses_path(date: date.next_quarter) do
+      content = 'Next '
+      content += content_tag(:span, '&rarr;'.html_safe)
+      content.html_safe
+    end
+  end
+
+  def previous_paginator_tag date
+    link_to expenses_path(date: date.prev_quarter) do
+      content = content_tag(:span, '&larr;'.html_safe)
+      content += ' Previous'
+      content
+    end
+  end
+
+  def current_paginator_tag date
+    link_to 'Current Quarter', expenses_path(date: date)
+  end
+
+  def add_expense_tag
+    link_to new_expense_path do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-minus-sign'
+      content << " Add expense"
+      content
+    end
+  end
+end

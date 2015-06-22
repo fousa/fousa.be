@@ -11,5 +11,74 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require bootstrap
  *= require_self
  */
+
+/*** FONTS ***/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+       url('/assets/glyphicons-halflings-regular.woff') format('woff'), 
+       url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), 
+       url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+/*** MAIN STYLING ***/
+
+body {
+  padding: 20px;
+}
+
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.container-narrow > hr {
+  margin: 20px 0;
+}
+
+/*** NAVIGATION ***/
+
+.nav li a, .nav li a:focus {
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.logo {
+  height: 60px;
+  padding-left: 10px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.jumbotron .content {
+  text-align: left;
+}
+
+.dropdown-menu {
+  text-align: left;
+}
+
+/* Main Style */
+
+h1 {
+  font-size: 3em !important;
+}
