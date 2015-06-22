@@ -8,7 +8,7 @@ module TagHelper
 
   def next_paginator_tag date
     link_to quarter_path(date: date.next_quarter) do
-      content = 'Next '
+      content = "#{format_quarter_date(date.next_quarter)} "
       content += content_tag(:span, '&rarr;'.html_safe)
       content.html_safe
     end
@@ -17,13 +17,13 @@ module TagHelper
   def previous_paginator_tag date
     link_to quarter_path(date: date.prev_quarter) do
       content = content_tag(:span, '&larr;'.html_safe)
-      content += ' Previous'
+      content += " #{format_quarter_date(date.prev_quarter)}"
       content
     end
   end
 
   def current_paginator_tag date
-    link_to 'Current Quarter', quarter_path(date: date)
+    link_to format_quarter_date(date), quarter_path(date: date)
   end
 
   def back_tag
