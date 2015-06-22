@@ -6,6 +6,9 @@ class InvoicesController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.js { render layout: false }
+    end
   end
 
   def create
@@ -21,12 +24,12 @@ class InvoicesController < ApplicationController
   end
 
   def update
+    old_date = @invoice.invoiced_at
+    if @invoice.update(invoice_params)
+      @invoices = Invoice.by_quarter old_date
+    end
     respond_to do |format|
-      if @invoice.update(invoice_params)
-        format.html { redirect_to home_path(date: @invoice.invoiced_at), notice: 'Invoice was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+      format.js { render layout: false }
     end
   end
 
