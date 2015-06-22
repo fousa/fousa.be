@@ -3,6 +3,9 @@ class InvoicesController < ApplicationController
 
   def new
     @invoice = Invoice.new
+    respond_to do |format|
+      format.js { render layout: false }
+    end
   end
 
   def edit
@@ -13,13 +16,11 @@ class InvoicesController < ApplicationController
 
   def create
     @invoice = Invoice.new(invoice_params)
-
+    if @invoice.save
+      @invoices = Invoice.by_quarter @invoice.invoiced_at
+    end
     respond_to do |format|
-      if @invoice.save
-        format.html { redirect_to home_path(date: @invoice.invoiced_at), notice: 'Invoice was successfully created.' }
-      else
-        format.html { render :new }
-      end
+      format.js { render 'update', layout: false }
     end
   end
 
@@ -29,7 +30,7 @@ class InvoicesController < ApplicationController
       @invoices = Invoice.by_quarter old_date
     end
     respond_to do |format|
-      format.js { render layout: false }
+      format.js { render 'update', layout: false }
     end
   end
 

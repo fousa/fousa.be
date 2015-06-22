@@ -35,7 +35,7 @@ module TagHelper
   end
 
   def add_invoice_tag
-    link_to new_invoice_path do
+    link_to new_invoice_path, remote: true do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-plus-sign'
       content << " Add invoice"
       content
@@ -43,7 +43,7 @@ module TagHelper
   end
 
   def add_expense_tag
-    link_to new_expense_path do
+    link_to new_expense_path, remote: true do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-minus-sign'
       content << " Add expense"
       content

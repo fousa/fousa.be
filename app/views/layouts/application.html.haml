@@ -18,3 +18,11 @@
       %hr
       .jumbotron= yield
 
+    .modal.fade#form_modal
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            %button.close{ type: "button", data: { dismiss: "modal" } }
+              %span &times;
+            %h4.modal-title
+          .modal-body

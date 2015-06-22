@@ -3,6 +3,9 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
+    respond_to do |format|
+      format.js { render layout: false }
+    end
   end
 
   def edit
@@ -13,13 +16,11 @@ class ExpensesController < ApplicationController
 
   def create
     @expense = Expense.new(expense_params)
-
+    if @expense.save
+      @expenses = Expense.by_quarter @expense.issued_at
+    end
     respond_to do |format|
-      if @expense.save
-        format.html { redirect_to home_path(date: @expense.issued_at), notice: 'Expense was successfully created.' }
-      else
-        format.html { render :new }
-      end
+      format.js { render 'update', layout: false }
     end
   end
 
@@ -29,7 +30,7 @@ class ExpensesController < ApplicationController
       @expenses = Expense.by_quarter old_date
     end
     respond_to do |format|
-      format.js { render layout: false }
+      format.js { render 'update', layout: false }
     end
   end
 
