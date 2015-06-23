@@ -10,11 +10,14 @@ class QuarterController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.pdf { render layout: false }
       format.zip do
+        overview = QuarterDocument.new(@filter_date, @expenses, @invoices)
+        overview_tmp_file = Tempfile.new("overview_tmp_file_#{Process.pid}.pdf")
+        overview.render_file(overview_tmp_file.path)
         documents =  @expenses.map do |expense|
           [expense.document, "expenses/#{expense.filename}.pdf"] 
         end
+        documents << [overview_tmp_file, 'expenses.pdf']
         zipline(documents, "#{format_quarter_date(@filter_date)}.zip")
       end
     end
