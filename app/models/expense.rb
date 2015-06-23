@@ -1,6 +1,7 @@
 class Expense < ActiveRecord::Base
   validates :issued_at, presence: true
-  validates :description, presence: true
+  validates :description, presence: true, uniqueness: { scope: :issued_at }
+  validates :document, presence: true
 
   mount_uploader :document, DocumentUploader
 
