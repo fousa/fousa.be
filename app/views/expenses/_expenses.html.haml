@@ -14,7 +14,7 @@
           %td{ style: 'width: 30px' }= export_tag expense.document.url
         - else
           %td{ style: 'width: 30px' }
-        %td.right{ style: 'width: 110px' }= l expense.issued_at, format: :long
+        %td.right{ style: 'width: 130px' }= l expense.issued_at, format: :long
         %td
           - if expense.complete?
             = expense.description
