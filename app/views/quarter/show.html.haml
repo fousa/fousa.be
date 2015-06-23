@@ -12,7 +12,10 @@
     %nav
       %ul.pager
         %li.previous= previous_paginator_tag(@filter_date).html_safe
-        %li.current= current_paginator_tag(Date.today).html_safe
+        - if Date.today.beginning_of_quarter == @filter_date.beginning_of_quarter
+          %li.current.disabled= current_paginator_tag(Date.today).html_safe
+        - else
+          %li.current= current_paginator_tag(Date.today).html_safe
         %li.next= next_paginator_tag(@filter_date).html_safe
   
   .row
