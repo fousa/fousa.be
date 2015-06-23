@@ -21,4 +21,8 @@ class Expense < ActiveRecord::Base
   def date
     issued_at
   end
+
+  def net_price
+    (total_price || 0) - (tax_price || 0)
+  end
 end

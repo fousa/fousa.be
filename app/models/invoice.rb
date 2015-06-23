@@ -28,6 +28,10 @@ class Invoice < ActiveRecord::Base
     "#{invoiced_at.year}/#{sprintf("%03d", number)}"
   end
 
+  def net_price
+    (total_price || 0) - (tax_price || 0)
+  end
+
   private
 
   def generate_number

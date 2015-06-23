@@ -12,8 +12,8 @@
 
       %tbody
         - @quarters.each do |quarter, exin|
-          - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.total_price || 0 }
-          - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.total_price || 0 }
+          - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.net_price || 0 }
+          - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.net_price || 0 }
           %tr
             %td{ style: 'width: 30px' }= export_tag quarter_path(date: quarter, format: :zip)
             %td= format_quarter_date(quarter)
