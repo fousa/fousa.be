@@ -47,6 +47,14 @@ gem "prawn", "~> 2.0.1"
 # [prawn-rails](https://github.com/cortiz/prawn-rails)
 gem "prawn-rails", "~> 0.1.1"
 
+# CarrierWave storage for Dropbox
+# [carrierwave-dropbox](https://github.com/robin850/carrierwave-dropbox)
+gem "carrierwave-dropbox", "~> 1.2.1"
+
+# Remotipart is a Ruby on Rails gem enabling remote multipart forms (AJAX styl
+# [remotipart](http://opensource.alfajango.com/remotipart/)
+gem "remotipart", "~> 1.2.1"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

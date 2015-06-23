@@ -1,10 +1,11 @@
 .content
-  = simple_form_for(@expense, remote: true) do |f|
+  = simple_form_for(@expense, remote: true, multipart: true) do |f|
     - date = @expense.issued_at ? l(@expense.issued_at, format: :default) : ''
     = f.input :issued_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :description
     = f.input :total_price
     = f.input :tax_price
+    = f.input :document
     = f.button :submit
 
 :javascript
