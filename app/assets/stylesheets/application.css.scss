@@ -41,6 +41,12 @@ body {
   margin: 20px 0;
 }
 
+/*** FIXES ***/
+
+.table-bordered > thead > tr > th {
+  border-bottom-width: 0;
+}
+
 /*** NAVIGATION ***/
 
 .nav li a, .nav li a:focus {
