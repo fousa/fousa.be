@@ -17,4 +17,8 @@ class Expense < ActiveRecord::Base
   def filename
     "#{I18n.l(issued_at, format: :filename)} - #{description}"
   end
+
+  def date
+    issued_at
+  end
 end

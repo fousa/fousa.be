@@ -3,5 +3,5 @@
   $('#expenses').html("<%= escape_javascript(render(partial: 'expenses/expenses', locals: { expenses: @expenses })) %>");
   $('#form_modal').modal('hide')
 <% else %>
-  $("#form_modal .modal-body").html("<%= escape_javascript(render 'edit') %>");
+  $("#form_modal .modal-body").html("<%= escape_javascript(render 'form') %>");
 <% end %>

@@ -1,10 +1,16 @@
 # encoding: utf-8
 
 class DocumentUploader < CarrierWave::Uploader::Base
+  include DateHelper
+
   storage :dropbox
 
+  def filename
+    "#{model.filename}.pdf"
+  end
+
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    format_quarter_date(model.date)
   end
 
   def extension_white_list
