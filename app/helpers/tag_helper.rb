@@ -34,6 +34,14 @@ module TagHelper
     end
   end
 
+  def quarters_tag
+    link_to quarter_path do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-list'
+      content << " Quarters"
+      content
+    end
+  end
+
   def add_invoice_tag
     link_to new_invoice_path, remote: true do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-plus-sign'

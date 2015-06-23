@@ -1,0 +1,26 @@
+.content
+  %h1 Dashboard
+
+  .row
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Quarter
+          %th Total expenses
+          %th Total income
+          %th Total net
+
+      %tbody
+        - @quarters.each do |quarter, exin|
+          - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.total_price || 0 }
+          - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.total_price || 0 }
+          %tr
+            %td= format_quarter_date(quarter)
+            %td= number_to_currency(expenses)
+            %td= number_to_currency(incomes)
+            - net = incomes - expenses
+            %td
+              - if net >= 0
+                %span{ class: 'label label-success' }= number_to_currency(net)
+              - else
+                %span{ class: 'label label-danger' }= number_to_currency(net)

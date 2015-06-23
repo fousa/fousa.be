@@ -15,4 +15,8 @@ class Invoice < ActiveRecord::Base
   def filename
     "#{I18n.l(invoiced_at, format: :filename)} - #{name}"
   end
+
+  def date
+    invoiced_at
+  end
 end
