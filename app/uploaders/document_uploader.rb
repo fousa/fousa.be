@@ -5,7 +5,7 @@ class DocumentUploader < CarrierWave::Uploader::Base
   include DateHelper
 
   def store_dir
-    "/#{format_quarter_date(model.date)}"
+    "#{format_quarter_date(model.date)}"
   end
 
   def filename
