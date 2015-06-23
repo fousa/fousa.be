@@ -11,10 +11,12 @@ class QuarterController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf { render layout: false }
-      format.zip {
-        documents =  @expenses.map { |expense| [expense.document, "#{expense.filename}.pdf"] }
+      format.zip do
+        documents =  @expenses.map do |expense|
+          [expense.document, "expenses/#{expense.filename}.pdf"] 
+        end
         zipline(documents, "#{format_quarter_date(@filter_date)}.zip")
-      }
+      end
     end
   end
 
