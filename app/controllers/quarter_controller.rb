@@ -1,4 +1,8 @@
 class QuarterController < ApplicationController
+  include ActionController::Streaming
+  include Zipline
+  include DateHelper
+
   before_action :set_date, only: :show
 
   def show
@@ -8,6 +12,10 @@ class QuarterController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf { render layout: false }
+      format.zip {
+        documents =  @expenses.map { |expense| [expense.document, "#{expense.filename}.pdf"] }
+        zipline(documents, "#{format_quarter_date(@filter_date)}.zip")
+      }
     end
   end
 

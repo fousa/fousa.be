@@ -51,6 +51,10 @@ gem "prawn-rails", "~> 0.1.1"
 # [carrierwave_direct](https://github.com/dwilkie/carrierwave_direct)
 gem "carrierwave_direct", "~> 0.0.15"
 
+# this is a giant pile of hax that may let you stream dynamically generated zi
+# [zipline](http://github.com/fringd/zipline)
+gem "zipline", "~> 0.0.10"
+
 # Remotipart is a Ruby on Rails gem enabling remote multipart forms (AJAX styl
 # [remotipart](http://opensource.alfajango.com/remotipart/)
 gem "remotipart", "~> 1.2.1"
