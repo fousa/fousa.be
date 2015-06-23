@@ -4,6 +4,8 @@ class Invoice < ActiveRecord::Base
 
   before_validation :generate_number
 
+  attr_accessor :another
+
   scope :by_quarter, ->(date) do
     where('invoices.invoiced_at >= ?', date.beginning_of_quarter)
     .where('invoices.invoiced_at <= ?', date.end_of_quarter)
