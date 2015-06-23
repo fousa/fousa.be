@@ -1,7 +1,12 @@
 <% if @expense.valid? %>
   $('#expenses-totals').html("<%= escape_javascript(render(partial: 'expenses/totals', locals: { expenses: @expenses })) %>");
   $('#expenses').html("<%= escape_javascript(render(partial: 'expenses/expenses', locals: { expenses: @expenses })) %>");
-  $('#form_modal').modal('hide')
+  <% if params[:expense][:another] == '1' %>
+    <% @expense = Expense.new({ another: '1' }) %>
+    $("#form_modal .modal-body").html("<%= escape_javascript(render 'form') %>");
+  <% else %>
+    $('#form_modal').modal('hide')
+  <% end %>
 <% else %>
   $("#form_modal .modal-body").html("<%= escape_javascript(render 'form') %>");
 <% end %>

@@ -4,6 +4,8 @@ class Expense < ActiveRecord::Base
 
   mount_uploader :document, DocumentUploader
 
+  attr_accessor :another
+
   scope :by_quarter, ->(date) do
     where('expenses.issued_at >= ?', date.beginning_of_quarter)
     .where('expenses.issued_at <= ?', date.end_of_quarter)
