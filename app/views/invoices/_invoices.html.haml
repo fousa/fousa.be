@@ -1,23 +1,23 @@
 %table.table.table-hover.table-bordered
   %thead
     %tr
-      %th Invoiced at
+      %th.right Invoiced at
       %th Name
-      %th Total price
-      %th.hidden-xs Tax price
+      %th.right Total price
+      %th.hidden-xs.right Tax price
       %th.hidden-xs{ colspan: '1' }
 
   %tbody
     - invoices.each do |invoice|
       %tr{ id: "invoice-#{invoice.id}" }
-        %td= l invoice.invoiced_at, format: :long
+        %td.right= l invoice.invoiced_at, format: :long
         %td
           - if invoice.complete?
             = invoice.name
           - else
             %span.label.label-danger= invoice.name
-        %td= number_to_currency invoice.total_price
-        %td.hidden-xs= number_to_currency invoice.tax_price
+        %td.right= number_to_currency invoice.total_price
+        %td.hidden-xs.right= number_to_currency invoice.tax_price
         %td.hidden-xs
           = link_to 'edit', edit_invoice_path(invoice), remote: true
           = '-'

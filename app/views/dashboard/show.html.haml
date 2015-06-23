@@ -6,9 +6,9 @@
       %thead
         %tr
           %th Quarter
-          %th Total expenses
-          %th Total income
-          %th Total net
+          %th.right Total expenses
+          %th.right Total income
+          %th.right Total net
 
       %tbody
         - @quarters.each do |quarter, exin|
@@ -16,10 +16,10 @@
           - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.total_price || 0 }
           %tr
             %td= format_quarter_date(quarter)
-            %td= number_to_currency(expenses)
-            %td= number_to_currency(incomes)
+            %td.right= number_to_currency(expenses)
+            %td.right= number_to_currency(incomes)
             - net = incomes - expenses
-            %td
+            %td.right
               - if net >= 0
                 %span{ class: 'label label-success' }= number_to_currency(net)
               - else

@@ -2,10 +2,10 @@
   %thead
     %tr
       %th
-      %th Issued at
+      %th.right Issued at
       %th Description
-      %th Total price
-      %th.hidden-xs Tax price
+      %th.right Total price
+      %th.hidden-xs.right Tax price
       %th.hidden-xs
 
   %tbody
@@ -15,14 +15,14 @@
           %td= export_image_tag expense.document.url
         - else
           %td
-        %td= l expense.issued_at, format: :long
+        %td.right= l expense.issued_at, format: :long
         %td
           - if expense.complete?
             = expense.description
           - else
             %span.label.label-danger= expense.description
-        %td= number_to_currency expense.total_price
-        %td.hidden-xs= number_to_currency expense.tax_price
+        %td.right= number_to_currency expense.total_price
+        %td.hidden-xs.right= number_to_currency expense.tax_price
         %td.hidden-xs
           = link_to 'edit', edit_expense_path(expense), remote: true
           = '-'
