@@ -5,16 +5,17 @@
     %table.table.table-hover.table-bordered
       %thead
         %tr
-          %th Quarter
-          %th.right Total expenses
-          %th.right Total income
-          %th.right Total net
+          %th.right{ colspan: '2' } Quarter
+          %th.right{ style: 'width: 130px' } Total expenses
+          %th.right{ style: 'width: 130px' } Total income
+          %th.right{ style: 'width: 130px' } Total net
 
       %tbody
         - @quarters.each do |quarter, exin|
           - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.total_price || 0 }
           - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.total_price || 0 }
           %tr
+            %td{ style: 'width: 30px' }= export_tag quarter_path(date: quarter, format: :zip)
             %td= format_quarter_date(quarter)
             %td.right= number_to_currency(expenses)
             %td.right= number_to_currency(incomes)
