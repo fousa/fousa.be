@@ -11,7 +11,10 @@
   %tbody
     - expenses.each do |expense|
       %tr{ id: "expense-#{expense.id}" }
-        %td= export_image_tag expense.document.url
+        - if expense.document.file.exists?
+          %td= export_image_tag expense.document.url
+        - else
+          %td
         %td= l expense.issued_at, format: :long
         %td
           - if expense.complete?

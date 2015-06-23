@@ -47,9 +47,9 @@ gem "prawn", "~> 2.0.1"
 # [prawn-rails](https://github.com/cortiz/prawn-rails)
 gem "prawn-rails", "~> 0.1.1"
 
-# CarrierWave storage for Dropbox
-# [carrierwave-dropbox](https://github.com/robin850/carrierwave-dropbox)
-gem "carrierwave-dropbox", "~> 1.2.1"
+# Process your uploads in the background by uploading directly to S3
+# [carrierwave_direct](https://github.com/dwilkie/carrierwave_direct)
+gem "carrierwave_direct", "~> 0.0.15"
 
 # Remotipart is a Ruby on Rails gem enabling remote multipart forms (AJAX styl
 # [remotipart](http://opensource.alfajango.com/remotipart/)

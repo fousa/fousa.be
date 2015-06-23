@@ -1,8 +1,9 @@
 CarrierWave.configure do |config|
-  config.dropbox_app_key = ENV["DROPBOX_APP_KEY"]
-  config.dropbox_app_secret = ENV["DROPBOX_APP_SECRET"]
-  config.dropbox_access_token = ENV["DROPBOX_ACCESS_TOKEN"]
-  config.dropbox_access_token_secret = ENV["DROPBOX_ACCESS_TOKEN_SECRET"]
-  config.dropbox_user_id = ENV["DROPBOX_USER_ID"]
-  config.dropbox_access_type = "app_folder"
+  config.fog_credentials = {
+    :provider               => 'AWS',
+    :aws_access_key_id      => ENV["AWS_ACCESS_KEY"],
+    :aws_secret_access_key  => ENV["AWS_SECRET_ACCESS_KEY"],
+    :region                 => ENV['AWS_REGION']
+  }
+  config.fog_directory  = ENV["AWS_BUCKET"] 
 end
