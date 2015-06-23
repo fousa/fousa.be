@@ -59,17 +59,20 @@ module TagHelper
   end
 
   def export_tag path
-    link_to path, target: '_BLANK' do
-      content = content_tag :i, nil, class: 'glyphicon glyphicon-download'
-      content << " Export"
-      content
+    link_to path do
+      content_tag :i, nil, class: 'glyphicon glyphicon-download'
     end
   end
 
-  def export_image_tag path
-    link_to path do
-      content = content_tag :i, nil, class: 'glyphicon glyphicon-download'
-      content
+  def edit_tag path, options
+    link_to path, options do
+      content_tag :i, nil, class: 'glyphicon glyphicon-edit'
+    end
+  end
+
+  def delete_tag path, options
+    link_to path, options do
+      content_tag :i, nil, class: 'glyphicon glyphicon-trash'
     end
   end
 end

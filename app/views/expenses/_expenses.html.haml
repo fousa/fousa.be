@@ -1,21 +1,20 @@
 %table.table.table-hover.table-bordered
   %thead
     %tr
-      %th
-      %th.right Issued at
+      %th.right{ colspan: '2' } Issued at
       %th Description
-      %th.right Total price
-      %th.hidden-xs.right Tax price
-      %th.hidden-xs
+      %th.right{ style: 'width: 90px' } Total price
+      %th.hidden-xs.right{ style: 'width: 90px' } Tax price
+      %th.hidden-xs{ style: 'width: 50px' }
 
   %tbody
     - expenses.each do |expense|
       %tr{ id: "expense-#{expense.id}" }
         - if expense.document.file.exists?
-          %td= export_image_tag expense.document.url
+          %td{ style: 'width: 30px' }= export_tag expense.document.url
         - else
-          %td
-        %td.right= l expense.issued_at, format: :long
+          %td{ style: 'width: 30px' }
+        %td.right{ style: 'width: 110px' }= l expense.issued_at, format: :long
         %td
           - if expense.complete?
             = expense.description
@@ -24,7 +23,6 @@
         %td.right= number_to_currency expense.total_price
         %td.hidden-xs.right= number_to_currency expense.tax_price
         %td.hidden-xs
-          = link_to 'edit', edit_expense_path(expense), remote: true
-          = '-'
-          = link_to 'destroy', expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+          = edit_tag edit_expense_path(expense), remote: true
+          = delete_tag expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
 

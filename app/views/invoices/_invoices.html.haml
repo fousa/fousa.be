@@ -1,15 +1,18 @@
 %table.table.table-hover.table-bordered
   %thead
     %tr
-      %th.right Invoiced at
+      %th.right{ colspan: '2' } N°
+      %th.right{ style: 'width: 110px' } Invoiced at
       %th Name
-      %th.right Total price
-      %th.hidden-xs.right Tax price
-      %th.hidden-xs{ colspan: '1' }
+      %th.right{ style: 'width: 90px' } Total price
+      %th.hidden-xs.right{ style: 'width: 90px' } Tax price
+      %th.hidden-xs{ style: 'width: 50px' }
 
   %tbody
     - invoices.each do |invoice|
       %tr{ id: "invoice-#{invoice.id}" }
+        %td{ style: 'width: 30px' }= export_tag ''
+        %td.right{ style: 'width: 70px' }= invoice.invoice_number
         %td.right= l invoice.invoiced_at, format: :long
         %td
           - if invoice.complete?
@@ -19,7 +22,6 @@
         %td.right= number_to_currency invoice.total_price
         %td.hidden-xs.right= number_to_currency invoice.tax_price
         %td.hidden-xs
-          = link_to 'edit', edit_invoice_path(invoice), remote: true
-          = '-'
-          = link_to 'destroy', invoice, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+          = edit_tag edit_invoice_path(invoice), remote: true
+          = delete_tag invoice, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
 
