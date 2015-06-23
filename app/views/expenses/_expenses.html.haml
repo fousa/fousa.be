@@ -1,15 +1,20 @@
 %table.table.table-hover.table-bordered
   %thead
     %tr
+      %th
       %th Issued at
       %th Description
       %th Total price
       %th.hidden-xs Tax price
-      %th.hidden-xs{ colspan: '1' }
+      %th.hidden-xs
 
   %tbody
     - expenses.each do |expense|
       %tr{ id: "expense-#{expense.id}" }
+        - if expense.document?
+          %td= export_image_tag expense.document.url
+        - else
+          %td
         %td= l expense.issued_at, format: :long
         %td
           - if expense.complete?

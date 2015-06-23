@@ -11,7 +11,7 @@ class Expense < ActiveRecord::Base
   end
 
   def complete?
-    total_price.present? && tax_price.present?
+    total_price.present? && tax_price.present? && document?
   end
 
   def filename
