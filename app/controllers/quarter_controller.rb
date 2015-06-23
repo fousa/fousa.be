@@ -1,5 +1,4 @@
 class QuarterController < ApplicationController
-  include ActionController::Streaming
   include Zipline
   include DateHelper
 
