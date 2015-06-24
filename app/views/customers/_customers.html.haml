@@ -1,0 +1,18 @@
+%table.table.table-hover.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th VAT
+      %th City
+      %th.hidden-xs{ style: 'width: 50px' }
+
+  %tbody
+    - customers.each do |customer|
+      %tr{ id: "customer-#{customer.id}" }
+        %td= customer.name
+        %td= customer.vat_number
+        %td= customer.city
+        %td.hidden-xs
+          = edit_tag edit_customer_path(customer), remote: true
+          = delete_tag customer, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+

@@ -67,6 +67,10 @@ gem "remotipart", "~> 1.2.1"
 # [nprogress-rails](https://github.com/caarlos0/nprogress-rails)
 gem "nprogress-rails", "~> 0.1.6.7"
 
+# Provides a simple helper to get an HTML select list of countries.  The list 
+# [country_select](https://github.com/stefanpenner/country_select)
+gem "country_select", "~> 2.2.0"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

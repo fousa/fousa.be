@@ -6,8 +6,9 @@
     = f.input :name
     = f.input :total_price
     = f.input :tax_price
-    .pull-right= f.input :another, as: :boolean, label: 'Add another'
-    = ladda_button_tag t(:generate, scope: [:projects, :form])
+    - if @invoice.new_record?
+      .pull-right= f.input :another, as: :boolean, label: 'Add another'
+    = ladda_button_tag f.object, 'invoice' 
 
 :javascript
   $('.datepicker').datepicker({ 

@@ -13,12 +13,14 @@
       .masterhead
         = logo_tag
         %ul.nav.pull-right.nav-pills
-          - if controller_name == 'dashboard'
+          - if controller_name == 'quarter'
+            %li= add_tag new_invoice_path(filter_date: @filter_date), 'invoice'
+            %li= add_tag new_expense_path(filter_date: @filter_date), 'expense'
+          - elsif controller_name == 'customers'
+            %li= add_tag new_customer_path, 'customer'
+          - else
             %li= customers_tag
             %li= quarters_tag
-          - else
-            %li= add_invoice_tag
-            %li= add_expense_tag
       %hr
       .jumbotron= yield
 

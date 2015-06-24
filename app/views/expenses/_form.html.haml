@@ -7,8 +7,9 @@
     = f.input :total_price
     = f.input :tax_price
     = f.input :document
-    .pull-right= f.input :another, as: :boolean, label: 'Add another'
-    = ladda_button_tag t(:generate, scope: [:projects, :form])
+    - if @expense.new_record?
+      .pull-right= f.input :another, as: :boolean, label: 'Add another'
+    = ladda_button_tag f.object, 'expense' 
     
 
 :javascript

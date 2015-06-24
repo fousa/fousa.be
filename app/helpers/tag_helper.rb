@@ -6,9 +6,10 @@ module TagHelper
     end
   end
 
-  def ladda_button_tag(text)
+  def ladda_button_tag(object, type)
     data = { style: 'expand-right', 'spinner-size' => '30px' }
     content_tag :button, class: 'btn btn-success ladda-button', type: :submit, data: data do
+      text = object.new_record? ? "Create" : "Update"
       content_tag :span, text, class: 'ladda-label'
     end
   end
@@ -57,18 +58,10 @@ module TagHelper
     end
   end
 
-  def add_invoice_tag
-    link_to new_invoice_path(filter_date: @filter_date), remote: true do
+  def add_tag path, name
+    link_to path, remote: true do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-plus-sign'
-      content << " Add invoice"
-      content
-    end
-  end
-
-  def add_expense_tag
-    link_to new_expense_path(filter_date: @filter_date), remote: true do
-      content = content_tag :i, nil, class: 'glyphicon glyphicon-minus-sign'
-      content << " Add expense"
+      content << " Add #{name}"
       content
     end
   end
