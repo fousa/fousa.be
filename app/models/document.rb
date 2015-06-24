@@ -17,16 +17,17 @@ class Document
   end
 
   def draw_table data
-    maxed_width = (@pdf.bounds.width - 80 - 80) / 2
+    maxed_width = (@pdf.bounds.width - 80 - 80 - 80) / 2
     @pdf.table(data, header: true, 
                      width: @pdf.bounds.width, 
                      row_colors: ['eeeeee', 'ffffff'],
-                     column_widths: [80, maxed_width, maxed_width, 80],
+                     column_widths: [80, maxed_width, maxed_width, 80, 80],
                      cell_style: { borders: {}, padding: 7, size: 8 }) do |table|
       data.each_with_index { |d, i| table.row(i).style(:borders => [:bottom]) }
 
       table.column(0).style(align: :right)
       table.column(3).style(align: :right)
+      table.column(4).style(align: :right)
     end
   end
 

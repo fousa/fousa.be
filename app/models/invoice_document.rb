@@ -97,7 +97,7 @@ class InvoiceDocument < Document
   def draw_totals
     data = [
         ['Subtotal', number_to_currency(@invoice.net_price)],
-        ['VAT', number_to_currency(@invoice.tax_price)],
+        ["VAT #{number_to_percentage(@invoice.tax_percentage)}", number_to_currency(@invoice.tax_price)],
         ['Total', number_to_currency(@invoice.total_price)]
     ]
     @pdf.table data, column_widths: [@pdf.bounds.width - 100, 100],

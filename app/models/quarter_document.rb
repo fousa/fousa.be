@@ -30,6 +30,7 @@ class QuarterDocument < Document
       "Date".upcase,
       "Description".upcase,
       "Filename".upcase,
+      "Vat price".upcase,
       "Total price".upcase
     ]]
     @invoices.each do |invoice|
@@ -37,6 +38,7 @@ class QuarterDocument < Document
         I18n.l(invoice.invoiced_at, format: :long),
         invoice.name,
         invoice.filename,
+        number_to_currency(invoice.tax_price),
         number_to_currency(invoice.total_price)
       ]
     end
@@ -51,6 +53,7 @@ class QuarterDocument < Document
       "Date".upcase,
       "Description".upcase,
       "Filename".upcase,
+      "Vat price".upcase,
       "Total price".upcase
     ]]
     @expenses.each do |expense|
@@ -58,6 +61,7 @@ class QuarterDocument < Document
         I18n.l(expense.issued_at, format: :long),
         expense.description,
         expense.filename,
+        number_to_currency(expense.tax_price),
         number_to_currency(expense.total_price)
       ]
     end

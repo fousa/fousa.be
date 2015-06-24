@@ -5,8 +5,8 @@
     = f.input :invoiced_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :name
     = f.input :customer_id, collection: Customer.all
-    = f.input :total_price
-    = f.input :tax_price
+    = f.input :net_price
+    = f.input :tax_percentage
     - if @invoice.new_record?
       .pull-right= f.input :another, as: :boolean, label: 'Add another'
     = ladda_button_tag f.object, 'invoice' 

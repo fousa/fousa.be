@@ -21,6 +21,9 @@
 
 en:
   number:
+    percentage:
+      format:
+        precision: 0
     currency:
       format:
         delimiter: " "

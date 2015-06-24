@@ -1,4 +1,6 @@
 class Invoice < ActiveRecord::Base
+  include ActionView::Helpers
+
   validates :invoiced_at, presence: true
   validates :name, presence: true
   validates :customer, presence: true
@@ -16,7 +18,7 @@ class Invoice < ActiveRecord::Base
   end
 
   def complete?
-    total_price.present? && tax_price.present?
+    net_price.present?
   end
 
   def filename
@@ -31,8 +33,12 @@ class Invoice < ActiveRecord::Base
     "#{invoiced_at.year}/#{sprintf("%03d", number)}"
   end
 
-  def net_price
-    (total_price || 0) - (tax_price || 0)
+  def total_price
+    (net_price || 0) + tax_price
+  end
+
+  def tax_price
+    (net_price || 0) / 100 * (tax_percentage || 0)
   end
 
   def format_invoice_number
@@ -41,6 +47,10 @@ class Invoice < ActiveRecord::Base
 
   def format_invoiced_at
     "Invoice date: #{I18n.l(invoiced_at, format: :long)}"
+  end
+
+  def format_vat_price
+    "VAT #{number_to_percentage(tax_percentage)}: #{number_to_currency(tax_price)}"
   end
 
   private

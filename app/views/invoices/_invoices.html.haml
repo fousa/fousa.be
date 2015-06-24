@@ -4,7 +4,7 @@
       %th.right{ style: 'width: 150px' } N°
       %th Name
       %th.hidden-xs Customer
-      %th.right{ style: 'width: 100px' } Price
+      %th.right{ style: 'width: 120px' } Price
       %th.hidden-xs{ style: 'width: 90px' }
 
   %tbody
@@ -21,7 +21,7 @@
         %td.hidden-xs= invoice.customer.try :name
         %td.right
           = number_to_currency invoice.total_price
-          %span.subtext= number_to_currency invoice.tax_price
+          %span.subtext= invoice.format_vat_price
         %td.hidden-xs
           = edit_tag edit_invoice_path(invoice), remote: true
           = '&nbsp;'.html_safe
