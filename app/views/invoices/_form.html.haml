@@ -4,6 +4,7 @@
     - date = @invoice.invoiced_at ? l(@invoice.invoiced_at, format: :default) : ''
     = f.input :invoiced_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :name
+    = f.input :customer_id, collection: Customer.all
     = f.input :total_price
     = f.input :tax_price
     - if @invoice.new_record?

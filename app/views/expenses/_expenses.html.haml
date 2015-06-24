@@ -3,8 +3,7 @@
     %tr
       %th.right{ colspan: '2' } Issued at
       %th Description
-      %th.right{ style: 'width: 90px' } Total price
-      %th.hidden-xs.right{ style: 'width: 90px' } Tax price
+      %th.right{ style: 'width: 100px' } Price
       %th.hidden-xs{ style: 'width: 50px' }
 
   %tbody
@@ -20,8 +19,9 @@
             = expense.description
           - else
             %span.label.label-danger= expense.description
-        %td.right= number_to_currency expense.total_price
-        %td.hidden-xs.right= number_to_currency expense.tax_price
+        %td.right
+          = number_to_currency expense.total_price
+          %span.subtext= number_to_currency expense.tax_price
         %td.hidden-xs
           = edit_tag edit_expense_path(expense), remote: true
           = delete_tag expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }

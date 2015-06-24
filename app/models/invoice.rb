@@ -1,8 +1,11 @@
 class Invoice < ActiveRecord::Base
   validates :invoiced_at, presence: true
   validates :name, presence: true
+  validates :customer, presence: true
 
   before_validation :generate_number
+
+  belongs_to :customer
 
   attr_accessor :another
 
