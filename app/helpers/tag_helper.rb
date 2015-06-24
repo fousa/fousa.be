@@ -52,7 +52,7 @@ module TagHelper
 
   def quarters_tag
     link_to quarter_path do
-      content = content_tag :i, nil, class: 'glyphicon glyphicon-list'
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-th-large'
       content << " Quarters"
       content
     end
