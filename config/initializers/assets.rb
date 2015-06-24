@@ -12,4 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.paths << "#{Rails.root}/app/assets/fonts"
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
-
+Rails.application.config.assets.precompile += %w( dashboard.css dashboard.js )

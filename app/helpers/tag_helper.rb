@@ -1,6 +1,6 @@
 module TagHelper
   def logo_tag
-    link_to root_path do
+    link_to dashboard_path do
       image_tag 'fousa.svg', class: 'logo', alt: 'Fousa'
     end
   end
