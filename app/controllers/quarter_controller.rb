@@ -16,8 +16,11 @@ class QuarterController < ApplicationController
                                             disposition: 'inline'
       end
       format.zip do
-        documents =  @expenses.map do |expense|
+        documents = @expenses.select { |e| e.document? }.map do |expense|
           [expense.document, "expenses/#{expense.filename}.pdf"] 
+        end
+        @invoices.map do |invoice|
+          documents << [render_invoice_document(invoice), "invoices/#{invoice.filename}.pdf"] 
         end
         documents << [render_overview_document, "#{format_quarter_date(@filter_date)}.pdf"]
         zipline(documents, "#{format_quarter_date(@filter_date)}.zip")
@@ -34,9 +37,16 @@ class QuarterController < ApplicationController
   end
 
   def render_overview_document
-    overview = QuarterDocument.new(@filter_date, @expenses, @invoices)
-    overview_tmp_file = Tempfile.new("overview_tmp_file_#{Process.pid}.pdf")
-    overview.render_file(overview_tmp_file.path)
-    overview_tmp_file
+    document = QuarterDocument.new(@filter_date, @expenses, @invoices)
+    document_tmp_file = Tempfile.new("#{format_quarter_date(@filter_date)}-#{Process.pid}.pdf")
+    document.render_file(document_tmp_file.path)
+    document_tmp_file
+  end
+
+  def render_invoice_document invoice
+    document = InvoiceDocument.new(invoice)
+    document_tmp_file = Tempfile.new("#{invoice.filename}-#{Process.pid}.pdf")
+    document.render_file(document_tmp_file.path)
+    document_tmp_file
   end
 end
