@@ -41,6 +41,14 @@ module TagHelper
     end
   end
 
+  def customers_tag
+    link_to customers_path do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-user'
+      content << " Customers"
+      content
+    end
+  end
+
   def quarters_tag
     link_to quarter_path do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-list'

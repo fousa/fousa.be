@@ -11,13 +11,14 @@
   %body
     .container-narrow
       .masterhead
+        = logo_tag
         %ul.nav.pull-right.nav-pills
           - if controller_name == 'dashboard'
+            %li= customers_tag
             %li= quarters_tag
           - else
             %li= add_invoice_tag
             %li= add_expense_tag
-        = logo_tag
       %hr
       .jumbotron= yield
 
