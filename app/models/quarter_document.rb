@@ -16,10 +16,9 @@ class QuarterDocument
 
     initialize_fonts
 
-    @pdf.font "Bold"
-    @pdf.text format_quarter_date(@date), size: 30
+    @pdf.font "Corbert"
+    @pdf.text format_quarter_date(@date), size: 30, align: :center
     @pdf.move_down 20
-    @pdf.font "Normal"
 
     draw_invoices
     @pdf.move_down 20
@@ -36,14 +35,7 @@ class QuarterDocument
 
   def initialize_fonts
     @pdf.font_families.update( 
-     "Normal" => { 
-       normal: "#{Rails.root}/app/assets/fonts/Corbert-Regular-webfont.ttf",
-       bold: "#{Rails.root}/app/assets/fonts/Novecentowide-Bold-webfont.ttf" 
-     },
-     "Bold" => { 
-       normal: "#{Rails.root}/app/assets/fonts/Novecentowide-Bold-webfont.ttf",
-       bold: "#{Rails.root}/app/assets/fonts/Novecentowide-Bold-webfont.ttf" 
-     }
+     "Corbert" => { normal: "#{Rails.root}/app/assets/fonts/Corbert-Regular-webfont.ttf" }
     )
   end
 
@@ -52,10 +44,10 @@ class QuarterDocument
     @pdf.move_down 10
 
     data = [[
-      "Date",
-      "Description",
-      "Filename",
-      "Total price"
+      "Date".upcase,
+      "Description".upcase,
+      "Filename".upcase,
+      "Total price".upcase
     ]]
     @invoices.each do |invoice|
       data << [
@@ -73,10 +65,10 @@ class QuarterDocument
     @pdf.move_down 10
 
     data = [[
-      "Date",
-      "Description",
-      "Filename",
-      "Total price"
+      "Date".upcase,
+      "Description".upcase,
+      "Filename".upcase,
+      "Total price".upcase
     ]]
     @expenses.each do |expense|
       data << [
@@ -90,14 +82,14 @@ class QuarterDocument
   end
 
   def draw_table data
+    maxed_width = (@pdf.bounds.width - 80 - 80) / 2
     @pdf.table(data, header: true, 
                      width: @pdf.bounds.width, 
                      row_colors: ['eeeeee', 'ffffff'],
-                     cell_style: { borders: {}, padding: 7 }) do |table|
+                     column_widths: [80, maxed_width, maxed_width, 80],
+                     cell_style: { borders: {}, padding: 7, size: 8 }) do |table|
       data.each_with_index { |d, i| table.row(i).style(:borders => [:bottom]) }
 
-      table.row(0).font_style = :bold
-    
       table.column(0).style(align: :right)
       table.column(3).style(align: :right)
     end
