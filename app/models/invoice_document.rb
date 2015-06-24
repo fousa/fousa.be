@@ -10,7 +10,7 @@ class InvoiceDocument < Document
     super
 
     @x = @pdf.bounds.right - 250
-    @y = @pdf.bounds.top - 30
+    @y = @pdf.bounds.top
 
     draw_logo
     draw_account_data
@@ -24,6 +24,21 @@ class InvoiceDocument < Document
 
   private
 
+  def account
+    {
+      name: ENV['ACCOUNT_NAME'],
+      address: ENV['ACCOUNT_ADDRESS'],
+      postal_code: ENV['ACCOUNT_POSTAL_CODE'],
+      city: ENV['ACCOUNT_CITY'],
+      country: ENV['ACCOUNT_COUNTRY'],
+      phone: ENV['ACCOUNT_PHONE'],
+      email: ENV['ACCOUNT_EMAIL'],
+      bank: ENV['ACCOUNT_BANK'],
+      bank_number: ENV['ACCOUNT_BANK_NUMBER'],
+      vat_number: ENV['ACCOUNT_VAT_NUMBER']
+    }
+  end
+
   def draw_logo
     @pdf.image "#{Rails.root}/app/assets/images/fousa.png", at: [@x, @y], 
                                                             height: 100, 
@@ -34,12 +49,12 @@ class InvoiceDocument < Document
     @pdf.fill_color "#33353F"
     @x += 110
 
-    @pdf.text_box @invoice.customer.name, at: [@x, @y], mode: :fill
-    @pdf.text_box @invoice.customer.name, at: [@x, @y-20], mode: :fill
-    @pdf.text_box @invoice.customer.name, at: [@x, @y-35], mode: :fill
-    @pdf.text_box @invoice.customer.name, at: [@x, @y-50], mode: :fill
-    @pdf.text_box @invoice.customer.name, at: [@x, @y-75], mode: :fill
-    @pdf.text_box @invoice.customer.name, at: [@x, @y-90], mode: :fill
+    @pdf.text_box account[:name], at: [@x, @y], mode: :fill
+    @pdf.text_box account[:address], at: [@x, @y-20], mode: :fill
+    @pdf.text_box "#{account[:postal_code]} #{account[:city]}", at: [@x, @y-35], mode: :fill
+    @pdf.text_box account[:country], at: [@x, @y-50], mode: :fill
+    @pdf.text_box account[:phone], at: [@x, @y-75], mode: :fill
+    @pdf.text_box account[:email], at: [@x, @y-90], mode: :fill
   end
 
   def draw_title
@@ -61,7 +76,7 @@ class InvoiceDocument < Document
   end
 
   def draw_invoice
-    @y -= 170
+    @y -= 200
     @pdf.text_box @invoice.format_invoice_number, at: [@x-100, @y], mode: :fill, align: :right
     @pdf.text_box @invoice.format_invoiced_at, at: [@x-100, @y-15], mode: :fill, align: :right
   end
@@ -91,9 +106,9 @@ class InvoiceDocument < Document
 
   def draw_footer
     y = @pdf.bounds.bottom + 20
-    @pdf.text_box "Jelle Vandebeeck - KBC BANKNUMBER - VAT VATNUMBER", at: [0, y], 
-                                                                       mode: :fill, 
-                                                                       size: 10, 
-                                                                       align: :center
+    @pdf.text_box "#{account[:name]} - #{account[:bank]} #{account[:bank_number]} - VAT #{account[:vat_number]}", at: [0, y], 
+                                                                                                                  mode: :fill, 
+                                                                                                                  size: 10, 
+                                                                                                                  align: :center
   end
 end
