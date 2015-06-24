@@ -4,17 +4,17 @@
     %table.table.table-hover.table-bordered
       %thead
         %tr
-          %th.right{ colspan: '2' } Quarter
+          %th{ style: 'width: 100px' } Quarter
           %th.right{ style: 'width: 130px' } Total expenses
           %th.right{ style: 'width: 130px' } Total income
           %th.right{ style: 'width: 130px' } Total net
+          %th.hidden-xs{ style: 'width: 30px' }
 
       %tbody
         - @quarters.each do |quarter, exin|
           - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.net_price || 0 }
           - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.net_price || 0 }
           %tr
-            %td{ style: 'width: 30px' }= export_tag quarter_path(date: quarter, format: :zip), 'floppy-save'
             %td= format_quarter_date(quarter)
             %td.right= number_to_currency(expenses)
             %td.right= number_to_currency(incomes)
@@ -24,3 +24,4 @@
                 %span{ class: 'label label-success' }= number_to_currency(net)
               - else
                 %span{ class: 'label label-danger' }= number_to_currency(net)
+            %td.hidden-xs= export_tag quarter_path(date: quarter, format: :zip), 'floppy-save'

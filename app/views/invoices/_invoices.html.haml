@@ -1,17 +1,16 @@
 %table.table.table-hover.table-bordered
   %thead
     %tr
-      %th.right{ colspan: '2' } N°
+      %th.right{ style: 'width: 150px' } N°
       %th Name
-      %th Customer
+      %th.hidden-xs Customer
       %th.right{ style: 'width: 100px' } Price
-      %th.hidden-xs{ style: 'width: 50px' }
+      %th.hidden-xs{ style: 'width: 90px' }
 
   %tbody
     - invoices.each do |invoice|
       %tr{ id: "invoice-#{invoice.id}" }
-        %td{ style: 'width: 30px' }= export_tag invoice_path(invoice, format: :pdf)
-        %td.right{ style: 'width: 130px' }
+        %td.right
           = l invoice.invoiced_at, format: :long
           %span.subtext= invoice.invoice_number
         %td
@@ -19,11 +18,14 @@
             = invoice.name
           - else
             %span.label.label-danger= invoice.name
-        %td= invoice.customer.try :name
+        %td.hidden-xs= invoice.customer.try :name
         %td.right
           = number_to_currency invoice.total_price
           %span.subtext= number_to_currency invoice.tax_price
         %td.hidden-xs
           = edit_tag edit_invoice_path(invoice), remote: true
+          = '&nbsp;'.html_safe
           = delete_tag invoice, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+          = '&nbsp;'.html_safe
+          = export_tag invoice_path(invoice, format: :pdf)
 
