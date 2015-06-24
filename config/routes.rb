@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :expenses, except: [:show, :index]
   resources :invoices, except: [:index]
 
-  root 'dashboard#show'
+  root 'home#show'
 end

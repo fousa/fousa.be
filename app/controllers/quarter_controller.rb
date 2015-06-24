@@ -1,4 +1,4 @@
-class QuarterController < ApplicationController
+class QuarterController < AuthenticatedController
   include Zipline
   include DateHelper
 

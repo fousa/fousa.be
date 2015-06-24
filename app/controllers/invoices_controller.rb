@@ -1,4 +1,4 @@
-class InvoicesController < ApplicationController
+class InvoicesController < AuthenticatedController
   before_action :set_invoice, only: [:show, :edit, :update, :destroy]
 
   def show

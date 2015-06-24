@@ -1,4 +1,4 @@
-class DashboardController < ApplicationController
+class DashboardController < AuthenticatedController
   def show
     @quarters = Expense.all + Invoice.all
     @quarters = @quarters.group_by{ |u| u.date.beginning_of_quarter }
