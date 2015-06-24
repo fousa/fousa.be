@@ -5,7 +5,7 @@
     = f.input :address
     = f.input :postal_code
     = f.input :city
-    = f.input :country
+    = f.input :country, as: :string
     - if @customer.new_record?
       .pull-right= f.input :another, as: :boolean, label: 'Add another'
     = ladda_button_tag f.object, 'customer' 
