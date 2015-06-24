@@ -6,10 +6,14 @@
     = f.input :total_price
     = f.input :tax_price
     .pull-right= f.input :another, as: :boolean, label: 'Add another'
-    = f.button :submit
+    = ladda_button_tag t(:generate, scope: [:projects, :form])
 
 :javascript
   $('.datepicker').datepicker({ 
     format: 'dd-mm-yyyy',
     autoclose: true
+  });
+  $('.simple_form').bind('submit', function () {
+    var laddaButton = Ladda.create(document.querySelector('.ladda-button'))
+    laddaButton.start();
   });

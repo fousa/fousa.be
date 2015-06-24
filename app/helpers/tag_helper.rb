@@ -6,6 +6,13 @@ module TagHelper
     end
   end
 
+  def ladda_button_tag(text)
+    data = { style: 'expand-right', 'spinner-size' => '30px' }
+    content_tag :button, class: 'btn btn-success ladda-button', type: :submit, data: data do
+      content_tag :span, text, class: 'ladda-label'
+    end
+  end
+
   def next_paginator_tag date
     link_to quarter_path(date: date.next_quarter) do
       content = "#{format_quarter_date(date.next_quarter)} "
