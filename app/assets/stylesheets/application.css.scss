@@ -19,6 +19,7 @@
  */
 
 /*** FONTS ***/
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: asset-url('glyphicons-halflings-regular.eot');
@@ -28,85 +29,3 @@
        asset-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-/*** MAIN STYLING ***/
-
-body {
-  padding: 20px;
-}
-
-.container-narrow {
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-.container-narrow > hr {
-  margin: 20px 0;
-}
-
-span.subtext {
-  display: block;
-  font-size: 70%;
-  color: #aaaaaa;
-}
-
-/*** FIXES ***/
-
-.table-bordered > thead > tr > th {
-  border-bottom-width: 0;
-}
-
-.label {
-  font-size: 90%;
-}
-
-.right {
-  text-align: right;
-}
-
-/*** Loading ***/
-#nprogress .peg {
-  box-shadow: 0 0 0;
-}
-
-#nprogress .bar {
-  background: #E34D26;
-}
-
-/*** NAVIGATION ***/
-
-.nav li a, .nav li a:focus {
-  font-weight: bold;
-  color: #3a3a3a;
-}
-
-.logo {
-  height: 40px;
-  padding-left: 10px;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  background-color: white;
-}
-
-.jumbotron h1 {
-  font-size: 72px;
-  line-height: 1;
-}
-
-.jumbotron .content {
-  text-align: left;
-}
-
-.dropdown-menu {
-  text-align: left;
-}
-
-/* Main Style */
-
-h1 {
-  font-size: 3em !important;
-}

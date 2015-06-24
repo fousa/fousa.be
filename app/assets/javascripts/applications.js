@@ -15,7 +15,6 @@
 //= require jquery.remotipart
 //= require turbolinks
 //= require bootstrap
-//= require bootstrap-datepicker
 //= require spin
 //= require ladda
 //= require nprogress
