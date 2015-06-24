@@ -9,4 +9,16 @@ class Customer < ActiveRecord::Base
   attr_accessor :another
 
   default_scope { order(:name) }
+
+  def format_city
+    "#{postal_code} #{city}"
+  end
+
+  def format_vat
+    "VAT: #{vat_number}"
+  end
+
+  def format_country
+    country
+  end
 end

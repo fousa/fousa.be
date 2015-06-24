@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :customers, except: [:show]
   resources :expenses, except: [:show, :index]
-  resources :invoices, except: [:show, :index]
+  resources :invoices, except: [:index]
 
   root 'dashboard#show'
 end

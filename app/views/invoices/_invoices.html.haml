@@ -10,7 +10,7 @@
   %tbody
     - invoices.each do |invoice|
       %tr{ id: "invoice-#{invoice.id}" }
-        %td{ style: 'width: 30px' }= export_tag ''
+        %td{ style: 'width: 30px' }= export_tag invoice_path(invoice, format: :pdf)
         %td.right{ style: 'width: 130px' }
           = l invoice.invoiced_at, format: :long
           %span.subtext= invoice.invoice_number

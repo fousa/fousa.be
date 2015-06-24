@@ -1,5 +1,16 @@
 class InvoicesController < ApplicationController
-  before_action :set_invoice, only: [:edit, :update, :destroy]
+  before_action :set_invoice, only: [:show, :edit, :update, :destroy]
+
+  def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        send_file render_invoice_document, filename: "#{@invoice.filename}.pdf", 
+                                           type: "application/pdf", 
+                                           disposition: 'inline'
+      end
+    end
+  end
 
   def new
     @invoice = Invoice.new
@@ -52,6 +63,13 @@ class InvoicesController < ApplicationController
 
   def invoice_params
     params.require(:invoice).permit(:invoiced_at, :name, :total_price, :tax_price, :customer_id)
+  end
+
+  def render_invoice_document
+    invoice = InvoiceDocument.new(@invoice)
+    invoice_tmp_file = Tempfile.new("invoice_tmp_file_#{Process.pid}.pdf")
+    invoice.render_file(invoice_tmp_file.path)
+    invoice_tmp_file
   end
 end
 

@@ -35,6 +35,14 @@ class Invoice < ActiveRecord::Base
     (total_price || 0) - (tax_price || 0)
   end
 
+  def format_invoice_number
+    "Invoice number: #{invoice_number}"
+  end
+
+  def format_invoiced_at
+    "Invoice date: #{I18n.l(invoiced_at, format: :long)}"
+  end
+
   private
 
   def generate_number
