@@ -5,7 +5,7 @@ class Invoice < ActiveRecord::Base
   validates :name, presence: true
   validates :customer, presence: true
 
-  before_validation :generate_number
+  before_create :generate_number
 
   belongs_to :customer
 
