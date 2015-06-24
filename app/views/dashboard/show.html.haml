@@ -15,7 +15,7 @@
           - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.net_price || 0 }
           - expenses = exin.select { |ei| ei.is_a? Expense }.sum { |ei| ei.net_price || 0 }
           %tr
-            %td{ style: 'width: 30px' }= export_tag quarter_path(date: quarter, format: :zip)
+            %td{ style: 'width: 30px' }= export_tag quarter_path(date: quarter, format: :zip), 'floppy-save'
             %td= format_quarter_date(quarter)
             %td.right= number_to_currency(expenses)
             %td.right= number_to_currency(incomes)

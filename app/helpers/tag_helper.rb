@@ -65,9 +65,9 @@ module TagHelper
     end
   end
 
-  def export_tag path
+  def export_tag path, icon='file'
     link_to path do
-      content_tag :i, nil, class: 'glyphicon glyphicon-download'
+      content_tag :i, nil, class: "glyphicon glyphicon-#{icon}"
     end
   end
 
