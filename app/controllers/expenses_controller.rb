@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     if @expense.save
-      @expenses = Expense.by_quarter @expense.issued_at
+      @expenses = Expense.by_quarter filter_date
     end
     respond_to do |format|
       format.js { render 'update', layout: false }
@@ -32,11 +32,19 @@ class ExpensesController < ApplicationController
 
   def destroy
     @expense.destroy
-    @expenses = Expense.by_quarter @expense.issued_at
+    @expenses = Expense.by_quarter filter_date
     render_no_layout
   end
 
   private
+
+  def filter_date
+    if params[:filter_date].nil? || params[:filter_date].blank?
+      Date.today
+    else
+      Date.parse params[:filter_date]
+    end
+  end
 
   def set_expense
     @expense = Expense.find(params[:id])

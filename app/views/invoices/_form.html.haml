@@ -1,5 +1,6 @@
 .content
   = simple_form_for(@invoice, remote: true) do |f|
+    = hidden_field_tag :filter_date, params[:filter_date]
     - date = @invoice.invoiced_at ? l(@invoice.invoiced_at, format: :default) : ''
     = f.input :invoiced_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :name

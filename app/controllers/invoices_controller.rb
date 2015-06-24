@@ -13,7 +13,7 @@ class InvoicesController < ApplicationController
   def create
     @invoice = Invoice.new(invoice_params)
     if @invoice.save
-      @invoices = Invoice.by_quarter @invoice.invoiced_at
+      @invoices = Invoice.by_quarter filter_date
     end
     respond_to do |format|
       format.js { render 'update', layout: false }
@@ -32,11 +32,19 @@ class InvoicesController < ApplicationController
 
   def destroy
     @invoice.destroy
-    @invoices = Invoice.by_quarter @invoice.invoiced_at
+    @invoices = Invoice.by_quarter filter_date
     render_no_layout
   end
 
   private
+
+  def filter_date
+    if params[:filter_date].nil? || params[:filter_date].blank?
+      Date.today
+    else
+      Date.parse params[:filter_date]
+    end
+  end
 
   def set_invoice
     @invoice = Invoice.find(params[:id])
