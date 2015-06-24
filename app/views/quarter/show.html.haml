@@ -1,7 +1,7 @@
 .content
   %h4.pull-right
-    = export_tag quarter_path(date: @filter_date, format: :pdf), 'floppy-save'
-    = export_tag quarter_path(date: @filter_date, format: :zip)
+    = export_tag quarter_path(date: @filter_date, format: :pdf)
+    = export_tag quarter_path(date: @filter_date, format: :zip), 'floppy-save'
   %h1= format_quarter_date @filter_date
 
   .row
