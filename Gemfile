@@ -63,6 +63,10 @@ gem "zipline", "~> 0.0.10"
 # [remotipart](http://opensource.alfajango.com/remotipart/)
 gem "remotipart", "~> 1.2.1"
 
+# This is a gem for the rstacruz' nprogress implementation. It's based on vers
+# [nprogress-rails](https://github.com/caarlos0/nprogress-rails)
+gem "nprogress-rails", "~> 0.1.6.7"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

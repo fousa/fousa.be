@@ -18,4 +18,10 @@
 //= require bootstrap-datepicker
 //= require spin
 //= require ladda
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .
+
+NProgress.configure({
+  showSpinner: false
+});

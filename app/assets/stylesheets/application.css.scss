@@ -14,6 +14,8 @@
  *= require bootstrap
  *= require bootstrap-datepicker3
  *= require ladda-themeless 
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require_self
  */
 
@@ -54,6 +56,15 @@ body {
 
 .right {
   text-align: right;
+}
+
+/*** Loading ***/
+#nprogress .peg {
+  box-shadow: 0 0 0;
+}
+
+#nprogress .bar {
+  background: #E34D26;
 }
 
 /*** NAVIGATION ***/
