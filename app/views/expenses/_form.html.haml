@@ -4,8 +4,13 @@
     - date = @expense.issued_at ? l(@expense.issued_at, format: :default) : ''
     = f.input :issued_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :description
-    = f.input :total_price
-    = f.input :tax_price
+    = f.input :total_price, :wrapper => :append do
+      = f.input_field :total_price, class: 'form-control'
+      .input-group-addon €
+    = f.input :tax_price, :wrapper => :append do
+      = f.input_field :tax_price, class: 'form-control'
+      .input-group-addon €
+    
     = f.input :document
     - if @expense.new_record?
       .pull-right= f.input :another, as: :boolean, label: 'Add another'

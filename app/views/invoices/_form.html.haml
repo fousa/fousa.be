@@ -5,8 +5,12 @@
     = f.input :invoiced_at, as: :string, input_html: { class: 'datepicker', value: date }
     = f.input :name
     = f.input :customer_id, collection: Customer.all
-    = f.input :net_price
-    = f.input :tax_percentage
+    = f.input :net_price, :wrapper => :append do
+      = f.input_field :net_price, class: 'form-control'
+      .input-group-addon €
+    = f.input :tax_percentage, as: :integer, :wrapper => :append do
+      = f.input_field :tax_percentage, class: 'form-control'
+      .input-group-addon %
     - if @invoice.new_record?
       .pull-right= f.input :another, as: :boolean, label: 'Add another'
     = ladda_button_tag f.object, 'invoice' 
