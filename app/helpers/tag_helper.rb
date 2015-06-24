@@ -1,8 +1,7 @@
 module TagHelper
   def logo_tag
     link_to root_path do
-      url = 'https://fousa.herokuapp.com/assets/fousa-f8325619bc3079782d60103040fa3bdc.svg'
-      image_tag url, class: 'logo', alt: 'Fousa'
+      image_tag 'fousa.svg', class: 'logo', alt: 'Fousa'
     end
   end
 
