@@ -23,3 +23,9 @@
 NProgress.configure({
   showSpinner: false
 });
+
+$(function() {
+  setTimeout(function(){
+      $('.logo').addClass('magictime tinUpIn');
+  }, 300);
+});

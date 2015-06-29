@@ -13,8 +13,8 @@
  *= require bootstrap
  *= require bootstrap-datepicker3
  *= require ladda-themeless 
- *= require nprogress
- *= require nprogress-bootstrap
+ *= require grid 
+ *= require animate 
  *= require_self
  */
 
@@ -29,3 +29,150 @@
        asset-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+/*** COMMON ***/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: medium;
+}
+
+/*** BANNER ***/
+
+.banner {
+
+  width: 100%;
+  height: 320px;
+
+  position: absolute;
+  top: 50%; 
+
+  margin-top: -160px;
+
+  text-align: center;
+}
+
+.banner img {
+  height: 200px;
+  width: 200px;
+
+  margin: 0 auto;
+
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+h1 {
+  font-size: 400%;
+	font-weight: 300;
+  text-align: center;
+	text-transform: uppercase;
+
+  margin: 0;
+}
+
+h1 .title {
+}
+
+h1 .subtitle {
+  display: block;
+	font-weight: 800;
+  font-size: 50%;
+
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/*** CONTENT ***/
+
+.arrow {
+  width: 100%;
+  height: 20px;
+
+  position: absolute;
+  top: 90%;
+
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.arrow a:after {
+  clear:both;
+  display:block;
+  position:relative;
+  top:-6px;
+  left:10px;
+  content: "";
+  height:0;
+  width:0;
+  padding:0;
+  margin:-8px auto;
+  border:8px solid transparent;
+  border-top-color: #E34D26;
+}
+
+.content {
+  width: 100%;
+
+  position: absolute;
+  top: 100%;
+}
+
+/*** BLOCK ***/
+
+h3 {
+	text-transform: uppercase;
+  text-align: center;
+  font-size: 250%;
+	font-weight: 300;
+  
+  display: block;
+  padding: 2em 1em;
+}
+
+.boxed {
+  width: 50%;
+
+  margin: 0 auto;
+} 
+
+.boxed p {
+  font-size: 150%;
+	font-weight: 300;
+  margin-bottom: 1.5em;
+}
+
+/*** RESPONSIVE ***/
+
+@media only screen and (max-device-width: 480px) {
+  .banner {
+    height: 220px;
+
+    margin-top: -110px;
+  }
+  .logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 170%;
+  }
+
+  .boxed {
+    width: 100%;
+    background-color: green;
+    padding: 0 1em;
+  } 
+
+  .boxed p {
+    font-size: 100%;
+  }
+}
