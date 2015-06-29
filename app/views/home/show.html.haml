@@ -14,46 +14,15 @@
 
   %h3 Here are the apps I created:
   .grid
-    %figure.effect-goliath
-      = image_tag 'test.jpg'
-      %figcaption
-        %h2 
-          GPX Reader
-          %span for iOS
-        %p Read your GPX and TCX files on your iOS device.
-        %a View
-    %figure.effect-goliath
-      = image_tag 'test.jpg'
-      %figcaption
-        %h2 
-          GPX Reader
-          %span for iOS
-        %p Read your GPX and TCX files on your iOS device.
-        %a View
-    %figure.effect-goliath
-      = image_tag 'test.jpg'
-      %figcaption
-        %h2 
-          GPX Reader
-          %span for iOS
-        %p Read your GPX and TCX files on your iOS device.
-        %a View
-    %figure.effect-goliath
-      = image_tag 'test.jpg'
-      %figcaption
-        %h2 
-          GPX Reader
-          %span for iOS
-        %p Read your GPX and TCX files on your iOS device.
-        %a View
-    %figure.effect-goliath
-      = image_tag 'test.jpg'
-      %figcaption
-        %h2 
-          GPX Reader
-          %span for iOS
-        %p Read your GPX and TCX files on your iOS device.
-        %a View
+    - @apps.each do |app|
+      %figure.effect-goliath
+        = image_tag 'test.jpg'
+        %figcaption
+          %h2 
+            = app.name
+            %span= app.name_suffix
+          %p= app.short_text
+          %a View
 
   .content
     %h3 Want to ask me something?

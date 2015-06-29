@@ -1,0 +1,16 @@
+.content
+  = simple_form_for(@app, remote: true) do |f|
+    = f.input :name
+    = f.input :name_suffix
+    = f.input :short_text
+    - if @app.new_record?
+      .pull-right= f.input :another, as: :boolean, label: 'Add another'
+    = ladda_button_tag f.object, 'app' 
+    
+
+:javascript
+  $('.simple_form').bind('submit', function () {
+    var laddaButton = Ladda.create(document.querySelector('.ladda-button'))
+    laddaButton.start();
+  });
+  

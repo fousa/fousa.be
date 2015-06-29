@@ -41,6 +41,14 @@ module TagHelper
     end
   end
 
+  def applications_tag
+    link_to apps_path do
+      content = content_tag :i, nil, class: 'glyphicon glyphicon-phone'
+      content << " Apps"
+      content
+    end
+  end
+
   def customers_tag
     link_to customers_path do
       content = content_tag :i, nil, class: 'glyphicon glyphicon-user'

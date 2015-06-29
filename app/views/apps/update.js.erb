@@ -1,0 +1,11 @@
+<% if @app.valid? %>
+  $('#apps').html("<%= escape_javascript(render(partial: 'apps/apps', locals: { apps: @apps })) %>");
+  <% if params[:app][:another] == '1' %>
+    <% @app = App.new({ another: '1' }) %>
+    $("#form_modal .modal-body").html("<%= escape_javascript(render 'form') %>");
+  <% else %>
+    $('#form_modal').modal('hide')
+  <% end %>
+<% else %>
+  $("#form_modal .modal-body").html("<%= escape_javascript(render 'form') %>");
+<% end %>

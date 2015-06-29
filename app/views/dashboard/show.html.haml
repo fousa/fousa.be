@@ -1,4 +1,15 @@
 .content
+  %h1 Apps
+  .row
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th{ style: 'width: 200px' } Name
+      %tbody
+        - @apps.each do |app|
+          %tr
+            %td= format_app_name(app)
+
   %h1 Accounting
   .row
     %table.table.table-hover.table-bordered
@@ -9,7 +20,6 @@
           %th.right{ style: 'width: 130px' } Total income
           %th.right{ style: 'width: 130px' } Total net
           %th.hidden-xs{ style: 'width: 30px' }
-
       %tbody
         - @quarters.each do |quarter, exin|
           - incomes = exin.select { |ei| ei.is_a? Invoice }.sum { |ei| ei.net_price || 0 }

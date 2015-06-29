@@ -1,0 +1,18 @@
+%table.table.table-hover.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Suffix
+      %th Short text
+      %th.hidden-xs{ style: 'width: 50px' }
+
+  %tbody
+    - apps.each do |app|
+      %tr{ id: "app-#{app.id}" }
+        %td= app.name
+        %td= app.name_suffix
+        %td= app.short_text
+        %td.hidden-xs
+          = edit_tag edit_app_path(app), remote: true
+          = delete_tag app, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
+

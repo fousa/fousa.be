@@ -18,7 +18,10 @@
             %li= add_tag new_expense_path(filter_date: @filter_date), 'expense'
           - elsif controller_name == 'customers'
             %li= add_tag new_customer_path, 'customer'
+          - elsif controller_name == 'apps'
+            %li= add_tag new_app_path, 'app'
           - else
+            %li= applications_tag
             %li= customers_tag
             %li= quarters_tag
       %hr
