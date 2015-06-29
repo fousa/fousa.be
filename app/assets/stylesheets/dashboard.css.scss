@@ -82,6 +82,15 @@ span.subtext {
 .logo {
   height: 40px;
   padding-left: 10px;
+
+  @media (max-width: 410px) {
+    display: block;
+    padding-left: 0px;
+    position: relative;
+    left: 50%;
+    margin-left: -20px;
+    margin-bottom: 20px;
+  }  
 }
 
 /* Main marketing message and sign up button */
