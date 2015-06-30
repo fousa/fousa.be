@@ -1,0 +1,7 @@
+= simple_form_for @contact, remote: true do |f|
+  = f.input :name, label: 'Your name'
+  = f.input :email, label: 'Your email'
+  = f.input :message, as: :text, label: 'Your message'
+  = f.input :captcha, as: :hidden
+  = f.submit 'Send email', class: 'btn btn-primary'
+

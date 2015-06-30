@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :expenses, except: [:show, :index]
   resources :invoices, except: [:index]
 
+  resources "contacts", only: [:create]
+
   root 'home#show'
 end

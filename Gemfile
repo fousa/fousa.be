@@ -31,6 +31,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+# Send e-mail straight from forms in Rails with I18n, validations, attachments
+# [mail_form](https://github.com/plataformatec/mail_form)
+gem "mail_form", "~> 1.5.1"
+
 # Forms made easy!
 # [simple_form](https://github.com/plataformatec/simple_form)
 gem "simple_form", "~> 3.1.0"
