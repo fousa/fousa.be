@@ -17,7 +17,7 @@
   .grid
     - @apps.each do |app|
       %figure.effect-goliath
-        = image_tag 'test.jpg'
+        = image_tag app.dashboard_image.url
         %figcaption
           %h2 
             = app.name

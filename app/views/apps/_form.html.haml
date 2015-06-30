@@ -3,6 +3,7 @@
     = f.input :name
     = f.input :name_suffix
     = f.input :short_text
+    = f.input :dashboard_image
     - if @app.new_record?
       .pull-right= f.input :another, as: :boolean, label: 'Add another'
     = ladda_button_tag f.object, 'app' 
