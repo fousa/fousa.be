@@ -30,9 +30,15 @@ $(function() {
       $('.logo').addClass('magictime tinUpIn');
   }, 300);
 
+  $(".content:first").inViewport(function(px) {
+    if (px > 0) {
+      $('.arrow').addClass('animated fadeOutUp');
+    }
+  });
+
   $(".viewport").inViewport(function(px) {
     if (px > 0) {
       $(this).addClass('animated fadeInRight');
     }
-  });  
+  });
 });
