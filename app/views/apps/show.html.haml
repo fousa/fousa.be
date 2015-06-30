@@ -1,0 +1,11 @@
+.banner
+  = image_tag @app.dashboard_image.url, class: 'fadeInDown animated rounded'
+  %h1
+    %span.title.fadeIn.animated= @app.name
+
+.arrow.fadeInUp.animated= link_to '&nbsp;'.html_safe, ''
+
+.content
+  %h3 Some features
+  .boxed
+    %p When I'm not coding or drinking beer, you'll probably find me somewhere in the sky looking for some thermals.

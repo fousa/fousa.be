@@ -65,6 +65,13 @@ html {
   animation-delay: 0.4s;
 }
 
+.banner .rounded {
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  margin-bottom: 2em;
+}
+
 h1 {
   font-size: 400%;
 	font-weight: 300;
