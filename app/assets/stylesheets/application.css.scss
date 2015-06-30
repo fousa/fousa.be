@@ -135,6 +135,7 @@ h3 {
 
 .boxed {
   width: 50%;
+  text-align: justify;
 
   margin: 0 auto;
 } 
@@ -145,9 +146,19 @@ h3 {
   margin-bottom: 1.5em;
 }
 
+.boxed img {
+  width: 200px;
+  height: 200px;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  float: right;
+}
+
 /*** RESPONSIVE ***/
 
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 580px) {
   .banner {
     height: 220px;
 
@@ -168,11 +179,17 @@ h3 {
 
   .boxed {
     width: 100%;
-    background-color: green;
     padding: 0 1em;
   } 
 
   .boxed p {
     font-size: 100%;
+  }
+  
+  .boxed img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
   }
 }
