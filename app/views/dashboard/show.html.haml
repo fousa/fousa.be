@@ -8,7 +8,7 @@
       %tbody
         - @apps.each do |app|
           %tr
-            %td= format_app_name(app)
+            %td= app.full_name
 
   = icon_title 'Quarters', 'th-large'
   .row

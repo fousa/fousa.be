@@ -75,6 +75,10 @@ gem "nprogress-rails", "~> 0.1.6.7"
 # [country_select](https://github.com/stefanpenner/country_select)
 gem "country_select", "~> 2.2.0"
 
+# FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins f
+# [friendly_id](http://github.com/norman/friendly_id)
+gem "friendly_id", "~> 5.1.0"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -6,7 +6,7 @@ class Contact < MailForm::Base
   attribute :captcha, captcha: true
 
   def self.types
-    App.all.map { |a| ContactsController.helpers.format_app_name a }
+    App.all.map { |a| a.full_name }
   end
 
   def headers

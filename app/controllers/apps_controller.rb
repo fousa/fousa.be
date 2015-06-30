@@ -47,10 +47,10 @@ class AppsController < AuthenticatedController
   private
 
   def set_app
-    @app = App.find(params[:id])
+    @app = App.friendly.find(params[:id])
   end
 
   def app_params
-    params.require(:app).permit(:name, :name_suffix, :short_text, :dashboard_image)
+    params.require(:app).permit(:name, :name_suffix, :short_text, :dashboard_image, :slug)
   end
 end
