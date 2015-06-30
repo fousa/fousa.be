@@ -2,6 +2,8 @@ class App < ActiveRecord::Base
   extend FriendlyId
   friendly_id :full_name, use: :slugged
 
+  markdownize! :text
+
   validates :name, presence: true, uniqueness: { scope: :name_suffix }
   validates :short_text, presence: true
 

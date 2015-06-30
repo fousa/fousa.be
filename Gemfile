@@ -79,6 +79,10 @@ gem "country_select", "~> 2.2.0"
 # [friendly_id](http://github.com/norman/friendly_id)
 gem "friendly_id", "~> 5.1.0"
 
+# Render any text as markdown, with code highlighting and all!
+# [markdownizer](http://github.com/codegram/markdownizer)
+gem "markdownizer", "~> 0.3.7"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
