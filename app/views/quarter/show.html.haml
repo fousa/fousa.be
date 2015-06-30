@@ -2,7 +2,7 @@
   %h4.pull-right
     = export_tag quarter_path(date: @filter_date, format: :pdf)
     = export_tag quarter_path(date: @filter_date, format: :zip), 'floppy-save'
-  %h1= format_quarter_date @filter_date
+  = icon_title format_quarter_date(@filter_date), 'th-large'
 
   .row
     .col-sm-6#expenses-totals
@@ -11,21 +11,24 @@
       = render partial: 'invoices/totals', locals: { invoices: @invoices }
 
   .row
-    %nav
-      %ul.pager
-        %li.previous= previous_paginator_tag(@filter_date).html_safe
-        - if Date.today.beginning_of_quarter == @filter_date.beginning_of_quarter
-          %li.current.disabled= current_paginator_tag(Date.today).html_safe
-        - else
-          %li.current= current_paginator_tag(Date.today).html_safe
-        %li.next= next_paginator_tag(@filter_date).html_safe
+    .col-sm-12
+      %nav
+        %ul.pager
+          %li.previous= previous_paginator_tag(@filter_date).html_safe
+          - if Date.today.beginning_of_quarter == @filter_date.beginning_of_quarter
+            %li.current.disabled= current_paginator_tag(Date.today).html_safe
+          - else
+            %li.current= current_paginator_tag(Date.today).html_safe
+          %li.next= next_paginator_tag(@filter_date).html_safe
   
   .row
-    %h3 Invoices
-    #invoices
-      = render partial: 'invoices/invoices', locals: { invoices: @invoices }
+    .col-sm-12
+      = icon_title 'Invoices', 'euro'
+      #invoices
+        = render partial: 'invoices/invoices', locals: { invoices: @invoices }
     
   .row
-    %h3 Expenses
-    #expenses
-      = render partial: 'expenses/expenses', locals: { expenses: @expenses }
+    .col-sm-12
+      = icon_title 'Expenses', 'euro'
+      #expenses
+        = render partial: 'expenses/expenses', locals: { expenses: @expenses }

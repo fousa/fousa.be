@@ -90,4 +90,12 @@ module TagHelper
       content_tag :i, nil, class: 'glyphicon glyphicon-trash'
     end
   end
+
+  def icon_title name, icon
+    content_tag :h1 do
+      content = content_tag :i, nil, class: "glyphicon glyphicon-#{icon}"
+      content << name
+      content
+    end
+  end
 end
