@@ -11,9 +11,15 @@ class Contact < MailForm::Base
 
   def headers
     {
-      subject: "[FOUSA] Contact",
+      subject: subject,
       to: "me@fousa.be",
       from: %("#{name}" <#{email}>)
     }
+  end
+
+  def subject
+    subject = '[FOUSA] Question'
+    return subject if type.nil? || type.blank?
+    subject + " about #{self.type}"
   end
 end
