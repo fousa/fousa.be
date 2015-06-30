@@ -17,6 +17,7 @@
 //= require bootstrap
 //= require spin
 //= require ladda
+//= require viewport
 //= require nprogress
 //= require nprogress-turbolinks
 
@@ -28,4 +29,10 @@ $(function() {
   setTimeout(function(){
       $('.logo').addClass('magictime tinUpIn');
   }, 300);
+
+  $(".viewport").inViewport(function(px) {
+    if (px > 0) {
+      $(this).addClass('animated fadeInRight');
+    }
+  });  
 });
