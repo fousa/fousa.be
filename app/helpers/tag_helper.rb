@@ -85,6 +85,12 @@ module TagHelper
     end
   end
 
+  def show_tag path, options = {}
+    link_to path, options do
+      content_tag :i, nil, class: 'glyphicon glyphicon-search'
+    end
+  end
+
   def delete_tag path, options
     link_to path, options do
       content_tag :i, nil, class: 'glyphicon glyphicon-trash'

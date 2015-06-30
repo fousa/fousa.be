@@ -1,5 +1,7 @@
 class AppsController < AuthenticatedController
-  before_action :set_app, only: [:edit, :update, :destroy]
+  before_action :set_app, only: [:show, :edit, :update, :destroy]
+
+  skip_before_action :authenticate, only: :show
 
   def index
     @apps = App.all
@@ -8,6 +10,9 @@ class AppsController < AuthenticatedController
   def new
     @app = App.new
     render_no_layout
+  end
+
+  def show
   end
 
   def edit
