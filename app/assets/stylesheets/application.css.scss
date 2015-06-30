@@ -156,6 +156,56 @@ h3 {
   float: right;
 }
 
+.block {
+  clear: both;
+  display: block;
+}
+
+.block p {
+  text-align: center;
+}
+
+#contact-form {
+  width: 60%;
+  margin: 0 auto 2em auto;
+}
+
+/*** FORM ***/
+
+abbr {
+  display: none;
+}
+
+label {
+	text-transform: uppercase;
+  font-size: 100%;
+	font-weight: 400;
+}
+
+input, select {
+  font-size: 150% !important;
+  height: 1.7em !important;
+}
+
+textarea {
+  font-size: 150% !important;
+  height: 6em !important;
+}
+
+input[type=submit] {
+  height: 2.1em !important;
+}
+
+.btn-primary, .btn-primary:hover {
+	text-transform: uppercase;
+  font-size: 150%;
+	font-weight: 200;
+  
+  background-color: #E34D26;
+  border-color: #E34D26;
+  -webkit-border-color: #E34D26;
+}
+
 /*** RESPONSIVE ***/
 
 @media (max-width: 580px) {
@@ -191,5 +241,11 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     float: none;
+  }
+}
+
+@media (max-width: 680px) {
+  #contact-form {
+    width: 100%;
   }
 }
