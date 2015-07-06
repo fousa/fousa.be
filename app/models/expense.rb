@@ -13,7 +13,7 @@ class Expense < ActiveRecord::Base
   end
 
   def complete?
-    total_price.present? && tax_price.present? && document?
+    total_price.present? && tax_price.present? && document.file.exists?
   end
 
   def filename
