@@ -9,7 +9,7 @@
 
 .content
   %h3 Some features
-  .boxed= @app.rendered_text.html_safe
+  .boxed= @app.rendered_text.try :html_safe
 
   - if @app.screenshots.count > 0
     %h3 Screenshots
