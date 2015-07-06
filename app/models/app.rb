@@ -22,4 +22,12 @@ class App < ActiveRecord::Base
     full_name << " #{name_suffix}" unless name_suffix.nil?
     full_name
   end
+
+  def detail_url
+    if url?
+      url
+    else
+      self
+    end
+  end
 end
