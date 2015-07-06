@@ -17,7 +17,7 @@
   .grid
     - @apps.each do |app|
       %figure.effect-goliath
-        = image_tag app.dashboard_image.url
+        = image_tag '', data: { src: app.dashboard_image.url }, class: 'lazyOwl'
         %figcaption
           %h2 
             = app.name

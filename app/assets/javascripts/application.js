@@ -40,6 +40,7 @@ $(function() {
   $("#app-carousel").owlCarousel({
     navigation : true,
     singleItem : true,
+    lazyLoad: true,
     slideSpeed : 300,
     paginationSpeed : 400
   });

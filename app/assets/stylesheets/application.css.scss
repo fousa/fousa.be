@@ -99,7 +99,7 @@ h1 .subtitle {
 /*** CONTENT ***/
 
 .back a {
-  position: fixed;
+  position: absolute;
   top: .5em;
   left: 1em;
   font-size: 2em;
@@ -252,6 +252,7 @@ input[type=submit] {
 /*** FOOTER ***/
 
 .footer p {
+  text-transform: uppercase;
   font-size: 150%;
 	font-weight: 300;
   margin-bottom: 2em;
@@ -302,5 +303,11 @@ input[type=submit] {
 @media (max-width: 680px) {
   #contact-form {
     width: 100%;
+  }
+
+  #app-carousel .item img{
+      display: block;
+      width: 100%;
+      height: auto;
   }
 }
