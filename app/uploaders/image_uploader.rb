@@ -1,7 +1,10 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
   include CarrierWaveDirect::Uploader
+
+  process :resize_to_fit => [800, 600]
 
   def store_dir
     "images/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"

@@ -20,6 +20,7 @@
 //= require viewport
 //= require nprogress
 //= require nprogress-turbolinks
+//= require owl.carousel
 
 NProgress.configure({
   showSpinner: false
@@ -34,5 +35,12 @@ $(function() {
     if (px > 0) {
       $('.arrow').addClass('animated fadeOutUp');
     }
+  });
+
+  $("#app-carousel").owlCarousel({
+    navigation : true,
+    singleItem : true,
+    slideSpeed : 300,
+    paginationSpeed : 400
   });
 });

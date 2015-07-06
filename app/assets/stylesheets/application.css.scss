@@ -15,6 +15,9 @@
  *= require ladda-themeless 
  *= require grid 
  *= require animate 
+ *= require owl.carousel
+ *= require owl.theme
+ *= require owl.transitions
  *= require_self
  */
 
@@ -104,6 +107,7 @@ h1 .subtitle {
   background-color: white;
   width: 1.5em;
   text-align: center;
+  z-index: 9000;
 }
 
 .back a:hover {
@@ -231,6 +235,18 @@ input[type=submit] {
   background-color: #E34D26;
   border-color: #E34D26;
   -webkit-border-color: #E34D26;
+}
+
+#app-carousel {
+  text-align: center;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  background-color: #E34D26;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  background: #E34D26;
 }
 
 /*** FOOTER ***/

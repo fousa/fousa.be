@@ -59,6 +59,10 @@ gem "prawn", "~> 2.0.1"
 # [prawn-rails](https://github.com/cortiz/prawn-rails)
 gem "prawn-rails", "~> 0.1.1"
 
+# Manipulate images with minimal use of memory via ImageMagick / GraphicsMagic
+# [mini_magick](https://github.com/minimagick/minimagick)
+gem "mini_magick", "~> 4.2.7"
+
 # Process your uploads in the background by uploading directly to S3
 # [carrierwave_direct](https://github.com/dwilkie/carrierwave_direct)
 gem "carrierwave_direct", "~> 0.0.15"
