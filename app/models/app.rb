@@ -11,8 +11,8 @@ class App < ActiveRecord::Base
 
   mount_uploader :dashboard_image, ImageUploader
 
-  accepts_nested_attributes_for :screenshots
-
+  accepts_nested_attributes_for :screenshots, :reject_if => :all_blank, :allow_destroy => true
+  
   attr_accessor :another
 
   default_scope { order(:name).order(:name_suffix) }

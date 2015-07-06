@@ -52,6 +52,7 @@ GEM
       carrierwave
       fog
       uuidtools
+    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -311,6 +312,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   carrierwave_direct (~> 0.0.15)
+  cocoon (~> 1.2.6)
   coffee-rails (~> 4.1.0)
   country_select (~> 2.2.0)
   dotenv (~> 2.0.2)

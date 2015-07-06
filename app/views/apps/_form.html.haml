@@ -1,20 +1,33 @@
 .content
   = simple_form_for(@app, remote: true) do |f|
-    = f.input :name
-    = f.input :name_suffix
-    - unless @app.new_record?
-      = f.input :slug
-    = f.input :dashboard_image
-    = f.input :short_text
-    = f.input :text, input_html: { rows: 6 }
-    - if @app.new_record?
-      .pull-right= f.input :another, as: :boolean, label: 'Add another'
-    = ladda_button_tag f.object, 'app' 
-    
+    .row
+      .col-sm-6
+        %h3 Common data
+        = f.input :name
+        = f.input :name_suffix
+        - unless @app.new_record?
+          = f.input :slug
+        = f.input :dashboard_image
+        = f.input :short_text
+        = f.input :text, input_html: { rows: 6 }
+      .col-sm-6
+        %h3 Screenshots
+        #screenshots
+          = f.simple_fields_for :screenshots do |task|
+            = render 'screenshot_fields', :f => task
+          .links
+            = link_to_add_association 'add screenshot', f, :screenshots
+
+    .row
+      .col-sm-12
+        - if @app.new_record?
+          .pull-right= f.input :another, as: :boolean, label: 'Add another'
+        = ladda_button_tag f.object, 'app' 
+
 
 :javascript
   $('.simple_form').bind('submit', function () {
     var laddaButton = Ladda.create(document.querySelector('.ladda-button'))
     laddaButton.start();
   });
-  
+

@@ -18,6 +18,7 @@
 //= require bootstrap-datepicker
 //= require spin
 //= require ladda
+//= require cocoon
 //= require nprogress
 //= require nprogress-turbolinks
 
