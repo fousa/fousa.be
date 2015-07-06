@@ -95,6 +95,21 @@ h1 .subtitle {
 
 /*** CONTENT ***/
 
+.back a {
+  position: fixed;
+  top: .5em;
+  left: 1em;
+  font-size: 2em;
+  color: #E34D26;
+  background-color: white;
+  width: 1.5em;
+  text-align: center;
+}
+
+.back a:hover {
+  text-decoration: none;
+}
+
 .arrow {
   width: 100%;
   height: 20px;
