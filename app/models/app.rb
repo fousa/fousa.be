@@ -4,10 +4,14 @@ class App < ActiveRecord::Base
 
   markdownize! :text
 
+  has_many :screenshots
+
   validates :name, presence: true, uniqueness: { scope: :name_suffix }
   validates :short_text, presence: true
 
   mount_uploader :dashboard_image, ImageUploader
+
+  accepts_nested_attributes_for :screenshots
 
   attr_accessor :another
 
