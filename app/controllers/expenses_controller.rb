@@ -1,3 +1,5 @@
+require 'service/document'
+
 class ExpensesController < AuthenticatedController
   before_action :set_expense, only: [:edit, :update, :destroy]
 
@@ -13,6 +15,7 @@ class ExpensesController < AuthenticatedController
   def create
     @expense = Expense.new(expense_params)
     if @expense.save
+      Service::Document.new(@expense).process
       @expenses = Expense.by_quarter filter_date
     end
     respond_to do |format|
@@ -23,6 +26,7 @@ class ExpensesController < AuthenticatedController
   def update
     old_date = @expense.issued_at
     if @expense.update(expense_params)
+      Service::Document.new(@expense).process
       @expenses = Expense.by_quarter old_date
     end
     respond_to do |format|
