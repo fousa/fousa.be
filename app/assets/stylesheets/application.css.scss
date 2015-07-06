@@ -85,15 +85,16 @@ h1 {
 }
 
 h1 .title {
+  display: block;
+
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 h1 .subtitle {
   display: block;
 	font-weight: 800;
   font-size: 50%;
-
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
 }
 
 /*** CONTENT ***/
