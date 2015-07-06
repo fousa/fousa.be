@@ -6,6 +6,8 @@ class Expense < ActiveRecord::Base
 
   attr_accessor :another
 
+  before_save :process_document_exists
+
   scope :by_quarter, ->(date) do
     where('expenses.issued_at >= ?', date.beginning_of_quarter)
     .where('expenses.issued_at <= ?', date.end_of_quarter)
@@ -13,7 +15,7 @@ class Expense < ActiveRecord::Base
   end
 
   def complete?
-    total_price.present? && tax_price.present? && document.file.exists?
+    total_price.present? && tax_price.present? && document_exists?
   end
 
   def filename
@@ -26,5 +28,10 @@ class Expense < ActiveRecord::Base
 
   def net_price
     (total_price || 0) - (tax_price || 0)
+  end
+
+  def process_document_exists
+    document_exists = document.file.exists?
+    true
   end
 end

@@ -22,7 +22,7 @@
           = edit_tag edit_expense_path(expense), remote: true
           = '&nbsp;'.html_safe
           = delete_tag expense, method: :delete, remote: true, data: { confirm: 'Are you sure?' }
-          - if expense.document.file.exists?
+          - if expense.document_exists?
             = '&nbsp;'.html_safe
             = export_tag expense.document.url
 

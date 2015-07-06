@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706061357) do
+ActiveRecord::Schema.define(version: 20150706075921) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -43,9 +43,10 @@ ActiveRecord::Schema.define(version: 20150706061357) do
     t.text     "description"
     t.decimal  "total_price"
     t.decimal  "tax_price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "document"
+    t.boolean  "document_exists", default: false, null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
