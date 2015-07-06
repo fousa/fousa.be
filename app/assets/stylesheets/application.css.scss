@@ -218,6 +218,16 @@ input[type=submit] {
   -webkit-border-color: #E34D26;
 }
 
+/*** FOOTER ***/
+
+.footer p {
+  font-size: 150%;
+	font-weight: 300;
+  margin-bottom: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+
 /*** RESPONSIVE ***/
 
 @media (max-width: 580px) {
@@ -244,6 +254,8 @@ input[type=submit] {
     padding: 0 1em;
   } 
 
+  .boxed li,
+  .footer p,
   .boxed p {
     font-size: 100%;
   }
