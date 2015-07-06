@@ -35,10 +35,4 @@ $(function() {
       $('.arrow').addClass('animated fadeOutUp');
     }
   });
-
-  $(".viewport").inViewport(function(px) {
-    if (px > 0) {
-      $(this).addClass('animated fadeInRight');
-    }
-  });
 });
