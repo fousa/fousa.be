@@ -88,10 +88,14 @@ h1 .subtitle {
 
 h1 .small-subtitle {
   display: block;
-	font-weight: 300;
+	font-weight: 200;
   font-size: 50%;
-  margin-top: 1em;
   padding: 0 1em;
+
+  width: 50%;
+  text-align: center;
+
+  margin: 2em auto;
 }
 
 /*** CONTENT ***/
@@ -276,6 +280,10 @@ input[type=submit] {
     width: 100%;
     padding: 0 1em;
   } 
+
+  h1 .small-subtitle {
+    width: 100%;
+  }
 
   .boxed li,
   .footer p,
