@@ -114,6 +114,13 @@ h1 .subtitle {
   top: 100%;
 }
 
+.grid figcaption h2,
+.grid figcaption p {
+  display: inline;
+  background-color: #E54C18;
+  padding: 4px;
+}
+
 .grid figure img {
   opacity: 1;
 }
