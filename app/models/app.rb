@@ -10,6 +10,7 @@ class App < ActiveRecord::Base
   validates :short_text, presence: true
 
   mount_uploader :dashboard_image, ImageUploader
+  mount_uploader :logo, LogoUploader
 
   accepts_nested_attributes_for :screenshots, :reject_if => :all_blank, :allow_destroy => true
   

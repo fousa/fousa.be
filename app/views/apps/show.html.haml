@@ -1,7 +1,7 @@
 .back= link_to '&larr;'.html_safe, root_path
 
 .banner
-  = image_tag @app.dashboard_image.url, class: 'fadeInDown animated rounded'
+  = image_tag @app.logo.url, class: 'logo'
   %h1
     %span.title= @app.name
     %span.small-subtitle= @app.short_text
