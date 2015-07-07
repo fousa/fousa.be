@@ -117,14 +117,20 @@ h1 .subtitle {
 .grid figure h2,
 .grid figure p {
   display: inline;
-  background-color: #E54C18;
+  background-color: #ccc;
   padding-top: 8px;
   padding-bottom: 8px;
-  box-shadow: 8px 0 0 0 #E54C18, -8px 0 0 0 #E54C18;
+  box-shadow: 8px 0 0 0 #ccc, -8px 0 0 0 #ccc;
 }
 
 .grid figure img {
   opacity: 1;
+}
+
+.grid figure:hover h2,
+.grid figure:hover p {
+  background-color: #E54C18;
+  box-shadow: 8px 0 0 0 #E54C18, -8px 0 0 0 #E54C18;
 }
 
 /*** BLOCK ***/
