@@ -3,7 +3,7 @@ class Screenshot < ActiveRecord::Base
 
   validates :name, presence: true
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :image, ScreenshotUploader
 
   default_scope { order(:name) }
 end

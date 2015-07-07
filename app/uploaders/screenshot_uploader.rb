@@ -1,0 +1,5 @@
+# encoding: utf-8
+
+class ScreenshotUploader < ImageUploader
+  process :resize_to_fit => [800, 600]
+end

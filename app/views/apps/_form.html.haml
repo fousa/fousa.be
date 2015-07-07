@@ -7,7 +7,11 @@
         = f.input :name_suffix
         - unless @app.new_record?
           = f.input :slug
+        - if @app.dashboard_image.thumbnail.file
+          = image_tag @app.dashboard_image.thumbnail.url
         = f.input :dashboard_image
+        - if @app.logo.thumbnail.file
+          = image_tag @app.logo.thumbnail.url
         = f.input :logo
         = f.input :url
         = f.input :short_text

@@ -1,4 +1,6 @@
 .nested-fields
   .pull-right= link_to_remove_association 'remove', f
   = f.input :name
+  - if f.object.image.thumbnail.file
+    = image_tag f.object.image.thumbnail.url
   = f.input :image
