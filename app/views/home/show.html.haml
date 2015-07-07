@@ -1,10 +1,8 @@
 .banner
-  = image_tag 'fousa.svg', class: 'fadeInDown animated'
+  = image_tag 'fousa.svg'
   %h1
-    %span.title.fadeInDown.animated fousa
-    %span.subtitle.fadeInDown.animated I craft awesome apps
-
-.arrow.fadeIn.animated= link_to '&nbsp;'.html_safe, ''
+    %span.title fousa
+    %span.subtitle I craft awesome apps
 
 .content
   %h3 This is me
@@ -16,7 +14,7 @@
   %h3 Here are the apps I created:
   .grid
     - @apps.each do |app|
-      %figure.effect-goliath
+      %figure
         = image_tag app.dashboard_image.url
         %figcaption
           %h2 

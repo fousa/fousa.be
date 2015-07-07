@@ -27,16 +27,6 @@ NProgress.configure({
 });
 
 $(function() {
-  setTimeout(function(){
-      $('.logo').addClass('magictime tinUpIn');
-  }, 300);
-
-  $(".content:first").inViewport(function(px) {
-    if (px > 0) {
-      $('.arrow').addClass('animated fadeOutUp');
-    }
-  });
-
   $("#app-carousel").owlCarousel({
     navigation : true,
     singleItem : true,

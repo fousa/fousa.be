@@ -14,7 +14,6 @@
  *= require bootstrap-datepicker3
  *= require ladda-themeless 
  *= require grid 
- *= require animate 
  *= require owl.carousel
  *= require owl.theme
  *= require owl.transitions
@@ -63,9 +62,6 @@ html {
   width: 200px;
 
   margin: 0 auto;
-
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
 }
 
 .banner .rounded {
@@ -86,9 +82,6 @@ h1 {
 
 h1 .title {
   display: block;
-
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
 }
 
 h1 .subtitle {
@@ -113,32 +106,6 @@ h1 .subtitle {
 
 .back a:hover {
   text-decoration: none;
-}
-
-.arrow {
-  width: 100%;
-  height: 20px;
-
-  position: absolute;
-  top: 90%;
-
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.arrow a:after {
-  clear:both;
-  display:block;
-  position:relative;
-  top:-6px;
-  left:10px;
-  content: "";
-  height:0;
-  width:0;
-  padding:0;
-  margin:-8px auto;
-  border:8px solid transparent;
-  border-top-color: #E34D26;
 }
 
 .content {
