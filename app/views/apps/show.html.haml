@@ -3,9 +3,10 @@
 .banner
   = image_tag @app.dashboard_image.url, class: 'fadeInDown animated rounded'
   %h1
-    %span.title.fadeIn.animated= @app.name
+    %span.title= @app.name
+    %span.small-subtitle= @app.short_text
 
-.arrow.fadeInUp.animated= link_to '&nbsp;'.html_safe, ''
+.arrow= link_to '&nbsp;'.html_safe, ''
 
 .content
   %h3 Some features
