@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707141410) do
+ActiveRecord::Schema.define(version: 20150707141557) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150707141410) do
     t.text     "rendered_text"
     t.string   "url"
     t.string   "logo"
+    t.string   "download_url"
   end
 
   add_index "apps", ["slug"], name: "index_apps_on_slug", unique: true

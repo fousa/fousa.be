@@ -6,8 +6,6 @@
     %span.title= @app.name
     %span.small-subtitle= @app.short_text
 
-.arrow= link_to '&nbsp;'.html_safe, ''
-
 .content
   %h3 Some features
   .boxed= @app.rendered_text.try :html_safe
@@ -19,4 +17,7 @@
         .item= image_tag screenshot.image.url
  
   .footer
+    - if @app.download_url.try :present?
+      = link_to @app.download_url do
+        = image_tag "App Store.svg"
     %p Created by Jelle Vandebeeck
