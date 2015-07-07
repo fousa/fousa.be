@@ -51,6 +51,6 @@ class AppsController < AuthenticatedController
   end
 
   def app_params
-    params.require(:app).permit(:name, :url, :name_suffix, :short_text, :text, :logo, :dashboard_image, :slug, screenshots_attributes: [:id, :image, :_destroy])
+    params.require(:app).permit(:name, :url, :short_text, :text, :logo, :dashboard_image, :slug, screenshots_attributes: [:id, :image, :_destroy])
   end
 end

@@ -2,7 +2,6 @@
   %thead
     %tr
       %th{ style: 'width: 10em' } Name
-      %th{ style: 'width: 6em' } Suffix
       %th Short text
       %th.hidden-xs{ style: 'width: 70px' }
 
@@ -10,7 +9,6 @@
     - apps.each do |app|
       %tr{ id: "app-#{app.id}" }
         %td= app.name
-        %td= app.name_suffix
         %td= app.short_text
         %td.hidden-xs
           = show_tag app_path(app)

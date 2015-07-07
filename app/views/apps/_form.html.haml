@@ -4,7 +4,6 @@
       .col-sm-6
         %h3 Common data
         = f.input :name
-        = f.input :name_suffix
         - unless @app.new_record?
           = f.input :slug
         - if @app.dashboard_image.thumbnail.file

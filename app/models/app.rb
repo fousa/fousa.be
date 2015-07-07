@@ -1,12 +1,12 @@
 class App < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :full_name, use: :slugged
+  friendly_id :name, use: :slugged
 
   markdownize! :text
 
   has_many :screenshots
 
-  validates :name, presence: true, uniqueness: { scope: :name_suffix }
+  validates :name, presence: true
   validates :short_text, presence: true
 
   mount_uploader :dashboard_image, DashboardUploader
@@ -16,13 +16,7 @@ class App < ActiveRecord::Base
   
   attr_accessor :another
 
-  default_scope { order(:name).order(:name_suffix) }
-
-  def full_name
-    full_name = name
-    full_name << " #{name_suffix}" unless name_suffix.nil?
-    full_name
-  end
+  default_scope { order(:name) }
 
   def detail_url
     if url?
