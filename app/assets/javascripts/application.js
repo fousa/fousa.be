@@ -26,7 +26,8 @@ NProgress.configure({
   showSpinner: false
 });
 
-$(function() {
+$(document).on('page:change', function(event) {
+  // idempotent function
   $("#app-carousel").owlCarousel({
     navigation : true,
     singleItem : true,
