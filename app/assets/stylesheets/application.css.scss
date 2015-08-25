@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap
+ *= require bootstrap-select
  *= require bootstrap-datepicker3
  *= require ladda-themeless 
  *= require grid 
@@ -205,7 +206,7 @@ label {
 	font-weight: 400;
 }
 
-input, select {
+input {
   font-size: 150% !important;
   height: 1.7em !important;
 }

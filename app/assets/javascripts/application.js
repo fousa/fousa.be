@@ -15,6 +15,7 @@
 //= require jquery.remotipart
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap-select
 //= require spin
 //= require ladda
 //= require viewport
