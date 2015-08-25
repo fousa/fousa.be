@@ -1,4 +1,5 @@
 <% if @delivered %>
     <% @contact = Contact.new %>
 <% end %>
+
 $("#contact-form").html("<%= escape_javascript(render 'form') %>");
