@@ -14,7 +14,7 @@
     %h3 Screenshots
     #app-carousel.owl-carousel.owl-theme
       - @app.screenshots.each do |screenshot|
-        .item= image_tag screenshot.image.url
+        .item= retina_image_tag screenshot.image
  
   .footer
     - if @app.download_url.try :present?

@@ -1,4 +1,8 @@
 module TagHelper
+  def retina_image_tag image
+    image_tag image.non_retina.url, srcset: "#{image.non_retina.url} 1x, #{image.retina.url} 2x"
+  end
+
   def logo_tag
     link_to dashboard_path do
       image_tag 'fousa.svg', class: 'logo', alt: 'Fousa'
