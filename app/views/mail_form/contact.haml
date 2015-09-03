@@ -1,10 +1,18 @@
 %h4= message.subject
 
 %ul
-  - @resource.mail_form_attributes.each do |attribute, value|
-    - next if value.blank?
-    %li
-      = "#{@resource.class.human_attribute_name(attribute)}: "
-      %span{ style: 'color: #E34D26' }= value
+  %li
+    = 'name: '
+    %span{ style: 'color: #E34D26' }= @resource.name
+    = 'email: '
+    %span{ style: 'color: #E34D26' }= @resource.email
+    = 'type: '
+    %span{ style: 'color: #E34D26' }= @resource.type
+    = 'message: '
 
-%p -- The fousa mailing bot
+%pre{ style: 'color: #E34D26' }
+  = preserve do
+    = @resource.message
+
+%p --
+%p The Fousa Bot
