@@ -340,3 +340,9 @@ DEPENDENCIES
   unicorn (~> 4.9.0)
   web-console (~> 2.0)
   zipline (~> 0.0.10)
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.13.6
