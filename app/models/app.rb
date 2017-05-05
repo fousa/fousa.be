@@ -16,7 +16,7 @@ class App < ActiveRecord::Base
   
   attr_accessor :another
 
-  default_scope { order(:name) }
+  default_scope { order(:order) }
 
   def detail_url
     if url?

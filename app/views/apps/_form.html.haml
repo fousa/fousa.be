@@ -5,6 +5,7 @@
         %h3 Common data
         = f.input :name
         = f.input :slug
+        = f.input :order
         - if @app.dashboard_image.thumbnail.file
           = image_tag @app.dashboard_image.thumbnail.url
         = f.input :dashboard_image

@@ -8,6 +8,7 @@
   %tbody
     - apps.each do |app|
       %tr{ id: "app-#{app.id}" }
+        %td= app.order
         %td= app.name
         %td= app.short_text
         %td.hidden-xs
