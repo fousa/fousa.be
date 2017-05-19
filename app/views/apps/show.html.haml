@@ -1,11 +1,11 @@
 - content_for :meta do
-  %meta{ name: 'descriptiopn', content: @app.short_text }
-  %meta{ name: 'og:title', content: @app.name }
-  %meta{ name: 'og:description', content: @app.short_text }
-  %meta{ name: 'og:type', content: 'website' }
-  %meta{ name: 'og:url', content: app_url(@app) }
+  %meta{ property: 'descriptiopn', content: @app.short_text }
+  %meta{ property: 'og:title', content: @app.name }
+  %meta{ property: 'og:description', content: @app.short_text }
+  %meta{ property: 'og:type', content: 'website' }
+  %meta{ property: 'og:url', content: app_url(@app) }
   - if screenshot = @app.screenshots.first
-    %meta{ name: 'og:image', content: screenshot.image.non_retina.url }
+    %meta{ property: 'og:image', content: screenshot.image.non_retina.url }
 
 .back= link_to '&larr;'.html_safe, root_path
 
