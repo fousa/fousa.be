@@ -4,8 +4,7 @@
   %meta{ name: 'og:description', content: @app.short_text }
   %meta{ name: 'og:type', content: 'website' }
   %meta{ name: 'og:url', content: app_url(@app) }
-  - if screenshot = @app.screenshots.first
-    %meta{ name: 'og:image', content: screenshot.url }
+  %meta{ name: 'og:image', content: @app.dashboard_image.url }
 
 .back= link_to '&larr;'.html_safe, root_path
 
