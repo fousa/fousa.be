@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.3.3'
-
 # Loads environment variables from `.env`.
 # [dotenv](https://github.com/bkeepers/dotenv)
 gem "dotenv", "~> 2.0.2"
@@ -101,13 +99,10 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the 
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
 end
 
 group :production do
   # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
   # [pg](https://bitbucket.org/ged/ruby-pg)
-  gem "pg", "~> 0.18.2"
+  gem "pg", "~> 1.2.3"
 end
