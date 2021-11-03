@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.6.8'
+
 # Loads environment variables from `.env`.
 # [dotenv](https://github.com/bkeepers/dotenv)
 gem "dotenv", "~> 2.0.2"
@@ -67,7 +69,7 @@ gem "carrierwave_direct", "~> 0.0.15"
 
 # this is a giant pile of hax that may let you stream dynamically generated zi
 # [zipline](http://github.com/fringd/zipline)
-gem "zipline", "~> 0.0.10"
+gem "zipline", "~> 1.2.0"
 
 # Remotipart is a Ruby on Rails gem enabling remote multipart forms (AJAX styl
 # [remotipart](http://opensource.alfajango.com/remotipart/)
