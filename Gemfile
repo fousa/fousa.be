@@ -7,7 +7,7 @@ ruby '2.6.8'
 gem "dotenv", "~> 2.0.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '~> 4.2.11'
 
 # \Unicorn is an HTTP server for Rack applications designed to only serve
 # [unicorn](http://unicorn.bogomips.org/)
