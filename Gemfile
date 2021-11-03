@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.6.8'
 
+# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
+# [pg](https://bitbucket.org/ged/ruby-pg)
+gem "pg", "~> 1.2.3"
+
 # Loads environment variables from `.env`.
 # [dotenv](https://github.com/bkeepers/dotenv)
 gem "dotenv", "~> 2.0.2"
@@ -102,7 +106,3 @@ group :development, :test do
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
-# [pg](https://bitbucket.org/ged/ruby-pg)
-gem "pg", "~> 1.2.3"
