@@ -103,8 +103,6 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production do
-  # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
-  # [pg](https://bitbucket.org/ged/ruby-pg)
-  gem "pg", "~> 1.2.3"
-end
+# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
+# [pg](https://bitbucket.org/ged/ruby-pg)
+gem "pg", "~> 1.2.3"
