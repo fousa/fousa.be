@@ -4,7 +4,7 @@ ruby '2.6.8'
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org
 # [pg](https://bitbucket.org/ged/ruby-pg)
-gem "pg", "~> 1.2.3"
+gem "pg"
 
 # Loads environment variables from `.env`.
 # [dotenv](https://github.com/bkeepers/dotenv)

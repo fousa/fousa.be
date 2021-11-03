@@ -254,7 +254,7 @@ DEPENDENCIES
   markdownizer (~> 0.3.7)
   mini_magick (~> 4.2.7)
   nprogress-rails (~> 0.1.6.7)
-  pg (~> 1.2.3)
+  pg
   prawn (~> 2.0.1)
   prawn-rails (~> 0.1.1)
   rails (~> 4.2.11)
