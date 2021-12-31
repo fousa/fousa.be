@@ -1,0 +1,10 @@
+!!!
+%html{ lang: 'en' }
+    %head
+        = render :haml, :'partials/head'
+
+    %body
+        = yield
+
+        = render :haml, :'partials/footer'
+        = render :haml, :'partials/javascript'

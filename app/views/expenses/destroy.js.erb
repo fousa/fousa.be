@@ -1,4 +1,0 @@
-$('#expenses-totals').html("<%= escape_javascript(render(partial: 'expenses/totals', locals: { expenses: @expenses })) %>");
-$("#expense-<%= @expense.id %>").fadeOut(1000,function() {
-    $("#expense-<%= @expense.id %>").remove();
-});

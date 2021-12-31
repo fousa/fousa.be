@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: medium;
+}
+
+.banner {
+    width: 100%;
+    height: 320px;
+
+    position: absolute;
+    top: 45%;
+
+    margin-top: -160px;
+
+    text-align: center;
+}
+
+.banner .logo {
+    height: 400px;
+    width: 400px;
+
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+h1 {
+    font-size: 400%;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-top: 0.5em;
+}
+
+h1 .title {
+    display: block;
+}
+
+h1 .subtitle {
+    display: block;
+    font-weight: 500;
+    font-size: 40%;
+}
+
+h1 .small-subtitle {
+    display: block;
+    font-weight: 200;
+    font-size: 50%;
+    padding: 0 1em;
+
+    width: 50%;
+    text-align: center;
+
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+
+    position: absolute;
+    top: 100%;
+}
+
+.squares {
+    margin: 0em;
+}
+
+.square {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    max-height: 50%;
+    margin: 0;
+    margin-bottom: 2em;
+}
+
+.square img {
+    max-width:100%;
+    transition: transform .5s ease;
+}
+
+.square .zoom {
+    max-width:100%;
+    overflow: hidden;
+}
+
+.square .overlay {
+    position: absolute;
+	left: 1.8em;
+	bottom: 1.3em;
+    right: 1.5em;
+    color: #fff;
+    opacity: 0;
+    text-shadow: 0px 0px 4px #333333;
+}
+
+.square img.disabled {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+}
+
+.square .overlay {
+    transition: .5s ease;
+}
+
+.square .overlay p {
+    font-size: 140%;
+    font-weight: 900;
+}
+
+.square .overlay h2 {
+    text-transform: uppercase;
+    font-size: 200%;
+    font-weight: 900;
+    line-height: 1em;
+}
+
+.square:hover .overlay {
+    opacity: 1;
+}
+
+.square:hover img:not(img.disabled) {
+    transform: scale(1.1);
+}
+
+.more p {
+    padding: 0em 1em;
+    font-size: 200%;
+    font-weight: 300;
+    line-height: 1.5em;
+    opacity: 0.8;
+}
+
+.more  span {
+    font-weight: 500;
+}
+
+.more a {
+    color: #E95E2F;
+}
+
+.more a:hover {
+    text-decoration: none;
+    border-bottom: 2px #E95E2F solid;
+}
+
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 200%;
+    font-weight: 400;
+
+    display: block;
+    padding: 3em 1em;
+}
+
+.boxed {
+    width: 60%;
+    text-align: justify;
+
+    margin: 0 auto;
+}
+
+.boxed p {
+    font-size: 200%;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.boxed li {
+    font-size: 150%;
+    font-weight: 300;
+}
+
+.boxed img {
+    width: 300px;
+    height: 300px;
+    margin-right: 4em;
+    margin-bottom: 2em;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+    float: left;
+}
+
+.contact {
+    text-align: center;
+    font-size: 150%;
+    line-height: 3em;
+    margin-bottom: 2em;
+}
+
+.contact a {
+    color: #E34D26;
+}
+
+.contact .social {
+    font-size: 0px;
+}
+
+.contact .social img {
+    height: 36px;
+    width: 36px;
+    color: red;
+}
+
+.contact .social li {
+    display: inline-block;
+    margin: 10px;
+}
+
+@media (max-width: 580px) {
+    .banner {
+        height: 220px;
+
+        margin-top: -110px;
+    }
+
+    .logo {
+        height: 150px;
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+
+    h3 {
+        font-size: 200%;
+    }
+
+    .boxed {
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    h1 .small-subtitle {
+        width: 100%;
+    }
+
+    .boxed li,
+    .footer p,
+    .boxed p {
+        font-size: 180%;
+    }
+
+    .boxed img {
+        width: 200px;
+        height: 200px;
+        margin-right: 4em;
+        margin-bottom: 2em;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+}
