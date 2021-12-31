@@ -13,10 +13,6 @@ class App < Sinatra::Base
         # Enable auto reload in development.
         register Sinatra::Reloader
     end
-    configure :production do
-        # Force SSL in production.
-        use Rack::SSL
-    end
 
     # Handle unfound pages.
     not_found do

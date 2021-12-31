@@ -15,9 +15,6 @@ gem "haml", "~> 5.2.1"
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for 
 # [puma](https://puma.io)
 gem "puma", "~> 5.1.1"
-# Rack middleware to force SSL/TLS.
-# [rack-ssl](https://github.com/josh/rack-ssl)
-gem "rack-ssl", "~> 1.4.1"
 # A gem that provides a client interface for the Sentry error logger
 # [sentry-raven](https://github.com/getsentry/raven-ruby)
 gem "sentry-raven", "~> 3.1.1"
