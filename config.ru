@@ -9,7 +9,7 @@ $stdout.sync = true
 require 'raven'
 
 Raven.configure do |config|
-    config.server = 'https://b198c8832cfb4ac5a7c9af90fb022e83@o247984.ingest.sentry.io/5591182'
+    config.server = 'https://bfa5339476b04f4fb24b71bf46853dbb@o247984.ingest.sentry.io/6129506'
 end
 
 use Raven::Rack
