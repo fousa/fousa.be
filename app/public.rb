@@ -20,6 +20,8 @@ module Vulture
                 ]
 
                 @more_apps = [
+                    OpenStruct.new(name: 'Connective',             url: 'https://apps.apple.com/be/app/connective-esignatures/id1214838024?l=nl'),
+                    OpenStruct.new(name: 'Isabel',                 url: 'https://apps.apple.com/be/app/isabel-multibanking/id973114090?l=nl'),
                     OpenStruct.new(name: 'Geluidshuis',            url: 'https://apps.apple.com/be/app/geluidshuis/id1114955258?l=nl'),
                     OpenStruct.new(name: '1Limburg',               url: 'https://apps.apple.com/nl/app/1limburg/id911802784'),
                     OpenStruct.new(name: 'Marvin Gaye Tour',       url: 'https://apps.apple.com/be/app/marvin-gaye-tour/id1532912190?l=nl'),
