@@ -15,17 +15,14 @@
     .container-fluid
         .row.squares
             - @apps.each do |app|
-                .col-12.col-md-4.col-lg-2
+                .col-12.col-md-4.col-lg-2.nospacing
                     %a{ href: app.url }
                         .square
                             .zoom
                                 %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
-                            .overlay
-                                %h2= app.name
-                                %p= app.tags
 
-    .container-fluid
-        .row.more
+    .container-fluid.more
+        .row
             .col-12
                 %p
                     %span And many more:
