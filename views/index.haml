@@ -5,12 +5,11 @@
         %span.subtitle I craft awesome apps
 
 .content
-    %h3 Hello there!
+    %h3 Hi, I'm Jelle!
     .boxed
         %img{ src: 'images/me.png' }
-        %p I'm Jelle, and I consider myself a passionate iOS developer. As a professional, I work on some very cool applications for the best clients. And when I have some time left, I try to create and sell my apps on the App Store.
-        %p When I'm not writing code, you'll probably find me in the sky looking for some thermals in my glider.
-        %p Want to get in touch? Don't hesitate to contact me.
+        %p I consider myself a passionate <strong>iOS developer</strong>. As a professional, I work on some very cool applications for the best clients. And when I have some time left, I try to create and sell my apps on the App Store.
+        %p When I'm not writing code, you'll probably find me in the sky looking for thermals in my glider.
 
     %h3 Some of my work
     .container-fluid
@@ -32,19 +31,18 @@
                     %span And many more:
                     = @more_apps.map { |a| a.url.nil? ? a.name : "<a href='#{a.url}'>#{a.name}</a>" }.join(', ')
 
-    %h3 contact
-    .boxed.contact
-        %ul
-            %li Jelle Vandebeeck
-            %li Mortsel, Belgium 🇧🇪
-            %li
-                %ul.social
-                    %li
-                        %a{ href: 'https://www.linkedin.com/in/fousa/', title: 'Contact me on LinkedIn' }
-                            %img{ srcset: 'images/linkedin.png' }
-                    %li
-                        %a{ href: 'http://instagram.com/fousa', title: 'Contact me on Instagram' }
-                            %img{ srcset: 'images/instagram.png' }
-                    %li
-                        %a{ href: 'https://twitter.com/fousa', title: 'Contact me on Twitter' }
-                            %img{ srcset: 'images/twitter.png' }
+    .container-fluid
+        .row
+            .col-12
+                .contact
+                    %p Jelle Vandebeeck <span>🇧🇪</span>
+                    %ul.social
+                        %li
+                            %a{ href: 'https://www.linkedin.com/in/fousa/', title: 'Contact me on LinkedIn' }
+                                %img{ srcset: 'images/linkedin.png' }
+                        %li
+                            %a{ href: 'http://instagram.com/fousa', title: 'Contact me on Instagram' }
+                                %img{ srcset: 'images/instagram.png' }
+                        %li
+                            %a{ href: 'https://twitter.com/fousa', title: 'Contact me on Twitter' }
+                                %img{ srcset: 'images/twitter.png' }

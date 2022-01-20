@@ -193,28 +193,38 @@ h3 {
 
 .contact {
     text-align: center;
-    font-size: 150%;
-    line-height: 3em;
+    margin-top: 4em;
     margin-bottom: 2em;
 }
 
-.contact a {
+.contact p {
+    font-size: 200%;
+    /* line-height: 1em; */
+    /* margin-top: 2em; */
+}
+
+.contact p span {
+    position: relative;
+    top: 0.1em;
+}
+
+.social a {
     color: #E34D26;
 }
 
-.contact .social {
+.social {
     font-size: 0px;
 }
 
-.contact .social img {
+.social img {
     height: 36px;
     width: 36px;
     color: red;
 }
 
-.contact .social li {
+.social li {
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
 }
 
 @media (max-width: 580px) {
