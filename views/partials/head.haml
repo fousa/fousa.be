@@ -37,4 +37,11 @@
 %link{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }
 %link{ rel: "manifest", href: "/site.webmanifest" }
 
+-# Preload images #
+- %w(Instagram LinkedIn Twitter Github).each do |image_name|
+    %link{ rel: 'preload', as: 'image', href: "../images/#{image_name}.png" }
+    %link{ rel: 'preload', as: 'image', href: "../images/#{image_name}-Hover.png" }
+    %link{ rel: 'preload', as: 'image', href: "../images/#{image_name}@2x.png" }
+    %link{ rel: 'preload', as: 'image', href: "../images/#{image_name}-Hover@2x.png" }
+
 %title Fousa
