@@ -135,36 +135,20 @@ h3 {
     padding: 3em 1em;
 }
 
-.boxed {
-    width: 60%;
-    text-align: justify;
-
-    margin: 0 auto;
-}
-
-.boxed p {
+.profile p {
     font-size: 200%;
     font-weight: 300;
     line-height: 1.2em;
     margin-bottom: 1.5em;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
-.boxed li {
-    font-size: 150%;
-    font-weight: 300;
-}
 
-.boxed img {
-    position: relative;
-    top: -2em;
+.profile img {
     width: 300px;
     height: 300px;
-    margin-right: 4em;
-    margin-bottom: 2em;
     -webkit-border-radius: 150px;
     border-radius: 150px;
-    float: left;
 }
 
 .contact {
@@ -253,29 +237,16 @@ h3 {
         font-size: 200%;
     }
 
-    .boxed {
-        width: 100%;
-        padding: 0 1em;
-    }
-
-    .boxed li,
     .footer p,
-    .boxed p {
+    .profile p {
         font-size: 180%;
     }
 
-    .boxed img {
+    .profile img {
         width: 200px;
         height: 200px;
-        margin-right: 4em;
-        margin-bottom: 2em;
         -webkit-border-radius: 100px;
         border-radius: 100px;
-
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
     }
 }
 
