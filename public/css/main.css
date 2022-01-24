@@ -180,8 +180,6 @@ h3 {
 
 .contact p {
     font-size: 200%;
-    /* line-height: 1em; */
-    /* margin-top: 2em; */
 }
 
 .contact p span {
@@ -252,11 +250,6 @@ h3 {
         margin-top: -110px;
     }
 
-    .logo {
-        height: 150px;
-        width: 150px;
-    }
-
     h1 {
         font-size: 300%;
     }
@@ -268,10 +261,6 @@ h3 {
     .boxed {
         width: 100%;
         padding: 0 1em;
-    }
-
-    h1 .small-subtitle {
-        width: 100%;
     }
 
     .boxed li,
@@ -292,5 +281,22 @@ h3 {
         margin-left: auto;
         margin-right: auto;
         float: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
+
+    h1,
+    h3,
+    p {
+        color: white;
+    }
+
+    .social .github {
+        background-image: -webkit-image-set(url('../images/Github-Dark.png') 1x, url('../images/Github-Dark@2x.png') 2x);
+        background-image: image-set(url('../images/Github-Dark.png') 1x, url('../images/Github-Dark@2x.png') 2x);
     }
 }
