@@ -53,6 +53,17 @@ module Vulture
             end
 
             app.get '/work' do
+                config = YAML.load_file 'config/work.yml'
+
+                #Prepare the projects
+                @technologies = config['technologies'].map do |technology| 
+                    struct = technology.to_struct
+                    struct.projects = struct.projects.map do |project|
+                        project.to_struct
+                    end
+                    struct
+                end
+
                 haml :work, :layout => :'layouts/site'
             end
         end
