@@ -281,14 +281,12 @@ h3 {
     margin-bottom: 3em;
     padding-left: 1em;
 
-    /* height: 10em !important; */
-
     border-color: white;
     border-width: 3px;
     border-left-style: solid;
 }
 
-.project:hover {
+a .project:hover {
     border-color: #E95E2F;
 }
 
@@ -302,13 +300,7 @@ h3 {
     padding-bottom: 0.5em;
 }
 
-.project p {
-    /* overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 5.4em; */
-}
-
-.project:hover h4 {
+a .project:hover h4 {
     color: #E95E2F;
 }
 

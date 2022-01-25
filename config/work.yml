@@ -3,39 +3,53 @@ technologies:
     projects:
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: 'https://soaringbook.com'
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: 'https://soaringbook.com'
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
         
 
   - name: Objective-C
     projects:
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
 
   - name: Swift
     projects:
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null
 
   - name: SwiftUI
     projects:
       - name: Soaring Book
         description: An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+        url: null

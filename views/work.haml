@@ -12,7 +12,13 @@
 
             .row.projects
                 - technology.projects.each do |project|
-                    .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-2.nospacing
-                        .project
-                            %h4= project.name
-                            %p= project.description
+                    .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
+                        - if project.url.nil?
+                            .project
+                                %h4= project.name
+                                %p= project.description
+                        - else
+                            %a{ href: project.url }
+                                .project
+                                    %h4= project.name
+                                    %p= project.description
