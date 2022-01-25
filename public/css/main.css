@@ -135,18 +135,14 @@ h1 .small-subtitle {
 
 .more p {
     padding: 0em 1em;
-    font-size: 200%;
-    font-weight: 300;
-    line-height: 1.5em;
-    opacity: 0.8;
-}
-
-.more  span {
-    font-weight: 500;
 }
 
 .more a {
     color: #E95E2F;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-transform: uppercase;
 }
 
 .more a:hover {

@@ -24,14 +24,11 @@
                             .zoom
                                 %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
 
-    .container-fluid.more
-        .row
+        .row.more
             .col-12
-                %p
-                    %span And many more:
-                    = @more_apps.map { |a| a.url.nil? ? a.name : "<a href='#{a.url}'>#{a.name}</a>" }.join(', ')
+                %p.text-right
+                    %a{ href: '/work' } Most of my work &rarr;
 
-    .container-fluid
         .row
             .col-12
                 .contact
