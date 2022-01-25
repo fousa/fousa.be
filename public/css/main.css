@@ -270,12 +270,18 @@ h3 {
 
 .projects {
     padding-left: 2em;
+
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
 }
 
 .project {
     margin-right: 3em;
     margin-bottom: 3em;
     padding-left: 1em;
+
+    /* height: 10em !important; */
 
     border-color: white;
     border-width: 3px;
@@ -294,6 +300,12 @@ h3 {
 
     display: block;
     padding-bottom: 0.5em;
+}
+
+.project p {
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 5.4em; */
 }
 
 .project:hover h4 {
