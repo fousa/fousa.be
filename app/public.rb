@@ -8,6 +8,12 @@ module Vulture
         def self.registered app
             app.get '/' do
                 config = YAML.load_file 'config/home.yml'
+                
+                # Prepare the texts.
+                text = config['text'].to_struct
+                @developer_text = text.developer
+                @gliding_text = text.gliding
+                
                 # Prepare the apps.
                 @apps = config['apps'].map { |app| app.to_struct }
 
