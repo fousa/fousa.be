@@ -19,12 +19,23 @@ html {
     text-align: center;
 }
 
-.banner .logo {
-    height: 400px;
-    width: 400px;
+.banner img {
+    display: inline-block;
 
-    margin: 0 auto;
-    margin-bottom: 4em;
+    animation: logoAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 h1 {
@@ -34,6 +45,24 @@ h1 {
     text-transform: uppercase;
 
     margin-top: 0.5em;
+
+    animation: titleAnimation ease-out 1s 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 h1 .title {
