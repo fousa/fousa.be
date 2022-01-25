@@ -4,3 +4,16 @@
             %a{ href: '/' }
                 %img{ src: 'images/fousa.svg' }
                 %h1 fousa
+        
+        - 3.times do |section|
+            .row
+                .col-12
+                    %h3 Ruby on Rails
+
+            .row.projects
+                - 9.times do |index|
+                    .col-12.col-md-4.col-lg-3.nospacing
+                        .project
+                            %h4 Soaring Book
+                            %p An administrative website where all data is managed when it concerns flying on EBBT. An administrative website where all data is managed when it concerns flying on EBBT.
+            
