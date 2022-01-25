@@ -51,6 +51,10 @@ module Vulture
 
                 haml :index, :layout => :'layouts/site'
             end
+
+            app.get '/work' do
+                haml :work, :layout => :'layouts/site'
+            end
         end
     end
 end

@@ -38,7 +38,7 @@ html {
     }
 }
 
-h1 {
+.banner h1 {
     font-size: 400%;
     font-weight: 600;
     text-align: center;
@@ -65,17 +65,17 @@ h1 {
     }
 }
 
-h1 .title {
+.banner h1 .title {
     display: block;
 }
 
-h1 .subtitle {
+.banner h1 .subtitle {
     display: block;
     font-weight: 500;
     font-size: 40%;
 }
 
-h1 .small-subtitle {
+.banner h1 .small-subtitle {
     display: block;
     font-weight: 200;
     font-size: 50%;
@@ -247,6 +247,22 @@ h3 {
     margin: 5px;
 }
 
+.work h1 {
+    font-size: 200%;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.work img {
+    height: 70px;
+    margin-top: 2em;
+}
+
+.work a:hover {
+    text-decoration: none;
+}
+
 @media (max-width: 580px) {
     .banner {
         height: 220px;
@@ -254,7 +270,7 @@ h3 {
         margin-top: -110px;
     }
 
-    h1 {
+    .banner h1 {
         font-size: 300%;
     }
 
