@@ -1,23 +1,15 @@
+require 'yaml'
+
 require 'sinatra/base'
+require './app/helpers/struct'
 
 module Vulture
     module Public
         def self.registered app
             app.get '/' do
-                @apps = [
-                    OpenStruct.new(name: 'Vulture',      tags: '#ios #macos #api', image: 'Vulture',     url: 'https://vulture.fousa.be'),
-                    OpenStruct.new(name: 'Aviobook',     tags: '#ipados',          image: 'Aviobook',    url: 'https://aviobook.aero'),
-                    OpenStruct.new(name: 'Telenet Flow', tags: '#ios #tvos',       image: 'TelenetFlow', url: 'https://www2.telenet.be/residential/nl/producten/telenet-tv/flow'),
-                    OpenStruct.new(name: 'Horizon Go',   tags: '#tvos',            image: 'HorizonGo',   url: 'https://apps.apple.com/sk/app/horizon-tv-app/id1456233801'),
-                    OpenStruct.new(name: 'Soaring Book', tags: '#ios #web',        image: 'SoaringBook', url: 'https://apps.apple.com/nl/app/soaring-book-runway/id1422856598'),
-                    OpenStruct.new(name: 'Pace Up',      tags: '#watchos',         image: 'PaceUp',      url: 'http://paceup.fousa.be'),
-                    OpenStruct.new(name: 'Bolero',       tags: '#ios',             image: 'Bolero',      url: 'https://www.bolero.be/nl/platformen/mobile'),
-                    OpenStruct.new(name: 'PoS',          tags: '#ipados',          image: 'PoS',         url: 'https://apps.apple.com/us/app/philips-hue-in-store-app/id1191767292'),
-                    OpenStruct.new(name: 'Track',        tags: '#ios #macos',      image: 'Track',       url: 'https://itunes.apple.com/us/app/track/id1197989851?ls=1&mt=8'),
-                    OpenStruct.new(name: 'TruliUs',      tags: '#ios',             image: 'TruliUs',     url: 'https://www.trulius.be'),
-                    OpenStruct.new(name: 'RASP',         tags: '#ios #api',        image: 'RASP',        url: 'https://apps.apple.com/us/app/rasp/id426040634#'),
-                    OpenStruct.new(name: 'GPX Reader',   tags: '#ios #macos',      image: 'GPXReader',   url: 'https://apps.apple.com/be/app/gpx-reader/id543308129')
-                ]
+                config = YAML.load_file 'config/home.yml'
+                # Prepare the apps.
+                @apps = config['apps'].map { |app| app.to_struct }
 
                 @more_apps = [
                     OpenStruct.new(name: 'Connective',             url: 'https://apps.apple.com/be/app/connective-esignatures/id1214838024?l=nl'),

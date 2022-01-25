@@ -1,0 +1,47 @@
+apps:
+  - name: 'Vulture'
+    image: 'Vulture'
+    url: 'https://vulture.fousa.be'
+
+  - name: 'Aviobook'
+    image: 'Aviobook'
+    url: 'https://aviobook.aero'
+
+  - name: 'Telenet Flow'
+    image: 'TelenetFlow'
+    url: 'https://www2.telenet.be/residential/nl/producten/telenet-tv/flow'
+    
+  - name: 'Horizon Go'  
+    image: 'HorizonGo'  
+    url: 'https://apps.apple.com/sk/app/horizon-tv-app/id1456233801'
+  
+  - name: 'Soaring Book'
+    image: 'SoaringBook'
+    url: 'https://apps.apple.com/nl/app/soaring-book-runway/id1422856598'
+
+  - name: 'Pace Up'     
+    image: 'PaceUp'     
+    url: 'http://paceup.fousa.be'
+
+  - name: 'Bolero'      
+    image: 'Bolero'     
+    url: 'https://www.bolero.be/nl/platformen/mobile'
+
+  - name: 'PoS'
+    image: 'PoS'        
+    url: 'https://apps.apple.com/us/app/philips-hue-in-store-app/id1191767292'
+
+  - name: 'Track'       
+    image: 'Track'      
+    url: 'https://itunes.apple.com/us/app/track/id1197989851?ls=1&mt=8'
+  - name: 'TruliUs'     
+    image: 'TruliUs'    
+    url: 'https://www.trulius.be'
+
+  - name: 'RASP'        
+    image: 'RASP'       
+    url: 'https://apps.apple.com/us/app/rasp/id426040634#'
+    
+  - name: 'GPX Reader'  
+    image: 'GPXReader'  
+    url: 'https://apps.apple.com/be/app/gpx-reader/id543308129'
