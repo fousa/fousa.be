@@ -174,43 +174,43 @@ h3 {
 }
 
 .social .instagram {
-    background-image: -webkit-image-set(url('../images/Instagram.png') 1x, url('../images/Instagram@2x.png') 2x);
-    background-image: image-set(url('../images/Instagram.png') 1x, url('../images/Instagram@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Instagram.png') 1x, url('../images/Services/Instagram@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Instagram.png') 1x, url('../images/Services/Instagram@2x.png') 2x);
 }
 
 .social .instagram:hover {
-    background-image: -webkit-image-set(url('../images/Instagram-Hover.png') 1x, url('../images/Instagram-Hover@2x.png') 2x);
-    background-image: image-set(url('../images/Instagram-Hover.png') 1x, url('../images/Instagram-Hover@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Instagram-Hover.png') 1x, url('../images/Services/Instagram-Hover@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Instagram-Hover.png') 1x, url('../images/Services/Instagram-Hover@2x.png') 2x);
 }
 
 .social .linkedin {
-    background-image: -webkit-image-set(url('../images/LinkedIn.png') 1x, url('../images/LinkedIn@2x.png') 2x);
-    background-image: image-set(url('../images/LinkedIn.png') 1x, url('../images/LinkedIn@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/LinkedIn.png') 1x, url('../images/Services/LinkedIn@2x.png') 2x);
+    background-image: image-set(url('../images/Services/LinkedIn.png') 1x, url('../images/Services/LinkedIn@2x.png') 2x);
 }
 
 .social .linkedin:hover {
-    background-image: -webkit-image-set(url('../images/LinkedIn-Hover.png') 1x, url('../images/LinkedIn-Hover@2x.png') 2x);
-    background-image: image-set(url('../images/LinkedIn-Hover.png') 1x, url('../images/LinkedIn-Hover@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/LinkedIn-Hover.png') 1x, url('../images/Services/LinkedIn-Hover@2x.png') 2x);
+    background-image: image-set(url('../images/Services/LinkedIn-Hover.png') 1x, url('../images/Services/LinkedIn-Hover@2x.png') 2x);
 }
 
 .social .twitter {
-    background-image: -webkit-image-set(url('../images/Twitter.png') 1x, url('../images/Twitter@2x.png') 2x);
-    background-image: image-set(url('../images/Twitter.png') 1x, url('../images/Twitter@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Twitter.png') 1x, url('../images/Services/Twitter@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Twitter.png') 1x, url('../images/Services/Twitter@2x.png') 2x);
 }
 
 .social .twitter:hover {
-    background-image: -webkit-image-set(url('../images/Twitter-Hover.png') 1x, url('../images/Twitter-Hover@2x.png') 2x);
-    background-image: image-set(url('../images/Twitter-Hover.png') 1x, url('../images/Twitter-Hover@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Twitter-Hover.png') 1x, url('../images/Services/Twitter-Hover@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Twitter-Hover.png') 1x, url('../images/Services/Twitter-Hover@2x.png') 2x);
 }
 
 .social .github {
-    background-image: -webkit-image-set(url('../images/Github.png') 1x, url('../images/Github@2x.png') 2x);
-    background-image: image-set(url('../images/Github.png') 1x, url('../images/Github@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Github.png') 1x, url('../images/Services/Github@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Github.png') 1x, url('../images/Services/Github@2x.png') 2x);
 }
 
 .social .github:hover {
-    background-image: -webkit-image-set(url('../images/Github-Hover.png') 1x, url('../images/Github-Hover@2x.png') 2x);
-    background-image: image-set(url('../images/Github-Hover.png') 1x, url('../images/Github-Hover@2x.png') 2x);
+    background-image: -webkit-image-set(url('../images/Services/Github-Hover.png') 1x, url('../images/Services/Github-Hover@2x.png') 2x);
+    background-image: image-set(url('../images/Services/Github-Hover.png') 1x, url('../images/Services/Github-Hover@2x.png') 2x);
 }
 
 .social {
@@ -262,7 +262,7 @@ h3 {
     }
 
     .social .github {
-        background-image: -webkit-image-set(url('../images/Github-Dark.png') 1x, url('../images/Github-Dark@2x.png') 2x);
-        background-image: image-set(url('../images/Github-Dark.png') 1x, url('../images/Github-Dark@2x.png') 2x);
+        background-image: -webkit-image-set(url('../images/Services/Github-Dark.png') 1x, url('../images/Services/Github-Dark@2x.png') 2x);
+        background-image: image-set(url('../images/Services/Github-Dark.png') 1x, url('../images/Services/Github-Dark@2x.png') 2x);
     }
 }
