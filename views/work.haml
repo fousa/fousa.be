@@ -16,9 +16,11 @@
                         - if project.url.nil?
                             .project
                                 %h4= project.name
+                                %p.tags= project.tags
                                 %p= project.description
                         - else
                             %a{ href: project.url }
                                 .project
                                     %h4= project.name
+                                    %p.tags= project.tags
                                     %p= project.description
