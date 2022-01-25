@@ -1,12 +1,12 @@
 .work 
     .container-fluid
-        .row.text-center
+        .row.text-center.header
             %a{ href: '/' }
                 %img{ src: 'images/fousa.svg' }
                 %h1 fousa
         
         - @technologies.each do |technology|
-            .row
+            .row.technology
                 .col-12
                     %h3= technology.name
 
