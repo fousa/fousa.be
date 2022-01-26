@@ -24,3 +24,5 @@
                                     %h4= project.name
                                     %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                     %p= project.description
+
+        = render :haml, :'partials/footer'
