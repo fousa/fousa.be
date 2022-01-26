@@ -332,6 +332,10 @@ h3 {
     border-left-style: solid;
 }
 
+a .project {
+    border-color: black;
+}
+
 a .project:hover {
     border-color: #E95E2F;
 }
@@ -403,7 +407,8 @@ a .project:hover h4 {
         background-color: black;
     }
 
-    .project {
+    .project,
+    a .project {
         border-color: white;
     }
 
