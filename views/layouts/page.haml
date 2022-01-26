@@ -1,9 +1,9 @@
 !!!
 %html{ lang: 'en' }
     %head
+        %title= "Fousa - #{yield_content(:title)}"
+
         = render :haml, :'partials/head'
 
     %body
         = yield
-
-        = render :haml, :'partials/javascript'

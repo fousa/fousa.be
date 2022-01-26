@@ -1,9 +1,11 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sinatra/content_for'
 
 require './app/public'
 
 class App < Sinatra::Base
+    helpers Sinatra::ContentFor
     register Sinatra::Namespace
 
     # Register the public modules.
