@@ -5,6 +5,10 @@
                 %img{ src: 'images/fousa.svg' }
                 %h1 fousa
         
+        .row.text-center
+            .col-12
+                %h2= "I worked on #{@project_count} wonderful projects"
+        
         - @technologies.each do |technology|
             .row.technology
                 .col-12
