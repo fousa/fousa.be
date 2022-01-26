@@ -17,7 +17,7 @@ module Vulture
                 # Prepare the apps.
                 @apps = config['apps'].map { |app| app.to_struct }
 
-                haml :index, :layout => :'layouts/main'
+                haml :index
             end
 
             app.get '/work' do
@@ -37,7 +37,7 @@ module Vulture
                     count += technology.projects.count
                 end
 
-                haml :work, :layout => :'layouts/page'
+                haml :work
             end
         end
     end

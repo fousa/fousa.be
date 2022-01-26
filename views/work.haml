@@ -1,33 +1,48 @@
-- content_for :title, "Most of my work"
+!!!
+%html{ lang: 'en' }
+    %head
+        %title Fousa - Most of my work
 
-.container-fluid
-    .row.text-center.header
-        %a{ href: '/' }
-            %img{ src: 'images/fousa.svg' }
-            %h1 fousa
-    
-    .row.text-center
-        .col-12
-            %h2= "I worked on #{@project_count} wonderful projects"
-    
-    - @technologies.each do |technology|
-        .row.technology
-            .col-12
-                %h3
-                    = technology.name
-                    %span.badge.rounded-circle.bg-danger= technology.projects.count
+        = render :haml, :'partials/head'
 
-        .row.projects
-            - technology.projects.each do |project|
-                .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
-                    - if project.url.nil?
-                        .project
-                            %h4= project.name
-                            %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
-                            %p= project.description
-                    - else
-                        %a{ href: project.url }
-                            .project
-                                %h4= project.name
-                                %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
-                                %p= project.description
+        %link{ rel: 'stylesheet', href: '/css/page.css' }
+
+    %body
+        .work 
+            .container-fluid
+                -# Header
+                .row.text-center.header
+                    %a{ href: '/' }
+                        %img{ src: 'images/fousa.svg' }
+                        %h1 fousa
+                
+                -# Sub header
+                .row.text-center
+                    .col-12
+                        %h2= "I worked on #{@project_count} wonderful projects"
+                
+                - @technologies.each do |technology|
+                    -# Section
+                    .row.technology
+                        .col-12
+                            %h3
+                                = technology.name
+                                %span.badge.rounded-circle.bg-danger= technology.projects.count
+
+                    -# Projects
+                    .row.projects
+                        - technology.projects.each do |project|
+                            .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
+                                - if project.url.nil?
+                                    .project
+                                        %h4= project.name
+                                        %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
+                                        %p= project.description
+                                - else
+                                    %a{ href: project.url }
+                                        .project
+                                            %h4= project.name
+                                            %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
+                                            %p= project.description
+            
+            .container-fluid= render :haml, :'partials/footer'

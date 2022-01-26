@@ -1,23 +1,47 @@
-%h3 Hi, I'm Jelle!
-.container.profile
-    .row.justify-content-center
-        .col-12.col-md-4.col-lg-4.text-center
-            %img{ srcset: "images/me.jpg 1x, images/me.jpg 2x" }
-        .col-12.col-md-8.col-lg-8
-            %p= @developer_text
-            %p= @gliding_text
+!!!
+%html{ lang: 'en' }
+    %head
+        %title Fousa
 
-%h3 Some of my work
-.container-fluid
-    .row.favorites
-        - @apps.each do |app|
-            .col-12.col-md-4.col-lg-2.nospacing
-                %a{ href: app.url }
-                    .favorite
-                        .zoom
-                            %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
+        = render :haml, :'partials/head'
 
-    -# .row.more
-    -#     .col-12
-    -#         %p.text-end
-    -#             %a{ href: '/work' } Most of my work &rarr;
+        %link{ rel: 'stylesheet', href: '/css/main.css' }
+
+    %body
+        -# Hero
+        .hero
+            %img{ src: 'images/fousa.svg' }
+            %h1
+                fousa
+                %span I craft awesome apps
+
+        .main
+            -# Introduction
+            %h3 Hi, I'm Jelle!
+            .container.profile
+                .row.justify-content-center
+                    .col-12.col-md-4.col-lg-4.text-center
+                        %img{ srcset: "images/me.jpg 1x, images/me.jpg 2x" }
+                    .col-12.col-md-8.col-lg-8
+                        %p= @developer_text
+                        %p= @gliding_text
+
+            -# Favorite project
+            %h3 Some of my work
+            .container-fluid
+                .row.favorites
+                    - @apps.each do |app|
+                        .col-12.col-md-4.col-lg-2.nospacing
+                            %a{ href: app.url }
+                                .favorite
+                                    .zoom
+                                        %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
+
+                -# Link to more project
+                -# .row.more
+                -#     .col-12
+                -#         %p.text-end
+                -#             %a{ href: '/work' } Most of my work &rarr;
+
+            -# Footer
+            .container-fluid= render :haml, :'partials/footer'
