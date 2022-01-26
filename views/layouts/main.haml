@@ -8,13 +8,13 @@
         %link{ rel: 'stylesheet', href: '/css/main.css' }
 
     %body
-        .banner
+        .hero
             %img{ src: 'images/fousa.svg' }
             %h1
-                %span.title fousa
-                %span.subtitle I craft awesome apps
+                fousa
+                %span I craft awesome apps
 
-        .content
+        .main
             = yield
 
             .container-fluid= render :haml, :'partials/footer'

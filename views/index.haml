@@ -1,6 +1,6 @@
 %h3 Hi, I'm Jelle!
-.container
-    .row.justify-content-center.profile
+.container.profile
+    .row.justify-content-center
         .col-12.col-md-4.col-lg-4.text-center
             %img{ srcset: "images/me.jpg 1x, images/me.jpg 2x" }
         .col-12.col-md-8.col-lg-8
@@ -9,11 +9,11 @@
 
 %h3 Some of my work
 .container-fluid
-    .row.squares
+    .row.favorites
         - @apps.each do |app|
             .col-12.col-md-4.col-lg-2.nospacing
                 %a{ href: app.url }
-                    .square
+                    .favorite
                         .zoom
                             %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
 

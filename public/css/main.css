@@ -1,0 +1,199 @@
+
+/*
+ * FOUSA LOGO + TITLE
+ */
+
+.hero {
+    width: 100%;
+    height: 320px;
+
+    position: absolute;
+    top: 45%;
+
+    margin-top: -160px;
+
+    text-align: center;
+}
+
+.hero img {
+    display: inline-block;
+
+    animation: heroLogoAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hero h1 {
+    font-size: 400%;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-top: 0.5em;
+
+    animation: heroTitleAnimation ease-out 1s 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero h1 span {
+    display: block;
+    font-weight: 500;
+    font-size: 40%;
+}
+
+/*
+ * MAIN CONTENT
+ */
+
+.main {
+    width: 100%;
+
+    position: absolute;
+    top: 100%;
+}
+
+/*
+ * PROFILE
+ */
+
+.profile p {
+    font-size: 200%;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+}
+
+
+.profile img {
+    width: 300px;
+    height: 300px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+}
+
+/*
+ * FAVORITE PROJECTS
+ */
+
+.favorites {
+    margin: 0em;
+}
+
+.favorite {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    max-height: 50%;
+    margin: 0;
+}
+
+.favorite img {
+    max-width:100%;
+    transition: transform .2s ease-out;
+}
+
+.favorite .zoom {
+    max-width:100%;
+    overflow: hidden;
+}
+
+.favorite:hover .overlay {
+    opacity: 1;
+}
+
+.favorite:hover img:not(img.disabled) {
+    transform: scale(1.1);
+}
+
+/*
+ * MORE LINK
+ */
+
+.more {
+    margin-top: 2em;
+}
+
+.more p {
+    padding: 0em 1em;
+}
+
+.more a {
+    color: #E95E2F;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.more a:hover {
+    text-decoration: none;
+    border-bottom: 2px #E95E2F solid;
+}
+
+/*
+ * ANIMATIONS
+ */
+
+@keyframes heroLogoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes heroTitleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*
+ * DARK MODE
+ */
+
+@media (prefers-color-scheme: dark) {
+    .hero h1,
+    .profile p {
+        color: white;
+    }
+}
+
+/*
+ * BREAKPOINTS
+ */
+
+@media (max-width: 580px) {
+    .hero {
+        height: 220px;
+        margin-top: -110px;
+    }
+
+    .hero h1 {
+        font-size: 300%;
+    }
+
+    .profile p {
+        font-size: 180%;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+    }
+}
