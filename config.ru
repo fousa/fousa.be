@@ -16,4 +16,5 @@ use Raven::Rack
 
 require './config/haml.rb'
 require './app'
+
 run App

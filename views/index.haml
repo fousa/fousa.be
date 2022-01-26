@@ -1,32 +1,23 @@
-.banner
-    %img{ src: 'images/fousa.svg' }
-    %h1
-        %span.title fousa
-        %span.subtitle I craft awesome apps
+%h3 Hi, I'm Jelle!
+.container
+    .row.justify-content-center.profile
+        .col-12.col-md-4.col-lg-4.text-center
+            %img{ srcset: "images/me.jpg 1x, images/me.jpg 2x" }
+        .col-12.col-md-8.col-lg-8
+            %p= @developer_text
+            %p= @gliding_text
 
-.content
-    %h3 Hi, I'm Jelle!
-    .container
-        .row.justify-content-center.profile
-            .col-12.col-md-4.col-lg-4.text-center
-                %img{ srcset: "images/me.jpg 1x, images/me.jpg 2x" }
-            .col-12.col-md-8.col-lg-8
-                %p= @developer_text
-                %p= @gliding_text
+%h3 Some of my work
+.container-fluid
+    .row.squares
+        - @apps.each do |app|
+            .col-12.col-md-4.col-lg-2.nospacing
+                %a{ href: app.url }
+                    .square
+                        .zoom
+                            %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
 
-    %h3 Some of my work
-    .container-fluid
-        .row.squares
-            - @apps.each do |app|
-                .col-12.col-md-4.col-lg-2.nospacing
-                    %a{ href: app.url }
-                        .square
-                            .zoom
-                                %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
-
-        -# .row.more
-        -#     .col-12
-        -#         %p.text-end
-        -#             %a{ href: '/work' } Most of my work &rarr;
-
-        = render :haml, :'partials/footer'
+    -# .row.more
+    -#     .col-12
+    -#         %p.text-end
+    -#             %a{ href: '/work' } Most of my work &rarr;

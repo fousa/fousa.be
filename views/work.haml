@@ -1,36 +1,33 @@
 - content_for :title, "Most of my work"
 
-.work 
-    .container-fluid
-        .row.text-center.header
-            %a{ href: '/' }
-                %img{ src: 'images/fousa.svg' }
-                %h1 fousa
-        
-        .row.text-center
+.container-fluid
+    .row.text-center.header
+        %a{ href: '/' }
+            %img{ src: 'images/fousa.svg' }
+            %h1 fousa
+    
+    .row.text-center
+        .col-12
+            %h2= "I worked on #{@project_count} wonderful projects"
+    
+    - @technologies.each do |technology|
+        .row.technology
             .col-12
-                %h2= "I worked on #{@project_count} wonderful projects"
-        
-        - @technologies.each do |technology|
-            .row.technology
-                .col-12
-                    %h3
-                        = technology.name
-                        %span.badge.rounded-circle.bg-danger= technology.projects.count
+                %h3
+                    = technology.name
+                    %span.badge.rounded-circle.bg-danger= technology.projects.count
 
-            .row.projects
-                - technology.projects.each do |project|
-                    .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
-                        - if project.url.nil?
+        .row.projects
+            - technology.projects.each do |project|
+                .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
+                    - if project.url.nil?
+                        .project
+                            %h4= project.name
+                            %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
+                            %p= project.description
+                    - else
+                        %a{ href: project.url }
                             .project
                                 %h4= project.name
                                 %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                 %p= project.description
-                        - else
-                            %a{ href: project.url }
-                                .project
-                                    %h4= project.name
-                                    %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
-                                    %p= project.description
-
-        = render :haml, :'partials/footer'

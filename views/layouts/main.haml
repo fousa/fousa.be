@@ -4,6 +4,17 @@
         %title Fousa
 
         = render :haml, :'partials/head'
+        
+        %link{ rel: 'stylesheet', href: '/css/main.css' }
 
     %body
-        = yield
+        .banner
+            %img{ src: 'images/fousa.svg' }
+            %h1
+                %span.title fousa
+                %span.subtitle I craft awesome apps
+
+        .content
+            = yield
+
+            .container-fluid= render :haml, :'partials/footer'
