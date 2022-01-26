@@ -8,7 +8,9 @@
         - @technologies.each do |technology|
             .row.technology
                 .col-12
-                    %h3= technology.name
+                    %h3
+                        = technology.name
+                        %span.badge.rounded-circle.bg-danger= technology.projects.count
 
             .row.projects
                 - technology.projects.each do |project|

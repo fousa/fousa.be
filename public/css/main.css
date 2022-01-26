@@ -210,6 +210,15 @@ h3 {
     padding: 3em 1em 1.5em 0.6em;
 }
 
+.work h3 span {
+    position: relative;
+    top: -0.3em;
+    font-size: 60%;
+    color: white;
+    background-color: #cccccc !important;
+    padding: 0.4em 0.5em 0.25em 0.5em;
+}
+
 .profile p {
     font-size: 200%;
     font-weight: 300;
@@ -432,6 +441,11 @@ a .project:hover h4 {
 
     a .project p {
         opacity: 1.0;
+    }
+
+    .work h3 span {
+        color: black !important;
+        background-color: #666 !important;
     }
 
     h1,
