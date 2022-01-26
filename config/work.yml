@@ -343,12 +343,40 @@ technologies:
           - fousa
           - ios
 
+      - name: LazyPoken
+        description: 'A Poken is used to quickly share your identity. We created a small app that allows you to quickly export your contact data to this Poken.'
+        url: null
+        tags:
+          - milkcarton
+          - macos
+
+      - name: Pity
+        description: 'At Belighted we were using Yammer to communicate. So Cimm and I created a tiny Mac application that showed us when we had some notifications.'
+        url: null
+        tags:
+          - milkcarton
+          - macos
+
+      - name: Lustro
+        description: 'Cimm and I build this tiny little app to convert all the contacts in your local contacts application on Mac. You can export to multiple formats like CSV, tab-separated, and even to Google Contacts.'
+        url: null
+        tags:
+          - milkcarton
+          - macos
+
       - name: 1am
         description: 'This is the very first iPhone application I wrote. The app helped me decide which Nespresso blend I should drink in the morning. It is the start of many more utility apps and Fousa!'
         url: null
         tags:
           - fousa
           - iphone
+
+      - name: Funes
+        description: 'This was the very first Mac app I ever created. With Funes, you can rate the currently playing song in iTunes. Mac World noticed it and wrote a very cool article about it.'
+        url: null
+        tags:
+          - milkcarton
+          - macos
 
   - name: Sinatra
     projects:
@@ -391,6 +419,13 @@ technologies:
           - bzc
           - website
           - api
+
+      - name: Project Generator
+        description: 'Since every project setup is always the same, I tried to create a website that would facilitate this. With a single press on a button, you can create an app, push it to git, and test it on your device through HockeyApp.'
+        url: null
+        tags:
+          - icapps
+          - website
 
       - name: Translations
         description: 'A supporting web application to manage all the different localisations used in mobile applications. The data was accessible through an API and a supporting gem.'
@@ -451,4 +486,36 @@ technologies:
         url: null
         tags:
           - fousa
+          - website
+
+      - name: Budgetr
+        description: 'I need to track my budget. But I want everything to be custom so created a single-page Javascript website. Build with a prototype, supported by PHP.'
+        url: null
+        tags:
+          - fousa
+          - website
+
+      - name: Gijbels
+        description: 'Cimm and I had this little marketing website as a side project. We developed it for a construction company. The entire website was dynamic with a custom-made web portal.'
+        url: null
+        tags:
+          - milkcarton
+          - website
+
+  - name: .NET
+    projects:
+      - name: Stock Market Drinking Game
+        description: 'Our student club Diana needed a windows application that would calculate prices of beers depending on the consumption. When more Duvel was drunk, the lower the price became. Crazy!'
+        url: null
+        tags:
+          - diana
+          - windows
+
+  - name: Java
+    projects:
+      - name: NC
+        description: "I worked on the main application that is used in all the branches of KBC. Employees managed everything that was manageable for a customer. It's still in use today."
+        url: null
+        tags:
+          - kbc
           - website
