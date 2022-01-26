@@ -347,7 +347,7 @@ a .project:hover {
     color: black;
 
     display: block;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
 }
 
 a .project p {
@@ -365,8 +365,10 @@ a .project:hover h4 {
 }
 
 .project .tags {
+    text-transform: uppercase;
+    font-size: 90%;
     opacity: 0.6;
-    margin-bottom: 0;
+    margin-bottom: 0.3em;
 }
 
 .work .nospacing {

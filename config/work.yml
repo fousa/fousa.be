@@ -5,314 +5,450 @@ technologies:
       - name: itsme
         description: 'Authenticate, share your data or sign a document with this nifty iPhone application. Your digital identity on your iPhone. itsme is one of the most used applications in Belgium at this point.'
         url: 'https://itsme.be'
-        tags: 'itsme iOS'
+        tags: 
+          - itsme
+          - ios
 
       - name: Vulture
         description: 'This soaring planning and analysis application is the flagship of my projects. I work on this whenever I have some time left. Gliding is my passion and Vulture helps me with it.'
         url: 'https:///vulture.fousa.be'
-        tags: 'Fousa iOS macOS'
+        tags: 
+          - fousa
+          - ios
+          - macos
 
       - name: Aviobook
         description: 'This iPad application is used onboard a commercial jet. It makes the life of the pilot a lot easier. They can automatically pull in weather data or any other type of data related to their flight.'
         url: 'https:///aviobook.aero'
-        tags: 'Aviovision iPad'
+        tags: 
+          - aviovision
+          - ipad
 
       - name: TruliUs
         description: 'Manage and share your corporate identity with your business partners online, securely, and with your consent. This iOS application integrates with external authentication services.'
         url: 'https://www.trulius.be/nl/'
-        tags: 'icapps ios'
+        tags: 
+          - icapps
+          - ios
 
       - name: Telenet Yugo
         description: 'Watching Tv without having to install a decoder at home was the main goal of Yugo (now Telenet Flow). We created an awesome media application that works on both iOS and tvOS devices.'
         url: 'https://apps.apple.com/be/app/telenet-tv-flow/id1447099944'
-        tags: 'icapps iOS tvOS'
+        tags: 
+          - icapps
+          - ios
+          - tvos
 
       - name: Horizon Go
         description: 'This Apple Tv application is used all across Europe. With a dynamically build interface every provider can choose how they want to present their media content to the user.'
         url: 'https://apps.apple.com/sk/app/horizon-tv-app/id1456233801'
-        tags: 'icapps tvos'
+        tags: 
+          - icapps
+          - tvos
 
       - name: 22
         description: 'Whenever you think, should I date this person because of the age? Then you should open 22 and get the socially accepted dating age. A simple fun app to make fun of my friends.'
         url: 'https://apps.apple.com/us/app/22-the-socially-accepted-dating-age-calculator/id1046641168'
-        tags: 'fousa iphone'
+        tags: 
+          - fousa
+          - iphone
 
       - name: GPX Reader
         description: 'I like to use apps to read my bike or run tracks offline without having to use an online service. This iOS and macOS application is perfect for this, it should you what you did on a map.'
         url: 'https://apps.apple.com/us/app/gpx-reader/id543308129'
-        tags: 'fousa ios macos'
+        tags: 
+          - fousa
+          - ios
+          - macos
 
       - name: Philips Hue PoS
         description: 'When you are in a store and you want to try out the newest Philips Hue light, you just have to tap this iPad app and change the lighting. Probably the only app I will build that is used inside the Apple Store.'
         url: null
-        tags: 'iCapps iPad'
+        tags:
+          - icapps
+          - ipad
 
       - name: SkySight Wave
         description: 'For the Perlan project, the pilots wanted to have an application to check the predicted wave winds at higher altitudes. This iPad app downloads the SkySight charts and shows them relative to their current position.'
         url: null
-        tags: 'fousa ios'
+        tags: 
+          - fousa
+          - ios
 
       - name: Track
         description: 'Whenever you work out, you want to see what you did with some additional data. Independent of the file format, Tracks shows you statistics on a map with a nice elevation overlay if applicable.'
         url: 'https://apps.apple.com/us/app/track-read-your-log-files/id1197989851'
-        tags: 'Fousa iOS macOS'
+        tags: 
+          - fousa
+          - ios
+          - macos
 
       - name: Soaring Book
         description: 'Manage an entire flying day with this iPad application. Download the data from the server and start your day. When the flying stops, you can upload this data so that invoices can be sent out to the pilots.'
         url: 'https://apps.apple.com/be/app/soaring-book-runway/id1422856598'
-        tags: 'fousa ios'
+        tags: 
+          - fousa
+          - ios
 
       - name: Monizze
         description: 'Check the balance of your Meal cheques with this iPhone application. Locate stores nearby that support the Monizze cheques.'
         url: 'https://www.monizze.be'
-        tags: 'iCapps ios'
+        tags: 
+          - icapps
+          - ios
       
   - name: 'SwiftUI'
     projects:
       - name: Expendr
         description: 'I love tracking expenses on my iPhone. And since there is not a service that tracks expenses the way I want, I decided to create it myself. And on iPad, you get to see more statistics.'
         url: null
-        tags: 'Fousa iOS macOS'
+        tags: 
+          - fousa
+          - ios
+          - macos
 
       - name: Pace Up
         description: 'I like running. And during a run, I only want to see my heart rate. Yet again, I made one that works according to what I need. Afterward, my data syncs to HealthKit and can be shared with other services.'
         url: 'http://paceup.fousa.be'
-        tags: 'Fousa watchOS'
+        tags: 
+          - fousa
+          - watchos
 
   - name: 'Objective-C'
     projects:
       - name: Telenet Yelo
         description: 'With this companion application, you can watch movies and series both live or in replay on your mobile devices. You can also send content to your decoder to make life better.'
         url: 'https://apps.apple.com/be/app/telenet-tv-yelo/id407200903'
-        tags: 'iCapps iOS'
+        tags:
+          - icapps
+          - ios
 
       - name: Geluidshuis
         description: 'Playable books for children, this is what Geluidshuis provides. You can buy, download and play the content of books on your mobile devices. Great to keep your kids amused during a long trip.'
         url: 'https://apps.apple.com/be/app/geluidshuis/id1114955258'
-        tags: 'iCapps iOS'
+        tags:
+          - icapps
+          - ios
 
       - name: Isabel
         description: 'Checking your accounts across multiple banks is made a lot easier with this mobile application. Get a quick overview of all transactions made by your company. '
         url: 'https://apps.apple.com/be/app/isabel-multibanking/id973114090'
-        tags: 'iCapps iOS'
+        tags:
+          - icapps
+          - ios
 
       - name: Connective
         description: 'Signing documents securely instead of signing a paper document and scanning it afterward. That is where the Connective mobile application comes to play. Sign on your device without a hassle.'
         url: 'https://apps.apple.com/be/app/connective-esignatures/id1214838024'
-        tags: 'iCapps iOS'
+        tags:
+          - icapps
+          - ios
 
       - name: Belins
         description: 'Fetch a list of documents from the server so that insurance agents can quickly browse them. Communicating with the backend systems was quite hard due to the legacy nature.'
         url: null
-        tags: 'iCapps iPad'
+        tags:
+          - icapps
+          - ipad
 
       - name: Niko
         description: 'I upgrade the application to work on the next iOS version. Migrating changes in Core Data was hard, but it taught me a lot about how you should use it.'
         url: null
-        tags: 'iCapps iPad'
+        tags:
+          - icapps
+          - ipad
 
       - name: Bolero
         description: 'Perform all your stock market transactions right from the Bolero iPhone or iPad applications. Get instant updates about their state with streaming data updating on the fly.'
         url: 'https://apps.apple.com/be/app/bolero-for-ipad/id922923774'
-        tags: 'iCapps iOS'
+        tags:
+          - icapps
+          - ios
 
       - name: 1Limburg
         description: 'Read the 1Limburg paper on your mobile device. Not a hard application, but when ads are added. Everything becomes hard, especially making it performant and snappy.'
         url: null
-        tags: 'iCapps iPhone'
+        tags:
+          - icapps
+          - iphone
 
       - name: Wie is De Mol
         description: "'Who is the Mole' is a Dutch television show. As a spectator, you can guess every episode who could be the Mole. The app was updated every episode depending on who dropped out."
         url: null
-        tags: '10to1 iPhone'
+        tags:
+          - 10to1
+          - ios
 
       - name: Eggy
         description: 'Create shortcuts for posting messages to Twitter with the native solution provided by Apple. First time I had to make an app without an actual interface, but running in the background.'
         url: null
-        tags: 'Fousa OSX'
+        tags:
+          - fousa
+          - macos
 
       - name: Snabb
         description: 'Post messages to App.net with just a simple tap on the keyboard. I started using App.net when there was no native OSX solution available. So I created one to quickly post messages.'
         url: null
-        tags: 'Fousa OSX'
+        tags:
+          - fousa
+          - macos
 
       - name: Car Sharing
         description: 'Locate and book a car with the Car Sharing iPhone application. When you are close to the car, connect with it through Bluetooth. Unlocking your car has never been easier.'
         url: null
-        tags: '10to1 iPhone'
+        tags:
+          - 10to1
+          - iphone
 
       - name: Luan
         description: 'Use this application whenever you go on a sales pitch. Upload pictures of the products you are trying to sell and show them to your potential clients'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - ipad
 
       - name: Courir
         description: "Before tracking was cool, I used to manually enter my run workouts in RunKeeper. But their app didn't allow this. Therefore I created an app with this functionality."
         url: null
-        tags: 'Fousa iPhone'
+        tags:
+          - fousa
+          - iphone
 
       - name: Pomidor
         description: 'Improve your focus level during your work. With Pomidor, this was very simple. Start the clock, and get notified when your working period ends.'
         url: null
-        tags: 'Fousa iOS'
+        tags:
+          - fousa
+          - ios
 
       - name: Report
         description: 'A product of our own where we tried to create an application that allows the user to dynamically build forms. These forms could then be exported to several formats.'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - ipad
 
       - name: Questionnaires
         description: "For Innovation Studio we developed a questionnaire iPad application. This application allowed the medical staff to be up to date with the patients' current condition."
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - innovationstudio
+          - ipad
 
       - name: Signup
         description: 'For Innovation Studio we created an application that allows patients to enroll when entering the hospital. This app was displayed in a booth that was easily accessible upon entry.'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - innovationstudio
+          - ipad
       
       - name: Safety Surgery Checklist
         description: 'For Innovation Studio I helped develop an application that allowed surgeons to go through a medical checklist while at the surgery. Apps that impact people in a good way give me so much satisfaction.'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - innovationstudio
+          - ipad
 
       - name: FaceTeam
         description: "When working remotely we all want to see each other's faces. This OSX application takes a picture of you working and syncs it over to Dropbox to other users that have access to the shared folder."
         url: null
-        tags: 'Fousa OSX'
+        tags:
+          - fousa
+          - macos
 
       - name: Huvepharma
         description: 'Pharmacists using drugs from Huvepharma could use this application to quickly calculate the correct dose that should be applied. UX wise may be one of the best applications I worked on.'
         url: null
-        tags: '10to1 iPhone'
+        tags:
+          - 10to1
+          - ios
 
       - name: Periodica
         description: 'Remind yourself that you have to do something regularly. This iPhone reminds you without you having to confirm that you did the task. Todos without the todo part.'
         url: null
-        tags: 'Fousa iPhone'
+        tags:
+          - fousa
+          - iphone
 
       - name: Twunch
         description: 'Meetup with Twitter friends over lunch, that is Twunch. And this iPhone application makes this experience even better. Check who is coming and RSVP from within the application.'
         url: null
-        tags: 'Fousa iPhone'
+        tags:
+          - fousa
+          - iphone
 
       - name: Fleetexpert
         description: 'When you return the car at the end of a lease contract, it has to be checked for damages. The Fleetexpert iPad application allowed them to do that while being offline.'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - ipad
 
       - name: Besix
         description: 'This construction company uses an application to get a better overview of the construction area. They could indicate potential issues and print out PDF reports depending on their state.'
         url: null
-        tags: '10to1 iPad'
+        tags:
+          - 10to1
+          - ipad
 
       - name: Factura
         description: 'Organize all your important documents after you scan them. This macOS application moves your document and renames it. Just use the finder afterward to locate them.'
         url: 'https://apps.apple.com/us/app/factura/id548954914'
-        tags: 'fousa macos'
+        tags:
+          - fousa
+          - macos
 
       - name: Pivot
         description: 'PivotalTracked used to be an essential agile project management tool in our company. And yes, I created an application to easily add new items to the board.'
         url: 'http://pivot.fousa.be'
-        tags: 'fousa macos'
+        tags:
+          - fousa
+          - macos
 
       - name: Punch
         description: "Time tracking is an essential part of development, and since I don't like to use the website, I created an application to track your time in Harvest en Toggle. I love it and still use it."
         url: 'http://punch.fousa.be'
-        tags: 'fousa macos'
+        tags:
+          - fousa
+          - macos
 
       - name: Marvin Gaye Tour
         description: 'This iPhone application guides you through Ostend with a scenic tour to discover all the places that Marvin Gay visited during his stay there. Everything happened offline and made deployment tricky.'
         url: null
-        tags: '10to1 iphone'
+        tags:
+          - 10to1
+          - iphone
 
       - name: IGC Reader
         description: "After a flight, I wanted to quickly see my flight on my iPhone. There was nothing like this at this point. IGC Reader's successor, Vulture, is even more powerful."
         url: null
-        tags: 'Fousa ios'
+        tags:
+          - fousa
+          - ios
 
       - name: Spoty
         description: 'Handy when flying gliding competitions and you want to get a quick overview of the general classification. Or get a glimpse of the given task right before the start of the flight.'
         url: 'https://apps.apple.com/us/app/spoty/id446227723'
-        tags: 'Fousa ios'
+        tags:
+          - fousa
+          - ios
 
       - name: RASP
         description: 'RASP weather charts are first made available on iOS with this handy little application. Driven by my own backend, and resources from all over the world, it helps plan your task a lot better.'
         url: 'https://apps.apple.com/us/app/rasp/id426040634'
-        tags: 'Fousa ios'
+        tags:
+          - fousa
+          - ios
 
       - name: 1am
         description: 'This is the very first iPhone application I wrote. The app helped me decide which Nespresso blend I should drink in the morning. It is the start of many more utility apps and Fousa!'
         url: null
-        tags: 'Fousa iphone'
+        tags:
+          - fousa
+          - iphone
 
   - name: Sinatra
     projects:
       - name: Fousa.be
         description: "My website showcases all the projects I worked on during the past years. Many projects I started didn't make it to the website, because the result wasn't finished yet."
         url: 'http://fousa.be'
-        tags: 'Fousa web'
+        tags:
+          - fousa
+          - website
 
       - name: Vulture
         description: 'The marketing website of my iOS application Vulture. I also integrated the backend API to manage a lot of data resources that provide content to the application.'
         url: 'https://vulture.fousa.be'
-        tags: 'Fousa web API'
+        tags:
+          - fousa
+          - website
+          - api
 
       - name: Spoty
         description: 'This API is used by the Spoty iOS application. The main goal is to scrape data from the Soaring Spot website in order to convert this to a format that the app can handle.'
         url: 'https://soaringspot.docs.apiary.io'
-        tags: 'Fousa API'
+        tags:
+          - fousa
+          - api
 
       - name: RASP
         description: 'This is an API that was easily updatable to extend the application with more weather regions on the fly.  All the weather layers are stored here and the application could request them depending on the region.'
         url: 'https://rasp.herokuapp.com'
-        tags: 'Fousa API'
+        tags:
+          - fousa
+          - api
 
   - name: Ruby on Rails
     projects:
       - name: Soaring Book
         description: 'Manage the organization of a gliding club completely online. This website supports the iPad application that was used on the airfield. And sends invoices to all the pilots afterward.'
         url: 'https://soaringbook.com'
-        tags: 'EBBT web API'
+        tags:
+          - fousa
+          - bzc
+          - website
+          - api
 
       - name: Translations
         description: 'A supporting web application to manage all the different localisations used in mobile applications. The data was accessible through an API and a supporting gem.'
         url: 'https://translations.icapps.com'
-        tags: 'icapps web API'
+        tags:
+          - icapps
+          - website
+          - api
 
       - name: M HKA
         description: 'Manage the resources and support for the museum of contemporary art in Antwerp during its day-to-day business with this administrative website.'
         url: null
-        tags: '10to1 web'
+        tags:
+          - 10to1
+          - website
 
       - name: Het Spiegelpaleis
         description: 'Participate in the live quiz broadcasted on prime-time on national tv in Belgium. I had the chance of working on this very challenging product with an incredible team at the University of Ghent.'
         url: null
-        tags: '10to1 web'
+        tags:
+          - 10to1
+          - vrt
+          - website
 
       - name: Fleetexpert
         description: 'Get an overview of all the cars, with their damages, that are checked with the Fleetexpert iPad application by the experts. It also provides the application with the required content for the app.'
         url: null
-        tags: '10to1 web API'
+        tags:
+          - 10to1
+          - website
+          - api
 
       - name: Menerga
         description: 'Manage the stock and supplies needed to make it possible to plan the assignment in the energy industry as well as possible. We connected with external services for a more up-to-date overview of the current stock.'
         url: null
-        tags: '10to1 web'
+        tags:
+          - 10to1
+          - website
 
       - name: Validpat
         description: 'An administrative website to better support administrative services for IP Attorneys. The development process used here was behavior-driven development, which was quite a challenge, but a lot of fun.'
         url: null
-        tags: 'Belighted web'
+        tags:
+          - belighted
+          - website
 
       - name: Biegel
         description: 'A handy website that translates commonly used words from the Limburg region to an understandable format for the rest of Belgium. The website participated in a product development competition.'
         url: null
-        tags: 'Fousa web'
+        tags:
+          - fousa
+          - website
 
   - name: PHP
     projects:
       - name: RHEA
         description: 'The public website with information about the research studies on gender, diversity, and intersectionality that was done at the Vrije Universiteit Brussel.'
         url: null
-        tags: 'Fousa web'
+        tags:
+          - fousa
+          - website
