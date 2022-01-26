@@ -161,6 +161,26 @@ technologies:
         url: null
         tags: null
 
+      - name: Questionnaires
+        description: null
+        url: null
+        tags: null
+      
+      - name: Patient
+        description: null
+        url: null
+        tags: null
+
+      - name: Signup
+        description: null
+        url: null
+        tags: null
+      
+      - name: Safety Surgery Checklist
+        description: null
+        url: null
+        tags: null
+
       - name: FaceTeam
         description: null
         url: null
@@ -256,46 +276,48 @@ technologies:
   - name: Ruby on Rails
     projects:
       - name: Soaring Book
-        description: null
-        url: null
-        tags: null
+        description: 'Manage the organization of a gliding club completely online. This website supports the iPad application that was used on the airfield. And sends invoices to all the pilots afterward.'
+        url: 'https://soaringbook.com'
+        tags: 'EBBT'
 
       - name: Translations
-        description: null
-        url: null
-        tags: null
+        description: 'A supporting web application to manage all the different localisations used in mobile applications. The data was accessible through an API and a supporting gem.'
+        url: 'https://translations.icapps.com'
+        tags: 'icapps'
 
       - name: M HKA
-        description: null
+        description: 'Manage the resources and support for the museum of contemporary art in Antwerp during its day to day business with this administrative website.'
         url: null
-        tags: null
+        tags: '10to1'
 
-      - name: School of Arts
-        description: null
+      - name: Het Spiegelpaleis
+        description: 'Participate in the live quiz broadcasted on prime-time on national tv in Belgium. I had the chance of working on this very challenging product with an incredible team at the University of Ghent.'
         url: null
-        tags: null
+        tags: '10to1'
 
       - name: Fleetexpert
-        description: null
+        description: 'Get an overview of all the cars, with their damages, that are checked with the Fleetexpert iPad application by the experts. It also provides the application with the required content for the app.'
         url: null
-        tags: null
-
-      - name: RHEA
-        description: null
-        url: null
-        tags: null
+        tags: '10to1'
 
       - name: Menerga
-        description: null
+        description: 'Manage the stock and supplies needed to make it possible to plan the assignment in the energy industry as well as possible. We connected with external services for a more up-to-date overview of the current stock.'
         url: null
-        tags: null
+        tags: '10to1'
 
       - name: Validpat
-        description: null
+        description: 'An administrative website to better support administrative services for IP Attorneys. The development process used here was behavior-driven development, which was quite a challenge, but a lot of fun.'
         url: null
-        tags: null
+        tags: 'Belighted'
 
       - name: Biegel
-        description: null
+        description: 'A handy website that translates commonly used words from the Limburg region to an understandable format for the rest of Belgium. The website participated in a product development competition.'
         url: null
-        tags: null
+        tags: 'Fousa'
+        
+  - name: PHP
+    projects:
+      - name: RHEA
+        description: 'The public website with information about the research studies on gender, diversity, and intersectionality that was done at the Vrije Universiteit Brussel.'
+        url: null
+        tags: 'Fousa'
