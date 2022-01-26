@@ -328,12 +328,16 @@ h3 {
     padding-left: 1em;
 
     border-color: black;
-    border-width: 3px;
+    border-width: 0;
     border-left-style: solid;
+    
+    opacity: 0.7;
 }
 
 a .project {
     border-color: black;
+    border-width: 3px;
+    opacity: 1.0;
 }
 
 a .project:hover {
@@ -342,12 +346,20 @@ a .project:hover {
 
 .project h4 {
     text-transform: uppercase;
+    text-decoration: line-through;
+    text-decoration-thickness: 5px;
     font-size: 150%;
     font-weight: 400;
     color: black;
+    opacity: 0.3;
 
     display: block;
     padding-bottom: 0.3em;
+}
+
+a .project h4 {
+    text-decoration: none;
+    opacity: 1.0;
 }
 
 a .project p {
@@ -412,6 +424,14 @@ a .project:hover h4 {
     .project,
     a .project {
         border-color: white;
+    }
+
+    .project p {
+        opacity: 0.6;
+    }
+
+    a .project p {
+        opacity: 1.0;
     }
 
     h1,
