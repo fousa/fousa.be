@@ -198,7 +198,7 @@ html {
 h3 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 200%;
+    font-size: 300%;
     font-weight: 400;
 
     display: block;
@@ -207,7 +207,7 @@ h3 {
 
 .work h3 {
     text-align: left;
-    padding: 3em 1em 3em 1em;
+    padding: 3em 1em 1.5em 0.6em;
 }
 
 .profile p {
