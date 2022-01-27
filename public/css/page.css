@@ -117,12 +117,24 @@ a .project h4 {
     opacity: 1.0;
 }
 
+a .project h4 span {
+    position: relative;
+    top: -0.2em;
+    margin-left: 0.2em;
+    font-size: 70%;
+    opacity: 0.0;
+}
+
 a .project p {
     color: black;
 }
 
 a .project:hover h4 {
     color: #E95E2F;
+}
+
+a .project:hover h4 span {
+    opacity: 1.0;
 }
 
 .project p {

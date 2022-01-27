@@ -41,7 +41,10 @@
                                 - else
                                     %a{ href: project.url }
                                         .project
-                                            %h4= project.name
+                                            %h4
+                                                = project.name
+                                                %span   
+                                                    %i.fas.fa-external-link-alt
                                             %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                             %p= project.description
             
