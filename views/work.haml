@@ -33,12 +33,7 @@
                     .row.projects
                         - technology.projects.each do |project|
                             .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
-                                - if project.url.nil?
-                                    .project
-                                        %h4= project.name
-                                        %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
-                                        %p= project.description
-                                - else
+                                - if project.respond_to?(:url)
                                     %a{ href: project.url }
                                         .project
                                             %h4
@@ -47,5 +42,10 @@
                                                     %i.fas.fa-external-link-alt
                                             %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                             %p= project.description
+                                - else
+                                    .project
+                                        %h4= project.name
+                                        %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
+                                        %p= project.description
             
             .container-fluid= render :haml, :'partials/footer'

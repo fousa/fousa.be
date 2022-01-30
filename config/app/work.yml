@@ -63,14 +63,12 @@ technologies:
 
       - name: Philips Hue PoS
         description: 'When you are in a store and you want to try out the newest Philips Hue light, you just have to tap this iPad app and change the lighting. Probably the only app I will build that is used inside the Apple Store.'
-        url: null
         tags:
           - icapps
           - ipad
 
       - name: SkySight Wave
         description: 'For the Perlan project, the pilots wanted to have an application to check the predicted wave winds at higher altitudes. This iPad app downloads the SkySight charts and shows them relative to their current position.'
-        url: null
         tags: 
           - fousa
           - ios
@@ -101,7 +99,6 @@ technologies:
     projects:
       - name: Expendr
         description: 'I love tracking expenses on my iPhone. And since there is not a service that tracks expenses the way I want, I decided to create it myself. And on iPad, you get to see more statistics.'
-        url: null
         tags: 
           - fousa
           - ios
@@ -146,14 +143,12 @@ technologies:
 
       - name: Belins
         description: 'Fetch a list of documents from the server so that insurance agents can quickly browse them. Communicating with the backend systems was quite hard due to the legacy nature.'
-        url: null
         tags:
           - icapps
           - ipad
 
       - name: Niko
         description: 'I upgrade the application to work on the next iOS version. Migrating changes in Core Data was hard, but it taught me a lot about how you should use it.'
-        url: null
         tags:
           - icapps
           - ipad
@@ -167,70 +162,60 @@ technologies:
 
       - name: 1Limburg
         description: 'Read the 1Limburg paper on your mobile device. Not a hard application, but when ads are added. Everything becomes hard, especially making it performant and snappy.'
-        url: null
         tags:
           - icapps
           - iphone
 
       - name: Wie is De Mol
         description: "'Who is the Mole' is a Dutch television show. As a spectator, you can guess every episode who could be the Mole. The app was updated every episode depending on who dropped out."
-        url: null
         tags:
           - 10to1
           - ios
 
       - name: Eggy
         description: 'Create shortcuts for posting messages to Twitter with the native solution provided by Apple. First time I had to make an app without an actual interface, but running in the background.'
-        url: null
         tags:
           - fousa
           - macos
 
       - name: Snabb
         description: 'Post messages to App.net with just a simple tap on the keyboard. I started using App.net when there was no native OSX solution available. So I created one to quickly post messages.'
-        url: null
         tags:
           - fousa
           - macos
 
       - name: Car Sharing
         description: 'Locate and book a car with the Car Sharing iPhone application. When you are close to the car, connect with it through Bluetooth. Unlocking your car has never been easier.'
-        url: null
         tags:
           - 10to1
           - iphone
 
       - name: Luan
         description: 'Use this application whenever you go on a sales pitch. Upload pictures of the products you are trying to sell and show them to your potential clients'
-        url: null
         tags:
           - 10to1
           - ipad
 
       - name: Courir
         description: "Before tracking was cool, I used to manually enter my run workouts in RunKeeper. But their app didn't allow this. Therefore I created an app with this functionality."
-        url: null
         tags:
           - fousa
           - iphone
 
       - name: Pomidor
         description: 'Improve your focus level during your work. With Pomidor, this was very simple. Start the clock, and get notified when your working period ends.'
-        url: null
         tags:
           - fousa
           - ios
 
       - name: Report
         description: 'A product of our own where we tried to create an application that allows the user to dynamically build forms. These forms could then be exported to several formats.'
-        url: null
         tags:
           - 10to1
           - ipad
 
       - name: Questionnaires
         description: "For Innovation Studio we developed a questionnaire iPad application. This application allowed the medical staff to be up to date with the patients' current condition."
-        url: null
         tags:
           - 10to1
           - innovationstudio
@@ -238,7 +223,6 @@ technologies:
 
       - name: Signup
         description: 'For Innovation Studio we created an application that allows patients to enroll when entering the hospital. This app was displayed in a booth that was easily accessible upon entry.'
-        url: null
         tags:
           - 10to1
           - innovationstudio
@@ -246,7 +230,6 @@ technologies:
       
       - name: Safety Surgery Checklist
         description: 'For Innovation Studio I helped develop an application that allowed surgeons to go through a medical checklist while at the surgery. Apps that impact people in a good way give me so much satisfaction.'
-        url: null
         tags:
           - 10to1
           - innovationstudio
@@ -254,42 +237,36 @@ technologies:
 
       - name: FaceTeam
         description: "When working remotely we all want to see each other's faces. This OSX application takes a picture of you working and syncs it over to Dropbox to other users that have access to the shared folder."
-        url: null
         tags:
           - fousa
           - macos
 
       - name: Huvepharma
         description: 'Pharmacists using drugs from Huvepharma could use this application to quickly calculate the correct dose that should be applied. UX wise may be one of the best applications I worked on.'
-        url: null
         tags:
           - 10to1
           - ios
 
       - name: Periodica
         description: 'Remind yourself that you have to do something regularly. This iPhone reminds you without you having to confirm that you did the task. Todos without the todo part.'
-        url: null
         tags:
           - fousa
           - iphone
 
       - name: Twunch
         description: 'Meetup with Twitter friends over lunch, that is Twunch. And this iPhone application makes this experience even better. Check who is coming and RSVP from within the application.'
-        url: null
         tags:
           - fousa
           - iphone
 
       - name: Fleetexpert
         description: 'When you return the car at the end of a lease contract, it has to be checked for damages. The Fleetexpert iPad application allowed them to do that while being offline.'
-        url: null
         tags:
           - 10to1
           - ipad
 
       - name: Besix
         description: 'This construction company uses an application to get a better overview of the construction area. They could indicate potential issues and print out PDF reports depending on their state.'
-        url: null
         tags:
           - 10to1
           - ipad
@@ -317,14 +294,12 @@ technologies:
 
       - name: Marvin Gaye Tour
         description: 'This iPhone application guides you through Ostend with a scenic tour to discover all the places that Marvin Gay visited during his stay there. Everything happened offline and made deployment tricky.'
-        url: null
         tags:
           - 10to1
           - iphone
 
       - name: IGC Reader
         description: "After a flight, I wanted to quickly see my flight on my iPhone. There was nothing like this at this point. IGC Reader's successor, Vulture, is even more powerful."
-        url: null
         tags:
           - fousa
           - ios
@@ -345,35 +320,30 @@ technologies:
 
       - name: LazyPoken
         description: 'A Poken is used to quickly share your identity. We created a small app that allows you to quickly export your contact data to this Poken.'
-        url: null
         tags:
           - milkcarton
           - macos
 
       - name: Pity
         description: 'At Belighted we were using Yammer to communicate. So Cimm and I created a tiny Mac application that showed us when we had some notifications.'
-        url: null
         tags:
           - milkcarton
           - macos
 
       - name: Lustro
         description: 'Cimm and I build this tiny little app to convert all the contacts in your local contacts application on Mac. You can export to multiple formats like CSV, tab-separated, and even to Google Contacts.'
-        url: null
         tags:
           - milkcarton
           - macos
 
       - name: 1am
         description: 'This is the very first iPhone application I wrote. The app helped me decide which Nespresso blend I should drink in the morning. It is the start of many more utility apps and Fousa!'
-        url: null
         tags:
           - fousa
           - iphone
 
       - name: Funes
         description: 'This was the very first Mac app I ever created. With Funes, you can rate the currently playing song in iTunes. Mac World noticed it and wrote a very cool article about it.'
-        url: null
         tags:
           - milkcarton
           - macos
@@ -422,7 +392,6 @@ technologies:
 
       - name: Project Generator
         description: 'Since every project setup is always the same, I tried to create a website that would facilitate this. With a single press on a button, you can create an app, push it to git, and test it on your device through HockeyApp.'
-        url: null
         tags:
           - icapps
           - website
@@ -437,14 +406,12 @@ technologies:
 
       - name: M HKA
         description: 'Manage the resources and support for the museum of contemporary art in Antwerp during its day-to-day business with this administrative website.'
-        url: null
         tags:
           - 10to1
           - website
 
       - name: Het Spiegelpaleis
         description: 'Participate in the live quiz broadcasted on prime-time on national tv in Belgium. I had the chance of working on this very challenging product with an incredible team at the University of Ghent.'
-        url: null
         tags:
           - 10to1
           - vrt
@@ -452,7 +419,6 @@ technologies:
 
       - name: Fleetexpert
         description: 'Get an overview of all the cars, with their damages, that are checked with the Fleetexpert iPad application by the experts. It also provides the application with the required content for the app.'
-        url: null
         tags:
           - 10to1
           - website
@@ -460,21 +426,18 @@ technologies:
 
       - name: Menerga
         description: 'Manage the stock and supplies needed to make it possible to plan the assignment in the energy industry as well as possible. We connected with external services for a more up-to-date overview of the current stock.'
-        url: null
         tags:
           - 10to1
           - website
 
       - name: Validpat
         description: 'An administrative website to better support administrative services for IP Attorneys. The development process used here was behavior-driven development, which was quite a challenge, but a lot of fun.'
-        url: null
         tags:
           - belighted
           - website
 
       - name: Biegel
         description: 'A handy website that translates commonly used words from the Limburg region to an understandable format for the rest of Belgium. The website participated in a product development competition.'
-        url: null
         tags:
           - fousa
           - website
@@ -483,21 +446,18 @@ technologies:
     projects:
       - name: RHEA
         description: 'The public website with information about the research studies on gender, diversity, and intersectionality that was done at the Vrije Universiteit Brussel.'
-        url: null
         tags:
           - fousa
           - website
 
       - name: Budgetr
         description: 'I need to track my budget. But I want everything to be custom so created a single-page Javascript website. Build with a prototype, supported by PHP.'
-        url: null
         tags:
           - fousa
           - website
 
       - name: Gijbels
         description: 'Cimm and I had this little marketing website as a side project. We developed it for a construction company. The entire website was dynamic with a custom-made web portal.'
-        url: null
         tags:
           - milkcarton
           - website
@@ -506,7 +466,6 @@ technologies:
     projects:
       - name: Stock Market Drinking Game
         description: 'Our student club Diana needed a windows application that would calculate prices of beers depending on the consumption. When more Duvel was drunk, the lower the price became. Crazy!'
-        url: null
         tags:
           - diana
           - windows
@@ -515,7 +474,6 @@ technologies:
     projects:
       - name: NC
         description: "I worked on the main application that is used in all the branches of KBC. Employees managed everything that was manageable for a customer. It's still in use today."
-        url: null
         tags:
           - kbc
           - website
