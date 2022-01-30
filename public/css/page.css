@@ -30,7 +30,7 @@
  * SUBHEADER
  */
 
-.work h2 {
+.page h2 {
     color: black;
     font-size: 250%;
     margin-top: 2em;
@@ -44,12 +44,12 @@
  * TECHNOLOGY
  */
 
-.work h3 {
+.page h3 {
     text-align: left;
     padding: 3em 1em 1.5em 0.6em;
 }
 
-.work h3 span {
+.page h3 span {
     position: relative;
     top: -0.3em;
     font-size: 60%;
@@ -193,7 +193,7 @@ a .project:hover h4 span {
 
 @media (prefers-color-scheme: dark) {
     .header h1,
-    .work h2,
+    .page h2,
     .project h4,
     .project p,
     a .project p {
@@ -213,7 +213,7 @@ a .project:hover h4 span {
         opacity: 1.0;
     }
 
-    .work h3 span {
+    .page h3 span {
         color: black !important;
         background-color: #666 !important;
     }
@@ -224,7 +224,7 @@ a .project:hover h4 span {
  */
 
 @media (max-width: 580px) {
-    .work h3 {
+    .page h3 {
         font-size: 200%;
     }
 }

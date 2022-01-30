@@ -8,7 +8,7 @@
         %link{ rel: 'stylesheet', href: '/css/page.css' }
 
     %body
-        .work 
+        .page 
             .container-fluid
                 -# Header
                 .row.text-center.header
@@ -33,12 +33,21 @@
                     .row.projects
                         - technology.projects.each do |project|
                             .col-12.col-md-6.col-lg-4.col-xl-4.col-xxl-3.nospacing
-                                - if project.respond_to?(:url)
+                                - if project.respond_to?(:id)
+                                    %a{ href: "/projects/#{project.id}" }
+                                        .project
+                                            %h4
+                                                = project.name
+                                                %span
+                                                    %i.fas.fa-arrow-right
+                                            %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
+                                            %p= project.description
+                                - elsif project.respond_to?(:url)
                                     %a{ href: project.url }
                                         .project
                                             %h4
                                                 = project.name
-                                                %span   
+                                                %span
                                                     %i.fas.fa-external-link-alt
                                             %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                             %p= project.description

@@ -20,8 +20,8 @@ module Vulture
                 haml :index
             end
 
-            app.get '/work' do
-                config = YAML.load_file 'config/app/work.yml'
+            app.get '/projects' do
+                config = YAML.load_file 'config/app/projects.yml'
 
                 #Prepare the projects
                 @technologies = config['technologies'].map do |technology| 
@@ -37,7 +37,7 @@ module Vulture
                     count += technology.projects.count
                 end
 
-                haml :work
+                haml :projects
             end
         end
     end
