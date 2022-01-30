@@ -6,6 +6,7 @@
         = render :haml, :'partials/head'
 
         %link{ rel: 'stylesheet', href: '/css/page.css' }
+        %link{ rel: 'stylesheet', href: '/css/project.css' }
 
     %body
         .page 
@@ -19,4 +20,4 @@
                 -# Sub header
                 .row.text-center
                     .col-12
-                        %h2= @project.name
+                        %h2= @project.name.upcase

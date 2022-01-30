@@ -1,0 +1,17 @@
+/*
+ * SUBHEADER
+ */
+
+ .page h2 {
+    font-size: 400%;
+ }
+
+ /*
+  * BREAKPOINTS
+  */
+ 
+ @media (max-width: 580px) {
+     .page h2 {
+         font-size: 200%;
+     }
+ }
