@@ -1,0 +1,22 @@
+!!!
+%html{ lang: 'en' }
+    %head
+        %title= "Fousa - #{@project.name}"
+
+        = render :haml, :'partials/head'
+
+        %link{ rel: 'stylesheet', href: '/css/page.css' }
+
+    %body
+        .page 
+            .container-fluid
+                -# Header
+                .row.text-center.header
+                    %a{ href: '/' }
+                        %img{ src: '/images/fousa.svg' }
+                        %h1 fousa
+                
+                -# Sub header
+                .row.text-center
+                    .col-12
+                        %h2= @project.name

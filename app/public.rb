@@ -39,6 +39,21 @@ module Vulture
 
                 haml :projects
             end
+
+            app.get '/projects/:id' do
+                config = YAML.load_file 'config/app/projects.yml'
+
+                # Find the project
+                projects = config['technologies'].inject(Array.new) do |projects, technology|
+                    projects + technology['projects']
+                end
+                project = projects.detect { |p| p['id'] == params[:id] }
+                raise 'Project not found' if project.nil?
+
+                @project = project.to_struct
+
+                haml :project
+            end
         end
     end
 end
