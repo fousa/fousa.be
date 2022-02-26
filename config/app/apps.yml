@@ -29,31 +29,169 @@ apps:
   - id: '22'
     title: '22'
     subtitle: 'The socially accepted dating age calculator'
+    app_store_link: 'https://apps.apple.com/us/app/22-the-socially-accepted-dating-age-calculator/id1046641168'
+    description: "This application is very simple. It has one rule.
+
+<br /><br />And that rule is a very complex algorithm we like to call: 'divided by two plus seven'.
+
+<br /><br />This is the age calculation algorithm that defines if your date is old enough to make it socially accepted. So don't lie to us, or your friends will make fun of you.
+
+<br /><br />Enjoy the application. And make sure it stays legal, we don't have any knowledge of legal dating age in your country."
 
   - id: 'track-ios'
     title: 'Track for iOS'
     subtitle: 'GPX, TCX, NMEA, LOC & FIT'
+    app_store_link: 'https://apps.apple.com/us/app/track-read-your-log-files/id1197989851'
+    description: "Whether you are running, cycling or even soaring the sky, Track is a perfect match for you. Track allows you to read different log files with just one application.
+
+<br /><br />ELEVATIONS
+<br />Check more specific information with the new elevation view. You can drag the slider in order to get more information of a certain log point.
+
+<br /><br />PLAY YOUR TRACK
+<br />Experience your run or swim over and over again with the integrated play function.
+
+<br /><br />ICLOUD DRIVE
+<br />Organise your files on iCloud Drive and make it possible to share them to your Mac.
+
+<br /><br />IMPORT FROM EVERYWHERE
+<br />You can import the different files from you email client of even you browser by simply using the share functionality.
+
+<br /><br />SUPPORTED FORMATS
+<br />We currently support the following formats: GPX, TCX, FIT, NMEA, & LOC
+
+<br /><br />APPLE HEALTH
+<br />Import your workouts from Apple Health. Get better metrics of your workout with Track.
+
+<br /><br />If you have another format you would like to use, just send us an email and we’ll see what we can do!
+
+<br /><br />Hope you enjoy Track. Let us know what we can do better!"
 
   - id: 'track-macos'
     title: 'Track for macOS'
     subtitle: 'GPX, TCX, NMEA, LOC & FIT'
+    mac_app_store_link: 'https://apps.apple.com/us/app/track-read-your-logs/id1191484642'
+    description: "Whether you are running, cycling or even soaring the sky, Track is a perfect match for you. Track allows you to read different log files with just one application.
+
+<br /><br />QUICK LOOK INTEGRATION
+<br />You can now get a quick preview of the contents of your file by just pressing the space bar on your Mac. 
+
+<br /><br />ELEVATIONS
+<br />Check more specific information with the new elevation view. You can drag the slider in order to get more information of a certain log point.
+
+<br /><br />PLAY YOUR TRACK
+<br />Experience your run or swim over and over again with the integrated play function.
+
+<br /><br />SUPPORTED FORMATS
+<br />We currently support the following formats: GPX, TCX, FIT, LOC & NMEA
+
+<br /><br />If you have another format you would like to use, just send us an email and we’ll see what we can do!
+
+<br /><br />Hope you enjoy Track. Let us know what we can do better!"
 
   - id: 'rasp'
     title: 'RASP'
     subtitle: 'RASP gliding weather charts'
+    app_store_link: 'https://apps.apple.com/us/app/rasp/id426040634'
+    description: "View the soaring weather charts on your iPhone or iPad.
+
+<br /><br />Can be very useful when you're on an airfield and want to check the soaring weather forecast for today.
+
+<br /><br />Scroll through the different hours of the day by swiping through the charts and check the forecast for tomorrow or the day after. Ow, and don't forget to pinch when you want to take a closer look.
+
+<br /><br />The following charts are available: (more coming soon)
+<br />- Charts for Benelux
+<br />- Charts for Finland
+<br />- Charts for Japan
+<br />- Charts for Australia (New South Wales)
+<br />- Charts for Australia (Queensland)
+<br />- Charts for Australia (South Australia)
+<br />- Charts for Australia (Slovakia)
+<br />- Charts for South Australia
+<br />- Charts for South-West South Africa
+<br />- Charts for Australia (Tasmania)
+<br />- Charts for Australia (Victoria)
+<br />- Charts for Australia (Western Australia)
+<br />- Charts for North/Central France
+<br />- Charts for Pyrenees
+<br />- Charts for Australia (Northern Territory)
+<br />- Charts for Germany
+<br />- Charts for UK
+<br />- Charts for Scandinavia
+<br />- Charts for USA (Bryon)
+<br />- Charts for USA (Southern California)"
 
   - id: 'gpx-reader-mac'
     title: 'GPX Reader for macOS'
     subtitle: 'Read GPX files on macOS'
+    mac_app_store_link: 'https://apps.apple.com/us/app/gpx-reader/id543327839'
+    description: "A powerful GPX file reader for macOS. 
+
+<br /><br />* Tracks, Routes & Waypoints - View your tracks, routes & waypoints in GPX Reader. 
+
+<br /><br />* Maps - Open your GPX file in GPX Reader and check out the tracks on Maps. Set the map type to map, satellite or hybrid. 
+
+<br /><br />* Spotlight - Find your GPX files in no time in Spotlight. The Spotlight importer will index the name, link text, and description content of your files. 
+
+<br /><br />* Multiple file Support - Open your TCX, GPX, LOC, NMEA & TRACK files in GPX Reader."
 
   - id: 'gpx-reader-ios'
     title: 'GPX Reader for iOS'
     subtitle: 'Read GPX files on iOS'
+    app_store_link: 'https://apps.apple.com/us/app/gpx-reader/id543308129'
+    description: "A powerful GPX file reader for the iPhone or the iPad. 
+
+<br /><br />* Tracks, Routes & Waypoints - View your tracks, routes & waypoints in GPX Reader.
+
+<br /><br />* Maps - Open your GPX file in GPX Reader and check out the tracks on Maps. Set the map type to map, satellite or hybrid. 
+
+<br /><br />* Safari & other apps - Open GPX files by clicking a link in Safari or any other external appilication. 
+
+<br /><br />* Multiple file Support - Open your TCX, GPX, LOC, NMEA & TRACK files in GPX Reader.
+
+<br /><br />* Sync your files to iCloud with the easy to use document browser."
 
   - id: 'spoty'
     title: 'Spoty'
     subtitle: 'An easy to use Soaring Spot iOS client.'
+    app_store_link: 'https://apps.apple.com/us/app/spoty/id446227723'
+    description: "This iPhone/iPad application allows you to easily browse the Soaring Spot competition results.
+
+<br /><br />You'll be able to look at the task, the daily results and the total results for each day and each class. On the daily results page you'll be able to take a closer look at the flight details.
+
+<br /><br />If you're looking for a contest or a pilot, just scroll up and search the competition, daily results or total results views.
+
+<br /><br />And don't forget to rotate your device to view more info!
+
+<br /><br />This application is in no way affiliated to the official Soaring Spot website. But the permission to use the data was granted, for that: Thank you Naviter!"
 
   - id: 'factura'
     title: Factura
     subtitle: 'Organize your invoices on macOS'
+    mac_app_store_link: 'https://apps.apple.com/us/app/factura/id548954914'
+    description: "Factura is a fast and easy way to organize that pile of files you keep trying to ignore. Select the files you want to put where they belong and copy or move them to any existing or new folder. You'll only need your keyboard to create your personal, clear folder hierarchy.
+<br />Stop searching for stuff and start finding it.
+
+<br /><br />We all have at least one giant folder stuffed with files we're going to organize later, when we have some spare time. Lots of photos, downloaded attachments. Years of paperwork, invoices and receipts you have digitalized with your brand new Doxie perhaps, waiting to be archived.
+
+<br /><br />Factura lets you flip through those files in no time. Preview each file, give it a destination and move on to the next one. Quick and simple. And free.
+
+<br /><br />Start with a pile.
+<br />- drop files to the app window or dock icon
+<br />- or reorganize a file via the context menu
+<br />- works with any file
+<br />- preview the picture, PDF,... without opening it
+<br />- zoom in and out on the preview
+
+<br /><br />Let your fingers glide through.
+<br />- just type a name for the destination folder
+<br />- if the folder doesn't exist, Factura will create it
+<br />- add a slash to pick a subfolder
+<br />- autocompletion of existing folders
+<br />- pick a date for the new filename (default today)
+<br />- press Enter to move or copy 
+
+<br /><br />Customize.
+<br />- choose to move or copy files
+<br />- choose to add a date to the new filename
+<br />- set a default destination folder
+<br />- rename the file or keep the name"
