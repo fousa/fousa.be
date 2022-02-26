@@ -1,0 +1,36 @@
+apps:
+  - id: 'soaring-book-runway'
+    title: 'Soaring Book Runway'
+    subtitle: 'Flight Management Tool'
+
+  - id: '22'
+    title: '22'
+    subtitle: 'The socially accepted dating age calculator'
+
+  - id: 'track-ios'
+    title: 'Track for iOS'
+    subtitle: 'GPX, TCX, NMEA, LOC & FIT'
+
+  - id: 'track-macos'
+    title: 'Track for macOS'
+    subtitle: 'GPX, TCX, NMEA, LOC & FIT'
+
+  - id: 'rasp'
+    title: 'RASP'
+    subtitle: 'RASP gliding weather charts'
+
+  - id: 'gpx-reader-mac'
+    title: 'GPX Reader for macOS'
+    subtitle: 'Read GPX files on macOS'
+
+  - id: 'gpx-reader-ios'
+    title: 'GPX Reader for iOS'
+    subtitle: 'Read GPX files on iOS'
+
+  - id: 'spoty'
+    title: 'Spoty'
+    subtitle: 'An easy to use Soaring Spot iOS client.'
+
+  - id: 'factura'
+    title: Factura
+    subtitle: 'Organize your invoices on macOS'
