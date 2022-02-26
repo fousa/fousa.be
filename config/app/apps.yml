@@ -2,6 +2,28 @@ apps:
   - id: 'soaring-book-runway'
     title: 'Soaring Book Runway'
     subtitle: 'Flight Management Tool'
+    description: "Soaring Book Runway keeps track of all the soaring activities on your airfield. No need to be online, just make sure all your data is synchronised to the app before leaving. 
+
+<br /><br />Register the flights on location, and when every body landed you can upload them online. It's that easy.
+
+<br /><br />More features:
+<br />* Easy way of preparing flights.
+<br />* Get a nice overview of who is flying.
+<br />* Use the application offline. (this will make it possible to use the application on airfields with limit connectivity)
+<br />* Synchronise the data whenever you need.
+<br />* Comment on a flight so that you can upload this extra data.
+<br />* Keep track of visitors.
+
+<br /><br />Soaring Book Unlimited yearly subscription plan extends the app:
+<br />* Manage an unlimited number of flights.
+<br />* Edit a flight whenever you want.
+<br />* Payment will be charged to iTunes Account at confirmation of purchase.
+<br />* Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period.
+<br />* Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal.
+<br />* Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase.
+<br />* Any unused portion of a free trial period will be forfeited when the user purchases a subscription to that publication.
+
+<br /><br />When your club has a different way of working but you would love to use Soaring Book Runway, do not hesitate to contact me and I'll see what I can do."
 
   - id: '22'
     title: '22'
