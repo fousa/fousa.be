@@ -1,0 +1,31 @@
+/*
+ * SUBHEADER
+ */
+
+ .page h2 {
+    font-size: 400%;
+    font-weight: 300;
+ }
+
+ .page h2 span {
+     display: block;
+     margin-top: 1em;
+     font-size: 50%;
+     font-weight: 100;
+ }
+
+ /*
+  * BREAKPOINTS
+  */
+ 
+ @media (max-width: 700px) {
+     .page h2 {
+         font-size: 200%;
+         font-weight: 300;
+     }
+
+     .page h2 span {
+        font-size: 70%;
+        margin-top: 0.2em;
+    }
+ }

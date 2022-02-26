@@ -1,0 +1,25 @@
+!!!
+%html{ lang: 'en' }
+    %head
+        %title= "Fousa - #{@app.title}"
+
+        = render :haml, :'partials/head'
+
+        %link{ rel: 'stylesheet', href: '/css/page.css' }
+        %link{ rel: 'stylesheet', href: '/css/app.css' }
+
+    %body
+        .page 
+            .container-fluid
+                -# Header
+                .row.text-center.header
+                    %a{ href: '/' }
+                        %img{ src: '/images/fousa.svg' }
+                        %h1 fousa
+                
+                -# Sub header
+                .row.text-center
+                    .col-12
+                        %h2
+                            = @app.title.upcase
+                            %span= @app.subtitle.upcase
