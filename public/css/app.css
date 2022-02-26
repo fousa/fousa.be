@@ -2,19 +2,23 @@
  * SUBHEADER
  */
 
- .page h2 {
+.page h2 {
     font-size: 400%;
     font-weight: 300;
- }
+}
 
- .page h2 span {
-     display: block;
-     margin-top: 1em;
-     font-size: 50%;
-     font-weight: 100;
- }
+.page h2 span {
+    display: block;
+    margin-top: 1em;
+    font-size: 50%;
+    font-weight: 100;
+}
 
- .page p {
+.page p.link {
+    margin-top: 30px;
+}
+
+.page p.description {
     margin: 5em 2em;
     padding-left: 1em;
 
@@ -30,7 +34,7 @@
     animation: descriptionAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
- }
+}
 
 
 /*
@@ -42,17 +46,18 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0px);
     }
 }
 
- /*
+/*
   * BREAKPOINTS
   */
- 
- @media (max-width: 700px) {
+
+@media (max-width: 700px) {
     .page h2 {
         font-size: 200%;
         font-weight: 300;
@@ -64,7 +69,7 @@
     }
 
 
-    .page p {
+    .page p.description {
         font-size: 150%;
     }
- }
+}

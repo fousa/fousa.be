@@ -2,6 +2,7 @@ apps:
   - id: 'soaring-book-runway'
     title: 'Soaring Book Runway'
     subtitle: 'Flight Management Tool'
+    app_store_link: 'https://apps.apple.com/us/app/soaring-book-runway/id1422856598'
     description: "Soaring Book Runway keeps track of all the soaring activities on your airfield. No need to be online, just make sure all your data is synchronised to the app before leaving. 
 
 <br /><br />Register the flights on location, and when every body landed you can upload them online. It's that easy.

@@ -23,8 +23,18 @@
                         %h2
                             = @app.title.upcase
                             %span= @app.subtitle.upcase
+                
+                .row.text-center
+                    .col-12
+                        %p.link
+                            - if @app.respond_to?(:mac_app_store_link)
+                                %a{ href: @app.mac_app_store_link }
+                                    %img{ src: '/images/mac_app_store.svg' }
+                            - elsif @app.respond_to?(:app_store_link)
+                                %a{ href: @app.app_store_link }
+                                    %img{ src: '/images/app_store.svg' }
 
                 -# Description
                 .row.justify-content-center
                     .col-12
-                        %p= @app.description
+                        %p.description= @app.description
