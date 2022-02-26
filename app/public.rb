@@ -54,6 +54,17 @@ module Vulture
 
                 haml :project
             end
+
+            app.get '/apps/:id' do
+                config = YAML.load_file 'config/app/apps.yml'
+
+                app = config['apps'].detect { |p| p['id'] == params[:id] }
+                raise 'App not found' if app.nil?
+
+                @app = app.to_struct
+
+                haml :app
+            end
         end
     end
 end
