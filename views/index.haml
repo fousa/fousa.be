@@ -37,11 +37,10 @@
                                     .zoom
                                         %img{ srcset: "images/apps/#{app.image}.jpg 1x, images/apps/#{app.image}.jpg 2x" }
 
-                -# Link to more project
-                -# .row.more
-                -#     .col-12
-                -#         %p.text-end
-                -#             %a{ href: '/work' } Most of my work &rarr;
+                .row.more
+                    .col-12
+                        %p.text-end
+                            %a{ href: '/projects' } More projects &rarr;
 
             -# Footer
             .container-fluid= render :haml, :'partials/footer'
