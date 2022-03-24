@@ -48,7 +48,7 @@ module Vulture
           projects + technology['projects']
         end
         project = projects.detect { |p| p['id'] == params[:id] }
-        raise 'Project not found' if project.nil?
+        pass if project.nil?
 
         @project = project.to_struct
 
@@ -59,7 +59,7 @@ module Vulture
         config = YAML.load_file 'config/app/apps.yml'
 
         app = config['apps'].detect { |p| p['id'] == params[:id] }
-        raise 'App not found' if app.nil?
+        pass if app.nil?
 
         @app = app.to_struct
 
