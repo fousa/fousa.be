@@ -15,7 +15,7 @@ module Vulture
         @gliding_text = text.gliding
 
         # Prepare the apps.
-        @apps = config['apps'].map(&to_struct)
+        @apps = config['apps'].map { |app| app.to_struct }
 
         haml :index
       end
