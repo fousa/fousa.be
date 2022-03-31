@@ -5,7 +5,7 @@ text:
 apps:
   - name: 'Vulture'
     image: 'Vulture'
-    url: 'https://vulture.fousa.be'
+    url: 'https://vulture.aero'
 
   - name: 'Aviobook'
     image: 'Aviobook'
