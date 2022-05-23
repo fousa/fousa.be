@@ -41,6 +41,8 @@
                                                 = project.name
                                                 %span
                                                     %i.fas.fa-arrow-right
+                                                - if project.respond_to?(:company)
+                                                    %span.company= "Commissioned by #{project.company.name}"
                                             %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                             %p= project.description
                                 - elsif project.respond_to?(:url)
@@ -48,13 +50,18 @@
                                         .project
                                             %h4
                                                 = project.name
-                                                %span
+                                                %span.icon
                                                     %i.fas.fa-external-link-alt
+                                                - if project.respond_to?(:company)
+                                                    %span.company= "Commissioned by #{project.company.name}"
                                             %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                             %p= project.description
                                 - else
                                     .project
-                                        %h4= project.name
+                                        %h4
+                                            = project.name
+                                            - if project.respond_to?(:company)
+                                                %span.company= "Commissioned by #{project.company.name}"
                                         %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'
                                         %p= project.description
             

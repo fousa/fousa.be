@@ -27,7 +27,12 @@ module Vulture
         @technologies = config['technologies'].map do |technology|
           struct = technology.to_struct
           struct.projects = struct.projects.map do |project|
-            project.to_struct
+            project = project.to_struct
+            if project.respond_to?(:company)
+              project.company = OpenStruct.new name: project.company['name'],
+                                               url:  project.company['url']
+            end
+            project
           end
           struct
         end
