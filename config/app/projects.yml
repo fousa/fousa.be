@@ -10,7 +10,6 @@ technologies:
           - ios
 
       - name: Vulture
-        id: vulture
         description: 'This soaring planning and analysis application is the flagship of my projects. I work on this whenever I have some time left. Gliding is my passion and Vulture helps me with it.'
         url: 'https:///vulture.aero'
         tags: 
