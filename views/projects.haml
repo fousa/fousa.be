@@ -59,7 +59,7 @@
                                 - else
                                     .project
                                         %h4
-                                            = project.name
+                                            %span.ignore= project.name
                                             - if project.respond_to?(:company)
                                                 %span.company= "Commissioned by #{project.company.name}"
                                         %p.tags= project.tags.map { |tag| "##{tag}" }.join '&nbsp;'

@@ -59,8 +59,6 @@ a .project:hover {
 
 .project h4 {
     text-transform: uppercase;
-    text-decoration: line-through;
-    text-decoration-thickness: 5px;
     font-size: 150%;
     font-weight: 400;
     color: black;
@@ -68,6 +66,11 @@ a .project:hover {
 
     display: block;
     padding-bottom: 0.3em;
+}
+
+.project h4 span.ignore {
+    text-decoration: line-through;
+    text-decoration-thickness: 5px;
 }
 
 a .project h4 {
@@ -83,6 +86,7 @@ a .project h4 span.icon {
     opacity: 0.0;
 }
 
+.project h4 span.company,
 a .project h4 span.company {
     font-size: 70%;
     font-weight: 350;
