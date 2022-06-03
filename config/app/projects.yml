@@ -5,8 +5,10 @@ technologies:
       - name: itsme
         description: 'Authenticate, share your data or sign a document with this nifty iPhone application. Your digital identity on your iPhone. itsme is one of the most used applications in Belgium at this point.'
         url: 'https://itsme.be'
+        company:
+          name: Mobile ID
+          url: https://itsme-id.com
         tags: 
-          - itsme
           - ios
 
       - name: Vulture
@@ -96,6 +98,9 @@ technologies:
       - name: Monizze
         description: 'Check the balance of your Meal cheques with this iPhone application. Locate stores nearby that support the Monizze cheques.'
         url: 'https://www.monizze.be'
+        company:
+          name: icapps
+          url: https://icapps.com
         tags: 
           - ios
       
@@ -127,8 +132,10 @@ technologies:
       - name: Geluidshuis
         description: 'Playable books for children, this is what Geluidshuis provides. You can buy, download and play the content of books on your mobile devices. Great to keep your kids amused during a long trip.'
         url: 'https://apps.apple.com/be/app/geluidshuis/id1114955258'
+        company:
+          name: icapps
+          url: https://icapps.com
         tags:
-          - icapps
           - ios
 
       - name: Isabel
@@ -184,8 +191,10 @@ technologies:
 
       - name: Wie is De Mol
         description: "'Who is the Mole' is a Dutch television show. As a spectator, you can guess every episode who could be the Mole. The app was updated every episode depending on who dropped out."
+        company:
+          name: 10to1
+          url: https://www.bloovi.be/10to1
         tags:
-          - 10to1
           - ios
 
       - name: Eggy
@@ -202,8 +211,10 @@ technologies:
 
       - name: Car Sharing
         description: 'Locate and book a car with the Car Sharing iPhone application. When you are close to the car, connect with it through Bluetooth. Unlocking your car has never been easier.'
+        company:
+          name: 10to1
+          url: https://www.bloovi.be/10to1
         tags:
-          - 10to1
           - iphone
 
       - name: Luan
@@ -212,7 +223,6 @@ technologies:
           name: 10to1
           url: https://www.bloovi.be/10to1
         tags:
-          - 10to1
           - ipad
 
       - name: Courir
@@ -428,8 +438,10 @@ technologies:
 
       - name: M HKA
         description: 'Manage the resources and support for the museum of contemporary art in Antwerp during its day-to-day business with this administrative website.'
+        company:
+          name: 10to1
+          url: https://www.bloovi.be/10to1
         tags:
-          - 10to1
           - website
 
       - name: Het Spiegelpaleis
