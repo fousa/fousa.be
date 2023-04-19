@@ -3,13 +3,17 @@ text:
   gliding: "When I'm not writing code, you'll probably find me in the sky looking for thermals in my glider."
 
 apps:
-  - name: 'Vulture'
-    image: 'Vulture'
-    url: 'https://vulture.aero'
+  - name: 'itsme'
+    image: 'itsme'
+    url: 'https://www.itsme-id.com'
 
   - name: 'Aviobook'
     image: 'Aviobook'
     url: 'https://aviobook.aero'
+
+  - name: 'Vulture'
+    image: 'Vulture'
+    url: 'https://vulture.aero'
 
   - name: 'Telenet Flow'
     image: 'TelenetFlow'
@@ -27,7 +31,7 @@ apps:
     image: 'PaceUp'     
     url: 'http://paceup.fousa.be'
 
-  - name: 'Bolero'      
+  - name: 'Bolero'
     image: 'Bolero'     
     url: 'https://www.bolero.be/nl/platformen/mobile'
 
@@ -38,6 +42,7 @@ apps:
   - name: 'Track'       
     image: 'Track'      
     url: 'https://itunes.apple.com/us/app/track/id1197989851?ls=1&mt=8'
+
   - name: 'TruliUs'     
     image: 'TruliUs'    
     url: 'https://www.trulius.be'
@@ -45,7 +50,3 @@ apps:
   - name: 'RASP'        
     image: 'RASP'       
     url: 'https://apps.apple.com/us/app/rasp/id426040634#'
-    
-  - name: 'GPX Reader'  
-    image: 'GPXReader'  
-    url: 'https://apps.apple.com/be/app/gpx-reader/id543308129'
