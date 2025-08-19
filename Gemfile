@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '3.2.7'
+
 # Rake is a Make-like program implemented in Ruby. Tasks and dependencies are
 # [rake](https://github.com/ruby/rake)
 gem 'rake', '~> 13.0.2'
@@ -14,7 +16,7 @@ gem 'sinatra-contrib', '~> 2.1.0'
 gem 'haml', '~> 5.2.1'
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for
 # [puma](https://puma.io)
-gem 'puma', '~> 5.1.1'
+gem "puma", "~> 6.6.1"
 # A gem that provides a client interface for the Sentry error logger
 # [sentry-raven](https://github.com/getsentry/raven-ruby)
 gem 'sentry-raven', '~> 3.1.1'

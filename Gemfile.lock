@@ -14,8 +14,8 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.4)
-    puma (5.1.1)
+    nio4r (2.7.4)
+    puma (6.6.1)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -62,7 +62,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml (~> 5.2.1)
-  puma (~> 5.1.1)
+  puma (~> 6.6.1)
   rack-ssl (~> 1.4.1)
   rack-test (~> 1.1.0)
   rake (~> 13.0.2)
@@ -70,6 +70,9 @@ DEPENDENCIES
   sentry-raven (~> 3.1.1)
   sinatra (~> 2.1.0)
   sinatra-contrib (~> 2.1.0)
+
+RUBY VERSION
+   ruby 3.2.7p253
 
 BUNDLED WITH
    2.2.30
